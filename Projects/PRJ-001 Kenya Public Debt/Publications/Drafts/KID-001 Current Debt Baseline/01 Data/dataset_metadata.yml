@@ -1,0 +1,40 @@
+dataset_id: KID001-DATA-BASELINE-2026
+title: "Kenya Public Debt — Verified Current Baseline Dataset (June 2025 – May 2026)"
+publication_id: KID-001
+project_id: PRJ-001
+version: 1.0.0
+release_date: "2026-08-28"
+status: verified
+publisher: Kenya in Data
+license: CC-BY-4.0
+coverage:
+  spatial: Kenya (National Government)
+  temporal_baseline: "2025-06-30"
+  temporal_monthly_update: "2026-05-31"
+  institutional_coverage: Public and publicly guaranteed (PPG) gross debt
+primary_sources:
+  - id: SRC-DEBT-001
+    institution: National Treasury of Kenya
+    document: Annual Public Debt Management Report FY 2024/2025
+    publication_year: 2025
+    key_tables: [Table 3, Table 4, Table 5, Table 10, Table 26, Table 27]
+  - id: SRC-DEBT-003
+    institution: Central Bank of Kenya
+    document: Monthly Economic Indicators June 2026
+    publication_year: 2026
+    key_tables: [Table 4.2, Table 7.1, Table 7.2]
+  - id: SRC-LAW-001
+    institution: Parliament of Kenya
+    document: Public Finance Management Act (PFMA 2012)
+    section: "Section 50(2A)-(2B)"
+  - id: SRC-INTL-001
+    institution: International Monetary Fund / World Bank
+    document: Kenya Joint Debt Sustainability Analysis (IMF Country Report No. 24/316)
+    date: "2024-10-18"
+files:
+  - path: KID001_current_debt_baseline.csv
+    format: csv
+    encoding: utf-8
+  - path: data_dictionary.csv
+    format: csv
+    encoding: utf-8

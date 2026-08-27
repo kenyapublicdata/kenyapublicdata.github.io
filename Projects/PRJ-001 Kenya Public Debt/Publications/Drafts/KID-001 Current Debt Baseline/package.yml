@@ -1,0 +1,24 @@
+publication_id: KID-001
+project_id: PRJ-001
+slug: kenya-public-debt-current-baseline
+title: "Kenya's Public Debt: The Current Stock, Composition and Servicing Burden"
+status: ready_for_review
+created: 2026-08-28
+last_updated: 2026-08-28
+scope:
+  fiscal_baseline: 2025-06-30
+  latest_complete_monthly_observation: 2026-05-31
+  coverage: "Current debt stock, instrument composition, debt servicing burden, statutory anchor"
+excluded:
+  - unverified 2002–2026 historical trajectory charts
+  - multi-administration comparisons
+  - unsupported June 2026 total debt estimate
+populated_components:
+  - data_csv: "01 Data/KID001_current_debt_baseline.csv"
+  - data_dictionary: "01 Data/data_dictionary.csv"
+  - dataset_metadata: "01 Data/dataset_metadata.yml"
+  - article: "05 Article/article.md"
+  - social_distribution: "04 Social/social_copy.md"
+  - source_manifest: "07 Sources/source_manifest.yml"
+  - citation_ledger: "07 Sources/citation_ledger.md"
+  - release_checklist: "08 QA and Release/release_checklist.md"

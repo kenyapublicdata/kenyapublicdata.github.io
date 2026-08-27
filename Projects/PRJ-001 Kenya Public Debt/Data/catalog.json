@@ -1,0 +1,302 @@
+{
+  "project_id": "PRJ-001",
+  "last_scanned": "2026-08-27T23:26:41.368202Z",
+  "stages": {
+    "raw": [
+      {
+        "filename": "CBK_Annual_GDP_2000_2026.csv",
+        "relative_path": "Data/Raw/CBK_Annual_GDP_2000_2026.csv",
+        "format": "CSV",
+        "size_bytes": 780,
+        "sha256": "f58b7852abc4745fc528ba37f03f4edb3d1fd3ec9c938907a33a89c168845779",
+        "modified": "2026-08-27T23:18:31.157958",
+        "columns": [
+          "year",
+          "nominal_gdp_million_ksh",
+          "annual_growth_pct",
+          "real_gdp_million_ksh"
+        ],
+        "row_count": 26
+      },
+      {
+        "filename": "KNBS_CPI_Deflators_2002_2026_raw.csv",
+        "relative_path": "Data/Raw/KNBS_CPI_Deflators_2002_2026_raw.csv",
+        "format": "CSV",
+        "size_bytes": 1387,
+        "sha256": "fd1c24f9ca2ea3b413f30325efae8efbd20ff60a04ce80d73fd9c3f3ed3ad6e9",
+        "modified": "2026-08-27T23:47:04.640997",
+        "columns": [
+          "year",
+          "cpi_index_raw",
+          "cpi_index_2024_base",
+          "annual_inflation_pct",
+          "gdp_deflator_index",
+          "source_document"
+        ],
+        "row_count": 25
+      },
+      {
+        "filename": "TNT_Debt_Service_Fiscal_2002_2026_raw.csv",
+        "relative_path": "Data/Raw/TNT_Debt_Service_Fiscal_2002_2026_raw.csv",
+        "format": "CSV",
+        "size_bytes": 2216,
+        "sha256": "34cd25c6c83d0e9eb130f8f7bd759a8bd3b453748aa2ae24d5a4d13959b170eb",
+        "modified": "2026-08-27T23:46:59.537034",
+        "columns": [
+          "fiscal_year",
+          "calendar_year",
+          "ordinary_revenue_ksh_bn",
+          "total_expenditure_ksh_bn",
+          "domestic_interest_ksh_bn",
+          "external_interest_ksh_bn",
+          "total_interest_ksh_bn",
+          "external_principal_ksh_bn",
+          "domestic_principal_ksh_bn",
+          "total_debt_service_ksh_bn",
+          "source_document"
+        ],
+        "row_count": 25
+      },
+      {
+        "filename": "TNT_Public_Debt_Stock_2002_2026_raw.csv",
+        "relative_path": "Data/Raw/TNT_Public_Debt_Stock_2002_2026_raw.csv",
+        "format": "CSV",
+        "size_bytes": 2655,
+        "sha256": "06468387f0b20291dece1729a9f2aa30a7bdbdc51955a112d30b394ff849aca4",
+        "modified": "2026-08-27T23:46:52.406194",
+        "columns": [
+          "fiscal_year",
+          "calendar_year",
+          "observation_date",
+          "administration",
+          "domestic_debt_ksh_bn",
+          "external_debt_ksh_bn",
+          "total_public_debt_ksh_bn",
+          "external_debt_usd_mn",
+          "kes_usd_rate",
+          "source_document",
+          "source_table"
+        ],
+        "row_count": 25
+      }
+    ],
+    "interim": [],
+    "processed": [
+      {
+        "filename": "PRJ001_presidential_snapshots_2002_2026.csv",
+        "relative_path": "Data/Processed/PRJ001_presidential_snapshots_2002_2026.csv",
+        "format": "CSV",
+        "size_bytes": 1967,
+        "sha256": "86d34b455aa1b27776363d38aaf49a9d722297bc70768d4ac020d5940e1dc554",
+        "modified": "2026-08-28T00:06:24.420672",
+        "columns": [
+          "fiscal_year",
+          "calendar_year",
+          "observation_date",
+          "administration",
+          "domestic_debt_ksh_bn",
+          "external_debt_ksh_bn",
+          "total_public_debt_ksh_bn",
+          "external_debt_usd_mn",
+          "kes_usd_rate",
+          "source_document",
+          "source_table",
+          "ordinary_revenue_ksh_bn",
+          "total_expenditure_ksh_bn",
+          "domestic_interest_ksh_bn",
+          "external_interest_ksh_bn",
+          "total_interest_ksh_bn",
+          "external_principal_ksh_bn",
+          "domestic_principal_ksh_bn",
+          "total_debt_service_ksh_bn",
+          "cpi_index_2024_base",
+          "annual_inflation_pct",
+          "gdp_deflator_index",
+          "nominal_gdp_million_ksh",
+          "real_gdp_million_ksh",
+          "annual_growth_pct",
+          "nominal_gdp_ksh_bn",
+          "real_gdp_ksh_bn",
+          "debt_to_gdp_pct",
+          "real_debt_2024_ksh_bn",
+          "domestic_debt_share_pct",
+          "external_debt_share_pct",
+          "debt_service_to_revenue_pct",
+          "domestic_interest_to_revenue_pct",
+          "external_interest_to_revenue_pct",
+          "debt_service_to_expenditure_pct",
+          "snapshot_label"
+        ],
+        "row_count": 4
+      },
+      {
+        "filename": "PRJ001_public_debt_timeseries_2002_2026.csv",
+        "relative_path": "Data/Processed/PRJ001_public_debt_timeseries_2002_2026.csv",
+        "format": "CSV",
+        "size_bytes": 6919,
+        "sha256": "80c62497f9e9f5ce25d41a1fd404a3e312dde9e405ab32c1ab8272eb07eff75b",
+        "modified": "2026-08-28T00:06:24.419802",
+        "columns": [
+          "fiscal_year",
+          "calendar_year",
+          "observation_date",
+          "administration",
+          "domestic_debt_ksh_bn",
+          "external_debt_ksh_bn",
+          "total_public_debt_ksh_bn",
+          "external_debt_usd_mn",
+          "kes_usd_rate",
+          "source_document",
+          "source_table",
+          "ordinary_revenue_ksh_bn",
+          "total_expenditure_ksh_bn",
+          "domestic_interest_ksh_bn",
+          "external_interest_ksh_bn",
+          "total_interest_ksh_bn",
+          "external_principal_ksh_bn",
+          "domestic_principal_ksh_bn",
+          "total_debt_service_ksh_bn",
+          "cpi_index_2024_base",
+          "annual_inflation_pct",
+          "gdp_deflator_index",
+          "nominal_gdp_million_ksh",
+          "real_gdp_million_ksh",
+          "annual_growth_pct",
+          "nominal_gdp_ksh_bn",
+          "real_gdp_ksh_bn",
+          "debt_to_gdp_pct",
+          "real_debt_2024_ksh_bn",
+          "domestic_debt_share_pct",
+          "external_debt_share_pct",
+          "debt_service_to_revenue_pct",
+          "domestic_interest_to_revenue_pct",
+          "external_interest_to_revenue_pct",
+          "debt_service_to_expenditure_pct"
+        ],
+        "row_count": 25
+      }
+    ],
+    "published": [
+      {
+        "filename": "KID001_Kenya_Public_Debt_2002_2026.csv",
+        "relative_path": "Data/Published/KID001_Kenya_Public_Debt_2002_2026.csv",
+        "format": "CSV",
+        "size_bytes": 6919,
+        "sha256": "80c62497f9e9f5ce25d41a1fd404a3e312dde9e405ab32c1ab8272eb07eff75b",
+        "modified": "2026-08-28T00:06:24.421110",
+        "columns": [
+          "fiscal_year",
+          "calendar_year",
+          "observation_date",
+          "administration",
+          "domestic_debt_ksh_bn",
+          "external_debt_ksh_bn",
+          "total_public_debt_ksh_bn",
+          "external_debt_usd_mn",
+          "kes_usd_rate",
+          "source_document",
+          "source_table",
+          "ordinary_revenue_ksh_bn",
+          "total_expenditure_ksh_bn",
+          "domestic_interest_ksh_bn",
+          "external_interest_ksh_bn",
+          "total_interest_ksh_bn",
+          "external_principal_ksh_bn",
+          "domestic_principal_ksh_bn",
+          "total_debt_service_ksh_bn",
+          "cpi_index_2024_base",
+          "annual_inflation_pct",
+          "gdp_deflator_index",
+          "nominal_gdp_million_ksh",
+          "real_gdp_million_ksh",
+          "annual_growth_pct",
+          "nominal_gdp_ksh_bn",
+          "real_gdp_ksh_bn",
+          "debt_to_gdp_pct",
+          "real_debt_2024_ksh_bn",
+          "domestic_debt_share_pct",
+          "external_debt_share_pct",
+          "debt_service_to_revenue_pct",
+          "domestic_interest_to_revenue_pct",
+          "external_interest_to_revenue_pct",
+          "debt_service_to_expenditure_pct"
+        ],
+        "row_count": 25
+      },
+      {
+        "filename": "KID001_Kenya_Public_Debt_2002_2026.xlsx",
+        "relative_path": "Data/Published/KID001_Kenya_Public_Debt_2002_2026.xlsx",
+        "format": "XLSX",
+        "size_bytes": 15269,
+        "sha256": "50f299d00499b6d2fbcfc82331bafb6bbb1af88a5ca3e8b23733c7d2ca4aa906",
+        "modified": "2026-08-28T00:06:24.497696"
+      }
+    ],
+    "documents": [
+      {
+        "filename": "CBK_MEI_June_2024.pdf",
+        "relative_path": "Sources/Documents/CBK_MEI_June_2024.pdf",
+        "format": "PDF",
+        "size_bytes": 1799316,
+        "sha256": "d183e7bce4aee6e72229dea548d10182d58939d8143cc5b2ac175ebfa1c5a8b2",
+        "modified": "2026-08-27T23:18:17.369709"
+      },
+      {
+        "filename": "CBK_MEI_June_2026.pdf",
+        "relative_path": "Sources/Documents/CBK_MEI_June_2026.pdf",
+        "format": "PDF",
+        "size_bytes": 1716676,
+        "sha256": "6651e397d93a5c57a0b8e28d70699479dceaeb1c86792c050473cc1355c55118",
+        "modified": "2026-08-27T23:18:04.289021"
+      },
+      {
+        "filename": "TNT_Annual_Public_Debt_Report_2005_2006.pdf",
+        "relative_path": "Sources/Documents/TNT_Annual_Public_Debt_Report_2005_2006.pdf",
+        "format": "PDF",
+        "size_bytes": 318627,
+        "sha256": "691dbb316aeae27c821fed9977c469dbdd1b216d1a0face566128771b2c7887f",
+        "modified": "2026-08-27T23:17:59.689866"
+      },
+      {
+        "filename": "TNT_Annual_Public_Debt_Report_2012_2013.pdf",
+        "relative_path": "Sources/Documents/TNT_Annual_Public_Debt_Report_2012_2013.pdf",
+        "format": "PDF",
+        "size_bytes": 2081676,
+        "sha256": "5431c3ba9e3ce98f108978471fb1c7021114073d44906006f4ef5a1dfb76a259",
+        "modified": "2026-08-27T23:17:57.070600"
+      },
+      {
+        "filename": "TNT_Annual_Public_Debt_Report_2021_2022.pdf",
+        "relative_path": "Sources/Documents/TNT_Annual_Public_Debt_Report_2021_2022.pdf",
+        "format": "PDF",
+        "size_bytes": 2118536,
+        "sha256": "5e6202ee3bf78abd666985b5107d3db4befeccf81c544c5cde3aad9d518e68ba",
+        "modified": "2026-08-27T23:17:34.387136"
+      },
+      {
+        "filename": "TNT_Annual_Public_Debt_Report_2022_2023.pdf",
+        "relative_path": "Sources/Documents/TNT_Annual_Public_Debt_Report_2022_2023.pdf",
+        "format": "PDF",
+        "size_bytes": 2102465,
+        "sha256": "00cf5f2e12e6b6733110d66e130404f63824b42d413b5a67b0250ec734f6eb1e",
+        "modified": "2026-08-27T23:17:01.839300"
+      },
+      {
+        "filename": "TNT_Annual_Public_Debt_Report_2023_2024.pdf",
+        "relative_path": "Sources/Documents/TNT_Annual_Public_Debt_Report_2023_2024.pdf",
+        "format": "PDF",
+        "size_bytes": 1211624,
+        "sha256": "8d3ede89fa4bb916cf401b6d01b519dfc41538aab8b667ca09fb64080e6417e6",
+        "modified": "2026-08-27T23:16:48.979536"
+      },
+      {
+        "filename": "TNT_Annual_Public_Debt_Report_2024_2025.pdf",
+        "relative_path": "Sources/Documents/TNT_Annual_Public_Debt_Report_2024_2025.pdf",
+        "format": "PDF",
+        "size_bytes": 1611766,
+        "sha256": "871bf6b38ed579e9abc8e6f4fe0cd21ad979116118bde109329dcb35b88e8d48",
+        "modified": "2026-08-27T23:16:33.498351"
+      }
+    ]
+  }
+}

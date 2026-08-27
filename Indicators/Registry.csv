@@ -1,0 +1,7 @@
+indicator_id,name,category,unit,frequency,primary_source,deflator_applicable,last_updated
+IND-PF-001,Total Public Debt Stock,Public Finance,KSh Billions / % of GDP,Annual/Quarterly,National Treasury / CBK,true,2026-08-27
+IND-PF-002,Public Debt Service to Revenue,Public Finance,%,Annual,National Treasury,false,2026-08-27
+IND-MACRO-001,KES/USD Historical Exchange Rate,Macroeconomy,KES per USD,Monthly/Daily,Central Bank of Kenya,false,2026-08-27
+IND-MACRO-002,Headline and Food Inflation (CPI),Macroeconomy,%,Monthly,KNBS,false,2026-08-27
+IND-MACRO-003,Real vs Nominal GDP,Macroeconomy,KSh Billions,Quarterly/Annual,KNBS,true,2026-08-27
+IND-COV-001,County Development Budget Absorption,Counties,%,Annual/Quarterly,Controller of Budget,false,2026-08-27
