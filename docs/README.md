@@ -1,12 +1,13 @@
 # Kenya in Data — Public Website (`docs/`)
 
-This directory contains the public-facing static website for **Kenya in Data**, configured for instant deployment via **GitHub Pages**.
+This directory contains the deliberately simple, public-facing homepage for **Kenya in Data**. It is a dependency-free static site configured for deployment through **GitHub Pages**.
 
 ## Structure
 
 ```text
 docs/
-├── index.html          # Public single-page civic data desk and KID-001 publication
+├── index.html          # Single-page civic observatory homepage
+├── og.png              # Social-sharing preview image
 ├── .nojekyll           # Bypasses Jekyll processing so all assets/folders are served
 ├── README.md           # Documentation for this public build folder
 └── assets/

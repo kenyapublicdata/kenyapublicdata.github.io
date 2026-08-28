@@ -1,21 +1,19 @@
 ---
 type: folder-index
-status: generated
-updated: 2026-08-27 23:28
+status: curated
+updated: 2026-08-28
 ---
 
-<!-- GENERATED:FOLDER_INDEX -->
-
-# Drafts - Folder Index
-
-> Generated chapter index. Refresh with `python scripts/vault_folder_indexes.py --apply`.
+# Publication drafts
 
 ## Parent
 
 - [Publications](../00_Folder%20Index.md)
 
-## All Nested Files
+## Active package
 
-| Folder | File | Type | Size | Modified |
-|---|---|---:|---:|---:|
-| / | [README.md](README.md) | md | 190 B | 2026-08-27 20:43 |
+| Package | Primary document | Status |
+|---|---|---|
+| KID-001 Current Debt Baseline | [Open canonical article](KID-001%20Current%20Debt%20Baseline/KID-001%20Current%20Debt%20Baseline.md) | Editorial draft |
+
+Supporting package navigation: [KID-001 Package Home](KID-001%20Current%20Debt%20Baseline/00_Package%20Home.md)

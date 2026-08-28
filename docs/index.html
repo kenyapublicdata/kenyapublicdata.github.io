@@ -1,608 +1,421 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Kenya in Data — Evidence for Public Discourse</title>
-  <meta name="description" content="Moving public conversation in Kenya from vibes to evidence. A trustworthy, reproducible, and visually compelling data publication machine across economics, society, governance, and development." />
-  
-  <!-- OpenGraph Metadata -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Kenya in Data — Evidence for Public Discourse" />
-  <meta property="og:description" content="Moving public conversation in Kenya from vibes to evidence. Verified datasets, clear visualizations, and open civic data." />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Kenya in Data" />
-  <meta name="twitter:description" content="Show first. Interpret second. Clear public data for Kenya." />
-  
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kenya in Data</title>
+  <meta name="description" content="A public-interest observatory making Kenya easier to understand through clear, verifiable data about government, society, the economy and public life.">
+  <meta name="theme-color" content="#f7f5ef">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kenya in Data">
+  <meta property="og:description" content="Clear, verifiable data about government, society, the economy and public life in Kenya.">
+  <meta property="og:image" content="https://kenyaindata.org/og.png">
+  <meta property="og:image:width" content="1730">
+  <meta property="og:image:height" content="909">
+  <meta property="og:image:alt" content="Kenya in Data — Understand Kenya through evidence.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kenya in Data">
+  <meta name="twitter:description" content="Clear, verifiable data about government, society, the economy and public life in Kenya.">
+  <meta name="twitter:image" content="https://kenyaindata.org/og.png">
   <style>
-    /* -------------------------------------------------------------
-       DESIGN SYSTEM (Minimal, Editorial, Clean)
-       ------------------------------------------------------------- */
     :root {
-      --kid-navy: #0F172A;
-      --kid-navy-dark: #0A0F1D;
-      --kid-canvas: #F8FAFC;
-      --kid-white: #FFFFFF;
-      --kid-slate: #64748B;
-      --kid-slate-light: #F1F5F9;
-      --kid-border: #E2E8F0;
-      
-      --kid-red: #DC2626;
-      --kid-blue: #2563EB;
-      --kid-green: #059669;
-      
-      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      --font-display: 'Plus Jakarta Sans', var(--font-sans);
-      --font-mono: 'JetBrains Mono', monospace;
-      
-      --radius-sm: 6px;
-      --radius-md: 10px;
-      --radius-lg: 16px;
-      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.04);
-      --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.06);
+      --paper: #f7f5ef;
+      --ink: #191919;
+      --muted: #66645e;
+      --line: #d8d4ca;
+      --red: #b51f2e;
+      --green: #176b48;
+      --white: #fff;
+      --width: 1080px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--paper);
     }
 
     body {
-      font-family: var(--font-sans);
-      background-color: var(--kid-canvas);
-      color: var(--kid-navy);
-      line-height: 1.65;
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
 
     a {
-      color: var(--kid-navy);
-      text-decoration: none;
-      transition: color 0.15s ease;
-    }
-    a:hover {
-      color: var(--kid-blue);
+      color: inherit;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
     }
 
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 24px;
+    a:hover { color: var(--red); }
+
+    a:focus-visible {
+      outline: 3px solid rgba(181, 31, 46, 0.3);
+      outline-offset: 4px;
+      border-radius: 2px;
     }
 
-    /* -------------------------------------------------------------
-       NAVIGATION
-       ------------------------------------------------------------- */
-    .navbar {
-      background: var(--kid-white);
-      border-bottom: 1px solid var(--kid-border);
-      position: sticky;
-      top: 0;
-      z-index: 50;
+    .wrap {
+      width: min(calc(100% - 40px), var(--width));
+      margin-inline: auto;
     }
-    .navbar-inner {
+
+    .site-header {
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      align-items: center;
-      height: 64px;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 18px;
-      letter-spacing: -0.4px;
-      color: var(--kid-navy);
-    }
-    .brand-tag {
-      background: var(--kid-red);
-      color: var(--kid-white);
-      font-family: var(--font-mono);
-      font-size: 11px;
-      font-weight: 700;
-      padding: 2px 6px;
-      border-radius: var(--radius-sm);
-    }
-    .nav-links {
-      display: flex;
-      gap: 24px;
-      list-style: none;
-      font-size: 14px;
-      font-weight: 500;
-    }
-    .nav-links a {
-      color: var(--kid-slate);
-    }
-    .nav-links a:hover {
-      color: var(--kid-navy);
+      min-height: 76px;
+      border-bottom: 1px solid var(--line);
     }
 
-    /* -------------------------------------------------------------
-       HERO SECTION
-       ------------------------------------------------------------- */
-    .hero {
-      padding: 80px 0 64px;
-      border-bottom: 1px solid var(--kid-border);
-      background: var(--kid-white);
-    }
-    .hero-kicker {
-      font-family: var(--font-mono);
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--kid-red);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 16px;
-    }
-    .hero-title {
-      font-family: var(--font-display);
-      font-size: 44px;
-      font-weight: 800;
-      line-height: 1.15;
-      letter-spacing: -1px;
-      color: var(--kid-navy);
-      margin-bottom: 20px;
-      max-width: 820px;
-    }
-    .hero-lead {
-      font-size: 19px;
-      color: var(--kid-slate);
-      line-height: 1.6;
-      max-width: 740px;
-      margin-bottom: 32px;
-    }
-    .axiom-box {
-      background: var(--kid-canvas);
-      border: 1px solid var(--kid-border);
-      border-left: 3px solid var(--kid-navy);
-      padding: 16px 20px;
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      font-size: 15px;
-      color: #334155;
-      margin-bottom: 32px;
-    }
-    .axiom-box strong {
-      color: var(--kid-navy);
-    }
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .btn {
+    .brand {
       display: inline-flex;
       align-items: center;
+      gap: 11px;
+      font-size: 17px;
+      font-weight: 750;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+    }
+
+    .mark {
+      width: 23px;
+      height: 23px;
+      overflow: hidden;
+      border: 1px solid var(--ink);
+      border-radius: 50%;
+      background: linear-gradient(
+        to bottom,
+        var(--ink) 0 29%,
+        var(--white) 29% 35%,
+        var(--red) 35% 65%,
+        var(--white) 65% 71%,
+        var(--green) 71% 100%
+      );
+    }
+
+    nav { display: flex; gap: 24px; }
+
+    nav a {
+      color: var(--muted);
       font-size: 14px;
-      font-weight: 600;
-      padding: 10px 18px;
-      border-radius: var(--radius-sm);
-      transition: all 0.15s ease;
-    }
-    .btn-primary {
-      background: var(--kid-navy);
-      color: var(--kid-white) !important;
-    }
-    .btn-primary:hover {
-      background: #1E293B;
-    }
-    .btn-outline {
-      background: var(--kid-white);
-      border: 1px solid var(--kid-border);
-      color: var(--kid-navy);
-    }
-    .btn-outline:hover {
-      border-color: var(--kid-navy);
+      text-decoration: none;
     }
 
-    /* -------------------------------------------------------------
-       SECTION STYLING
-       ------------------------------------------------------------- */
-    .section {
-      padding: 64px 0;
-      border-bottom: 1px solid var(--kid-border);
-    }
-    .section-header {
-      margin-bottom: 36px;
-    }
-    .section-tag {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--kid-red);
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      margin-bottom: 6px;
-    }
-    .section-title {
-      font-family: var(--font-display);
-      font-size: 26px;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      color: var(--kid-navy);
-    }
-    .section-sub {
-      font-size: 15px;
-      color: var(--kid-slate);
-      margin-top: 4px;
-    }
-
-    /* -------------------------------------------------------------
-       WHAT WE DO (THE 3 STEP PROCESS)
-       ------------------------------------------------------------- */
-    .steps-grid {
+    .hero {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
+      align-content: center;
+      min-height: 570px;
+      padding: 88px 0 96px;
+      border-bottom: 1px solid var(--line);
     }
-    .step-card {
-      background: var(--kid-white);
-      border: 1px solid var(--kid-border);
-      border-radius: var(--radius-md);
-      padding: 24px;
-      box-shadow: var(--shadow-sm);
-    }
-    .step-num {
-      font-family: var(--font-mono);
+
+    .eyebrow {
+      margin: 0 0 24px;
+      color: var(--red);
       font-size: 12px;
-      font-weight: 700;
-      color: var(--kid-red);
-      margin-bottom: 10px;
-    }
-    .step-title {
-      font-family: var(--font-display);
-      font-size: 17px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .step-text {
-      font-size: 14px;
-      color: var(--kid-slate);
-      line-height: 1.55;
+      font-weight: 750;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
     }
 
-    /* -------------------------------------------------------------
-       DATA DOMAINS (GENERAL CIVIC COVERAGE)
-       ------------------------------------------------------------- */
-    .domains-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .domain-card {
-      background: var(--kid-white);
-      border: 1px solid var(--kid-border);
-      border-radius: var(--radius-md);
-      padding: 24px;
-      box-shadow: var(--shadow-sm);
-      transition: transform 0.15s, border-color 0.15s;
-    }
-    .domain-card:hover {
-      border-color: var(--kid-navy);
-      transform: translateY(-2px);
-    }
-    .domain-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 10px;
-    }
-    .domain-icon {
-      font-size: 20px;
-    }
-    .domain-title {
-      font-family: var(--font-display);
-      font-size: 17px;
-      font-weight: 700;
-      color: var(--kid-navy);
-    }
-    .domain-text {
-      font-size: 13.5px;
-      color: var(--kid-slate);
-      line-height: 1.55;
-      margin-bottom: 12px;
-    }
-    .domain-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-    .tag {
-      font-size: 11px;
-      font-family: var(--font-mono);
-      background: var(--kid-slate-light);
-      padding: 2px 7px;
-      border-radius: 4px;
-      color: #475569;
+    h1 {
+      max-width: 900px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(48px, 8vw, 88px);
+      font-weight: 400;
+      letter-spacing: -0.055em;
+      line-height: 0.98;
     }
 
-    /* -------------------------------------------------------------
-       EDITORIAL CONSTITUTION & COMMITMENTS
-       ------------------------------------------------------------- */
-    .principles-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
-    .principle-item {
-      background: var(--kid-white);
-      border: 1px solid var(--kid-border);
-      border-radius: var(--radius-md);
-      padding: 20px;
-    }
-    .principle-title {
-      font-family: var(--font-display);
-      font-size: 15px;
-      font-weight: 700;
-      margin-bottom: 6px;
-      color: var(--kid-navy);
-    }
-    .principle-desc {
-      font-size: 13px;
-      color: var(--kid-slate);
+    .intro {
+      max-width: 700px;
+      margin: 34px 0 0;
+      color: var(--muted);
+      font-size: clamp(18px, 2vw, 22px);
       line-height: 1.5;
     }
 
-    /* -------------------------------------------------------------
-       FOOTER
-       ------------------------------------------------------------- */
-    footer {
-      background: var(--kid-white);
-      padding: 48px 0;
-      font-size: 13px;
-      color: var(--kid-slate);
+    .hero-link {
+      display: inline-block;
+      margin-top: 36px;
+      font-size: 15px;
+      font-weight: 650;
     }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 80px;
+      padding: 90px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-label {
+      margin: 3px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .about-copy p {
+      max-width: 670px;
+      margin: 0 0 22px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(24px, 3vw, 34px);
+      letter-spacing: -0.025em;
+      line-height: 1.28;
+    }
+
+    .topics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 34px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .topics li {
+      padding: 7px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .questions {
+      padding: 90px 0 106px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(34px, 5vw, 52px);
+      font-weight: 400;
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+    }
+
+    .questions-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 46px;
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+
+    .question {
+      min-height: 165px;
+      padding: 28px 30px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(23px, 2.6vw, 31px);
+      letter-spacing: -0.025em;
+      line-height: 1.25;
+    }
+
+    .question span {
+      display: block;
+      margin-bottom: 18px;
+      color: var(--red);
+      font-family: Inter, ui-sans-serif, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .principles {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 80px;
+      padding: 90px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .principle-list {
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid var(--line);
+      list-style: none;
+    }
+
+    .principle-list li {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 10px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .principle-list strong {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 15px;
+    }
+
+    .principle-list p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .number {
+      color: var(--red);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .closing {
+      padding: 110px 0 120px;
+      text-align: center;
+    }
+
+    .closing blockquote {
+      max-width: 820px;
+      margin: 0 auto;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(34px, 5.4vw, 60px);
+      letter-spacing: -0.045em;
+      line-height: 1.08;
+    }
+
+    .example {
+      display: inline-block;
+      margin-top: 40px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
     .footer-inner {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 16px;
+      gap: 24px;
+      padding: 28px 0 36px;
     }
-    .footer-brand {
-      font-family: var(--font-display);
-      font-weight: 800;
-      color: var(--kid-navy);
-      font-size: 15px;
+
+    footer p { margin: 0; }
+
+    @media (max-width: 700px) {
+      .wrap { width: min(calc(100% - 28px), var(--width)); }
+      nav a:first-child { display: none; }
+      .hero { min-height: 520px; padding: 72px 0; }
+      .about { grid-template-columns: 1fr; gap: 30px; padding: 68px 0; }
+      .questions { padding: 68px 0 80px; }
+      .questions-grid { grid-template-columns: 1fr; }
+      .question { min-height: 0; padding: 24px; }
+      .principles { grid-template-columns: 1fr; gap: 30px; padding: 68px 0; }
+      .closing { padding: 82px 0 90px; }
+      .footer-inner { display: block; }
+      footer p + p { margin-top: 6px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
     }
   </style>
 </head>
 <body>
-
-  <!-- Top Navigation -->
-  <nav class="navbar">
-    <div class="container navbar-inner">
-      <a href="#" class="brand">
-        <span class="brand-tag">KID</span>
-        <span>KENYA IN DATA</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#domains">Domains</a></li>
-        <li><a href="#approach">Approach</a></li>
-        <li><a href="#constitution">Constitution</a></li>
-        <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="container">
-      <div class="hero-kicker">Civic Observatory &amp; Public Data Initiative</div>
-      <h1 class="hero-title">Moving Kenya's public conversation from vibes to evidence.</h1>
-      
-      <p class="hero-lead">
-        Kenya generates enormous amounts of public data, but public debate often runs on political noise and unverified claims. Kenya in Data turns scattered, complex public records into clear, trustworthy, and visually compelling evidence.
-      </p>
-
-      <div class="axiom-box">
-        <strong>Editorial Axiom:</strong> Show first. Interpret second. We do not tell citizens whom to support. We add the <strong>denominator</strong>, the <strong>deflator</strong>, and the <strong>verifiable context</strong> needed to make public data clear and useful.
-      </div>
-
-      <div class="hero-actions">
-        <a href="#domains" class="btn btn-primary">Explore Data Domains</a>
-        <a href="#constitution" class="btn btn-outline">Read Our Standards</a>
-      </div>
-    </div>
+  <header class="wrap site-header">
+    <a class="brand" href="#top" aria-label="Kenya in Data home">
+      <span class="mark" aria-hidden="true"></span>
+      Kenya in Data
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#questions">Questions</a>
+    </nav>
   </header>
 
-  <main class="container">
+  <main id="top">
+    <section class="wrap hero" aria-labelledby="page-title">
+      <p class="eyebrow">A public-interest observatory</p>
+      <h1 id="page-title">Understand Kenya through evidence.</h1>
+      <p class="intro">Clear, verifiable data about Kenya's government, society, economy and public life—built for citizens, journalists, researchers and anyone asking better questions.</p>
+      <a class="hero-link" href="#questions">Explore the questions ↓</a>
+    </section>
 
-    <!-- Section: How We Work -->
-    <section id="approach" class="section">
-      <div class="section-header">
-        <div class="section-tag">How It Works</div>
-        <h2 class="section-title">The Publication Pipeline</h2>
-        <p class="section-sub">How primary official records become trustworthy public knowledge.</p>
-      </div>
-
-      <div class="steps-grid">
-        <div class="step-card">
-          <div class="step-num">01 / DISCOVER &amp; VERIFY</div>
-          <h3 class="step-title">Primary Sources Only</h3>
-          <p class="step-text">
-            We extract data directly from official statutory reports, censuses, statistical bulletins, and audited records with exact page and table citations.
-          </p>
-        </div>
-
-        <div class="step-card">
-          <div class="step-num">02 / CONTEXTUALIZE</div>
-          <h3 class="step-title">Add the Denominator</h3>
-          <p class="step-text">
-            Numbers without context mislead. We adjust for population scale (per capita), purchasing power (inflation deflators), and national economic size (% of GDP).
-          </p>
-        </div>
-
-        <div class="step-card">
-          <div class="step-num">03 / OPEN ACCESS</div>
-          <h3 class="step-title">100% Free &amp; Open</h3>
-          <p class="step-text">
-            Every graphic, methodology, and cleaned dataset is freely published in machine-readable formats for journalists, researchers, and citizens.
-          </p>
-        </div>
+    <section class="wrap about" id="about" aria-labelledby="about-title">
+      <p class="section-label" id="about-title">What we do</p>
+      <div class="about-copy">
+        <p>We turn scattered public records into useful data, clear charts and durable civic memory.</p>
+        <p>We show our sources, explain our calculations and leave political judgment to the reader.</p>
+        <ul class="topics" aria-label="Coverage areas">
+          <li>Economy</li>
+          <li>Public finance</li>
+          <li>Politics</li>
+          <li>Elections</li>
+          <li>Counties</li>
+          <li>Public services</li>
+          <li>People</li>
+          <li>Health</li>
+          <li>Education</li>
+          <li>Land &amp; environment</li>
+        </ul>
       </div>
     </section>
 
-    <!-- Section: General Civic Domains -->
-    <section id="domains" class="section">
-      <div class="section-header">
-        <div class="section-tag">Coverage</div>
-        <h2 class="section-title">Civic &amp; Development Domains</h2>
-        <p class="section-sub">Systematic evidence tracking across all areas of Kenyan public life.</p>
-      </div>
-
-      <div class="domains-grid">
-        
-        <div class="domain-card">
-          <div class="domain-header">
-            <span class="domain-icon">👥</span>
-            <h3 class="domain-title">People &amp; Demographics</h3>
-          </div>
-          <p class="domain-text">
-            Population distribution, urbanization rates, labor force dynamics, migration, and household census indicators.
-          </p>
-          <div class="domain-tags">
-            <span class="tag">Census</span>
-            <span class="tag">Employment</span>
-            <span class="tag">Urbanization</span>
-          </div>
-        </div>
-
-        <div class="domain-card">
-          <div class="domain-header">
-            <span class="domain-icon">🏛️</span>
-            <h3 class="domain-title">Devolution &amp; 47 Counties</h3>
-          </div>
-          <p class="domain-text">
-            County own-source revenue, development budget absorption, pending bills, and localized service delivery.
-          </p>
-          <div class="domain-tags">
-            <span class="tag">Counties</span>
-            <span class="tag">Budgets</span>
-            <span class="tag">Devolution</span>
-          </div>
-        </div>
-
-        <div class="domain-card">
-          <div class="domain-header">
-            <span class="domain-icon">🏥</span>
-            <h3 class="domain-title">Health &amp; Education</h3>
-          </div>
-          <p class="domain-text">
-            Maternal mortality, vaccination coverage, school enrollment ratios, teacher-to-pupil distributions, and literacy.
-          </p>
-          <div class="domain-tags">
-            <span class="tag">Health</span>
-            <span class="tag">Education</span>
-            <span class="tag">Human Capital</span>
-          </div>
-        </div>
-
-        <div class="domain-card">
-          <div class="domain-header">
-            <span class="domain-icon">🌾</span>
-            <h3 class="domain-title">Food, Climate &amp; Resources</h3>
-          </div>
-          <p class="domain-text">
-            Crop production, rainfall anomalies, renewable energy grid mix, forest cover, and food security baskets.
-          </p>
-          <div class="domain-tags">
-            <span class="tag">Agriculture</span>
-            <span class="tag">Energy</span>
-            <span class="tag">Climate</span>
-          </div>
-        </div>
-
-        <div class="domain-card">
-          <div class="domain-header">
-            <span class="domain-icon">📊</span>
-            <h3 class="domain-title">Economy &amp; Public Finances</h3>
-          </div>
-          <p class="domain-text">
-            Public debt sustainability, inflation indices, government revenues, currency exchange rates, and trade balances.
-          </p>
-          <div class="domain-tags">
-            <span class="tag">Fiscal Policy</span>
-            <span class="tag">Inflation</span>
-            <span class="tag">Debt</span>
-          </div>
-        </div>
-
-        <div class="domain-card">
-          <div class="domain-header">
-            <span class="domain-icon">⚖️</span>
-            <h3 class="domain-title">Civic Memory &amp; Institutions</h3>
-          </div>
-          <p class="domain-text">
-            Voter registration trends, Auditor-General findings, legislative tracking, and public procurement transparency.
-          </p>
-          <div class="domain-tags">
-            <span class="tag">Governance</span>
-            <span class="tag">Audits</span>
-            <span class="tag">Elections</span>
-          </div>
-        </div>
-
+    <section class="wrap questions" id="questions" aria-labelledby="questions-title">
+      <p class="section-label">What we observe</p>
+      <h2 id="questions-title">Questions about a changing country</h2>
+      <div class="questions-grid">
+        <div class="question"><span>01</span>How is life changing for people across Kenya?</div>
+        <div class="question"><span>02</span>Where does public money come from—and where does it go?</div>
+        <div class="question"><span>03</span>What do elected leaders promise, decide and deliver?</div>
+        <div class="question"><span>04</span>How do Kenya's 47 counties compare?</div>
+        <div class="question"><span>05</span>Are public services becoming more accessible and effective?</div>
+        <div class="question"><span>06</span>What has changed across generations and administrations?</div>
       </div>
     </section>
 
-    <!-- Section: Constitution & Standards -->
-    <section id="constitution" class="section">
-      <div class="section-header">
-        <div class="section-tag">Governance</div>
-        <h2 class="section-title">Editorial Standards &amp; Neutrality</h2>
-        <p class="section-sub">The rules that safeguard our credibility and public trust.</p>
+    <section class="wrap principles" aria-labelledby="principles-title">
+      <div>
+        <p class="section-label">How we work</p>
+        <h2 id="principles-title">Evidence, with context</h2>
       </div>
-
-      <div class="principles-list">
-        <div class="principle-item">
-          <h4 class="principle-title">Non-Partisan Commitment</h4>
-          <p class="principle-desc">
-            We do not endorse political parties, candidates, or policy factions. Timelines serve as historical landmarks, not causal rankings.
-          </p>
-        </div>
-
-        <div class="principle-item">
-          <h4 class="principle-title">Granular Provenance</h4>
-          <p class="principle-desc">
-            Every statistic must have an explicit source citation, table reference, and retrieval date from official statutory publishers.
-          </p>
-        </div>
-
-        <div class="principle-item">
-          <h4 class="principle-title">Transparent Corrections</h4>
-          <p class="principle-desc">
-            If an error is discovered or an official agency revises historical data, corrections are prominently logged with original and updated values.
-          </p>
-        </div>
-      </div>
+      <ol class="principle-list">
+        <li>
+          <span class="number">01</span>
+          <div><strong>Start with authoritative sources.</strong><p>We preserve where each number came from and when it was published.</p></div>
+        </li>
+        <li>
+          <span class="number">02</span>
+          <div><strong>Show the calculation.</strong><p>We make definitions, transformations and limitations visible.</p></div>
+        </li>
+        <li>
+          <span class="number">03</span>
+          <div><strong>Separate evidence from judgment.</strong><p>We explain what the data can show and leave political conclusions to the reader.</p></div>
+        </li>
+      </ol>
     </section>
 
+    <section class="wrap closing" aria-label="Closing statement">
+      <blockquote>Public data should help people understand power—not require power to understand it.</blockquote>
+      <a class="example" href="assets/figures/FIG-DEBT-001_nominal_vs_real_public_debt.svg">See an example: Kenya's public debt, 2002–2026 →</a>
+    </section>
   </main>
 
-  <!-- Simple Footer -->
   <footer>
-    <div class="container footer-inner">
-      <div>
-        <div class="footer-brand">KENYA IN DATA</div>
-        <div style="margin-top: 4px;">An independent civic data publication and observatory.</div>
-      </div>
-      <div>
-        <span>Open Data under CC BY 4.0</span> • 
-        <span>kenyaindata.org</span> • 
-        <span>@KenyaInData</span>
-      </div>
+    <div class="wrap footer-inner">
+      <p>Show first. Interpret second.</p>
+      <p>Kenya in Data · 2026</p>
     </div>
   </footer>
-
 </body>
 </html>

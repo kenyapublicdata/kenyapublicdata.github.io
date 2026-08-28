@@ -1,0 +1,20 @@
+column_name,data_type,unit,description,example_value,provenance_source
+indicator_category,string,text,High-level thematic category of the metric,debt_stock,Kenya in Data taxonomy
+indicator_code,string,code,Unique code for the observation,DEBT_STOCK_TOT_2026M05,Kenya in Data variable registry
+indicator_name,string,text,Human-readable name of the indicator,Total Public and Publicly Guaranteed Debt,Official source terminology
+observation_period,string,text,Fiscal year month or legal-vintage label,May 2026,Source document period
+observation_date,date,YYYY-MM-DD,Terminal date of the observation or cited legal consolidation,2026-05-31,Source document
+frequency,string,text,Reporting frequency or not_applicable,monthly,Reporting cycle
+value,numeric,varies,Reported or explicitly calculated numerical value,12896.4,Primary source or documented transformation
+unit,string,text,Currency scaling or percentage unit,KSh Billion,Source table header
+share_denominator,string,code,Named denominator used for share_pct,total_ppg_debt,Transformation record
+share_pct,numeric,percent,Value as a share of the named category denominator,56.13,Calculated from same-period values
+share_of_ordinary_revenue_pct,numeric,percent,Ratio to FY 2024/25 ordinary revenue when periods and units match,71.16,Calculated from Table 4 values
+share_of_gdp_pct,numeric,percent,Ratio to FY 2024/25 nominal GDP only when periods and currency units match,67.76,Calculated from Table 3 values
+status,string,text,Statistical vintage or legal status,provisional_monthly,Official source status
+source_id,string,code,Document-level extraction ID or registered legal-source ID,EXT-DOC-007,Project Source Register
+source_institution,string,text,Institution responsible for the source,Central Bank of Kenya,Primary source
+source_document,string,text,Canonical source-document title,Monthly Economic Indicators June 2026,Primary source
+source_table_page,string,text,Exact table section and page reference,Table 7.1 (p. 22),Primary source location
+transformation,string,text,Calculation conversion or direct-reporting statement,Share calculated from same-period CBK total,Publication transformation record
+notes,string,text,Definitions caveats exclusions and interpretation,Latest complete simultaneous domestic and external observation,Source footnote or editorial clarification

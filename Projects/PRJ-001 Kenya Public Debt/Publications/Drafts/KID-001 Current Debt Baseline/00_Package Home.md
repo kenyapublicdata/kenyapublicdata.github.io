@@ -1,63 +1,50 @@
 ---
-title: KID-001 — Kenya Public Debt Current Baseline Publication Package
+title: KID-001 — Publication Package Home
 publication_id: KID-001
 project_id: PRJ-001
-package_type: multi-format-publication
-status: ready_for_review
-created: 2026-08-28
+document_role: package_navigation
+status: editorial_draft
 last_updated: 2026-08-28
 ---
 
-# KID-001 — Current Debt Baseline Publication Package
+# KID-001 — Publication Package Home
 
-## Working Title
+## One-document rule
 
-**Kenya's Public Debt: The Current Stock, Composition and Servicing Burden**
+[`KID-001 Current Debt Baseline.md`](KID-001%20Current%20Debt%20Baseline.md) is the **only primary editorial document** in this package.
 
-## Publication Scope
+Every chart, social post, infographic, PDF and deck must be derived from that article. Supporting files may document data, provenance, production or QA, but they may not introduce a new public claim. When a fact changes, update and verify the article first, then regenerate the affected derivatives.
 
-This package establishes the verified current debt baseline for Kenya, combining the audited June 2025 fiscal-year baseline (National Treasury) and the latest complete May 2026 monthly update (Central Bank of Kenya).
+## Simple package structure
 
-> **Scope Boundary:** This publication focuses strictly on the **Current Debt Baseline** (stock, instrument breakdown, debt service squeeze, and statutory anchor). Historical 2002–2026 administration trajectory charts and long-term retrospective comparisons are intentionally excluded and scheduled for subsequent dedicated releases.
+| Location | Role |
+|---|---|
+| [`KID-001 Current Debt Baseline.md`](KID-001%20Current%20Debt%20Baseline.md) | Canonical article and editorial source of truth |
+| [`Assets/`](Assets/) | Master catalogue and production backlog for charts, cards, infographics and publication assets |
+| [`Data/`](Data/) | Machine-readable values, dictionary and metadata |
+| [`Derivatives/`](Derivatives/) | Social copy, charts, infographics, PDF and deck outputs derived from the article |
+| [`GitHub/`](GitHub/) | Public project/resource hub: reusable data extracts, tables, figures, provenance and reuse guidance |
+| [`Sources/`](Sources/) | Source manifest and claim-level citation ledger |
+| [`Release/`](Release/) | QA checks, release controls and final approvals |
+| [`package.yml`](package.yml) | Machine-readable package configuration |
 
----
+## Current status
 
-## Core Findings Summary
+- Canonical article: **restructured as a formal plain-language research report with key findings, six embedded figures, limitations and a glossary; editorial draft**.
+- Dataset: **source checked and schema validated**.
+- Social copy: **drafted from the canonical article**.
+- Charts: **eight source-labelled designs generated in PNG, SVG and PDF; editorial approval pending**.
+- Asset catalogue: **reduced to 15 focused assets; additional production parked after the quick post**.
+- Quick post: **copy, image, alt text and source line ready**.
+- Follow-up graphics: **three built in PNG, SVG and PDF—an article hero, domestic-interest explainer and statutory-anchor card**.
+- GitHub resource hub: **structured with six downloadable table extracts, selected figures and a machine-readable resource manifest**.
+- Live publication URL and deployment QA: **pending**.
+- Public release: **blocked until the open release gates are complete**.
 
-- **June 2025 PPG Debt Stock:** **KSh 11.814 trillion**
-- **Nominal Debt-to-GDP:** **67.8%**
-- **Present-Value Debt-to-GDP:** **63.7%** (vs. 55.0% statutory anchor)
-- **Domestic / External Composition (June 2025):** **53.5% / 46.5%**
-- **FY 2024/25 Annual Debt Service:** **KSh 1.722 trillion**
-- **Debt Service / Ordinary Revenue:** **71.2%**
-- **Domestic Interest / Ordinary Revenue:** **32.1%** (KSh 776.3 billion)
-- **Debt Service / Total Public Expenditure:** **39.0%**
-- **May 2026 Complete Monthly Debt Stock:** **KSh 12.896 trillion** (+9.2% in 11 months)
-- **May 2026 Domestic Share:** **56.1%**
+## Project references
 
----
-
-## Package Manifest & Populated Assets
-
-| Component | Status | Key Artifacts | Description |
-|:---|:---:|:---|:---|
-| [`01 Data`](01%20Data/) | ✅ Populated | [`KID001_current_debt_baseline.csv`](01%20Data/KID001_current_debt_baseline.csv)<br>[`data_dictionary.csv`](01%20Data/data_dictionary.csv)<br>[`dataset_metadata.yml`](01%20Data/dataset_metadata.yml) | Verified baseline dataset with machine-readable metadata and field dictionary. |
-| [`04 Social`](04%20Social/) | ✅ Populated | [`social_copy.md`](04%20Social/social_copy.md) | Formatted publication copy for LinkedIn, 6-tweet X thread, and WhatsApp mobile brief. |
-| [`05 Article`](05%20Article/) | ✅ Populated | [`article.md`](05%20Article/article.md) | Complete long-form publication essay with structured data tables and analytical breakdowns. |
-| [`07 Sources`](07%20Sources/) | ✅ Populated | [`source_manifest.yml`](07%20Sources/source_manifest.yml)<br>[`citation_ledger.md`](07%20Sources/citation_ledger.md) | Release-specific source manifest and granular table/page citation ledger. |
-| [`08 QA & Release`](08%20QA%20and%20Release/) | ✅ Populated | [`release_checklist.md`](08%20QA%20and%20Release/release_checklist.md) | Comprehensive QA audit confirming numerical reconciliation and epistemic compliance. |
-
----
-
-## Canonical Project References
-
-- [Current Analysis Note](../../../Analysis/Current%20Debt%20Baseline%20and%20Key%20Statistics.md)
+- [Current analysis note](../../../Analysis/Current%20Debt%20Baseline%20and%20Key%20Statistics.md)
 - [Project Source Register](../../../Sources/Source%20Register.md)
 - [Visual Style Guide](../../../../../Operations/Style%20Guide.md)
+- [Editorial and Publication Style Guide](../../../../../Operations/Editorial%20and%20Publication%20Style%20Guide.md)
 - [Data and Analysis Standards](../../../../../Operations/Data%20and%20Analysis%20Standards.md)
-
----
-
-## Release Gate
-
-All populated files have passed the internal QA verification gate and are synchronized with official source records.

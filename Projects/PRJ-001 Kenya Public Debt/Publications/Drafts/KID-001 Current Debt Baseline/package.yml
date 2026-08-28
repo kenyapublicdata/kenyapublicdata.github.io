@@ -1,24 +1,46 @@
 publication_id: KID-001
 project_id: PRJ-001
 slug: kenya-public-debt-current-baseline
-title: "Kenya's Public Debt: The Current Stock, Composition and Servicing Burden"
-status: ready_for_review
+title: "Kenya's Public Debt: Stock, Composition and Servicing Costs"
+status: editorial_draft
 created: 2026-08-28
 last_updated: 2026-08-28
 scope:
   fiscal_baseline: 2025-06-30
   latest_complete_monthly_observation: 2026-05-31
-  coverage: "Current debt stock, instrument composition, debt servicing burden, statutory anchor"
+  coverage: "Current debt stock, instrument composition, debt servicing costs, weighted average interest rates, domestic holders and statutory anchor"
+canonical_document: "KID-001 Current Debt Baseline.md"
+derivation_rule: "All public-facing derivatives must be generated from the canonical article; no derivative may introduce a new claim."
+editorial_standard: "Operations/Editorial and Publication Style Guide.md"
+web_publication:
+  article_page: "Narrative report, selected tables and figures, glossary and references"
+  project_page: "Dataset, dictionary, metadata, chart variants, downloadable assets, methods, source ledger and reuse information"
+visual_attribution: "Data: [primary source and exact location] | Analysis and visualisation: Kenya in Data"
 excluded:
   - unverified 2002–2026 historical trajectory charts
   - multi-administration comparisons
   - unsupported June 2026 total debt estimate
 populated_components:
-  - data_csv: "01 Data/KID001_current_debt_baseline.csv"
-  - data_dictionary: "01 Data/data_dictionary.csv"
-  - dataset_metadata: "01 Data/dataset_metadata.yml"
-  - article: "05 Article/article.md"
-  - social_distribution: "04 Social/social_copy.md"
-  - source_manifest: "07 Sources/source_manifest.yml"
-  - citation_ledger: "07 Sources/citation_ledger.md"
-  - release_checklist: "08 QA and Release/release_checklist.md"
+  - data_csv: "Data/KID001_current_debt_baseline.csv"
+  - data_dictionary: "Data/data_dictionary.csv"
+  - dataset_metadata: "Data/dataset_metadata.yml"
+  - canonical_article: "KID-001 Current Debt Baseline.md"
+  - social_distribution: "Derivatives/Social/Social Copy.md"
+  - quick_post: "Derivatives/Social/Quick Post.md"
+  - source_manifest: "Sources/source_manifest.yml"
+  - citation_ledger: "Sources/citation_ledger.md"
+  - release_checklist: "Release/release_checklist.md"
+  - publication_charts: "Derivatives/Charts/"
+  - asset_catalogue: "Assets/README.md"
+  - follow_up_infographics: "Derivatives/Infographics/"
+  - github_resource_hub: "GitHub/README.md"
+  - github_resource_manifest: "GitHub/resource_manifest.yml"
+  - public_table_extracts: "GitHub/Tables/"
+pending_components:
+  - live_publication_url
+  - final_link_check
+parked_components:
+  - carousel
+  - glossary_card
+  - magazine_pdf
+release_gate: blocked_pending_deployment

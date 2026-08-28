@@ -1,0 +1,59 @@
+publication_id: KID-001
+project_id: PRJ-001
+title: "Kenya's Public Debt: Stock, Composition and Servicing Costs"
+status: staged_pending_live_article_url
+last_updated: "2026-08-28"
+article:
+  canonical_path: "../KID-001 Current Debt Baseline.md"
+  live_url: null
+distribution:
+  quick_post: "../Derivatives/Social/Quick Post.md"
+  follow_up_assets: "../Assets/README.md"
+data:
+  canonical_csv: "../Data/KID001_current_debt_baseline.csv"
+  data_dictionary: "../Data/data_dictionary.csv"
+  metadata: "../Data/dataset_metadata.yml"
+tables:
+  - "Tables/current_debt_snapshot_may_2026.csv"
+  - "Tables/debt_components_june_2025.csv"
+  - "Tables/debt_service_fy2024_25.csv"
+  - "Tables/domestic_interest_fy2024_25.csv"
+  - "Tables/domestic_debt_holders_june_2025.csv"
+  - "Tables/weighted_average_interest_rates_fy2024_25.csv"
+article_figures:
+  - stem: "../Derivatives/Charts/FIG-KID001-001_current_debt_composition"
+    formats: [png, svg, pdf]
+  - stem: "../Derivatives/Charts/FIG-KID001-004_june_2025_debt_components"
+    formats: [png, svg, pdf]
+  - stem: "../Derivatives/Charts/FIG-KID001-005_debt_service_composition"
+    formats: [png, svg, pdf]
+  - stem: "../Derivatives/Charts/FIG-KID001-008_weighted_average_interest_rates"
+    formats: [png, svg, pdf]
+  - stem: "../Derivatives/Charts/FIG-KID001-006_domestic_interest_composition"
+    formats: [png, svg, pdf]
+  - stem: "../Derivatives/Charts/FIG-KID001-007_domestic_debt_holders"
+    formats: [png, svg, pdf]
+follow_up_graphics:
+  - id: ASSET-010
+    stem: "../Derivatives/Infographics/ASSET-KID001-010_article_og_hero"
+    formats: [png, svg, pdf]
+    canvas_px: [1200, 628]
+  - id: ASSET-012
+    stem: "../Derivatives/Infographics/ASSET-KID001-012_domestic_interest_explainer"
+    formats: [png, svg, pdf]
+    canvas_px: [1080, 1350]
+  - id: ASSET-014
+    stem: "../Derivatives/Infographics/ASSET-KID001-014_statutory_anchor"
+    formats: [png, svg, pdf]
+    canvas_px: [1080, 1080]
+provenance:
+  source_manifest: "../Sources/source_manifest.yml"
+  citation_ledger: "../Sources/citation_ledger.md"
+  release_checklist: "../Release/release_checklist.md"
+licence:
+  publication_dataset: CC-BY-4.0
+  third_party_materials: original_source_terms_apply
+release_requirements:
+  - add_live_article_url
+  - run_public_link_check
+  - create_release_checksums

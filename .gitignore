@@ -1,0 +1,23 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python virtual environment & cache
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.ipynb_checkpoints/
+
+# Environment and sensitive keys
+.env
+.env.*
+secrets.json
+
+# Build and distribution
+build/
+dist/
+*.egg-info/

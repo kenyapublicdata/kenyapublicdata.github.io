@@ -1,0 +1,43 @@
+path_base: project_root
+last_reviewed: "2026-08-28"
+status: source_checked_draft
+
+sources:
+  - source_id: EXT-DOC-001
+    parent_source_id: SRC-DEBT-001
+    institution: National Treasury of Kenya
+    publication_title: Annual Public Debt Management Report FY 2024/2025
+    edition: FY 2024/25
+    publication_year: 2025
+    period_covered: "Financial year ending 2025-06-30"
+    canonical_url: https://www.treasury.go.ke/annual-debt-management-reports-0
+    direct_pdf: https://www.treasury.go.ke/wp-content/uploads/2025/11/Annual-Public-Debt-Report-2024-2025.pdf
+    local_path: Sources/Documents/TNT_Annual_Public_Debt_Report_2024_2025.pdf
+    relevant_locations: ["Table 3 (p. 28)", "Table 4 (p. 30)", "Table 5 (p. 34)", "Table 6 (p. 36)", "Table 9 (p. 44)", "Table 10 (p. 45)", "Chapter 8 (p. 63)", "Section 9.3 and Figure 17 (p. 68)"]
+    statistical_status: provisional_fy_outturn
+
+  - source_id: EXT-DOC-007
+    parent_source_id: SRC-DEBT-003
+    institution: Central Bank of Kenya
+    publication_title: Monthly Economic Indicators June 2026
+    edition: June 2026
+    period_covered: "Debt table through May 2026; domestic instruments through June 2026"
+    canonical_url: https://www.centralbank.go.ke/monthly-economic-indicators/
+    direct_pdf: https://www.centralbank.go.ke/uploads/monthly_economic_indicators/355702775_MEI%20-%20June%202026.pdf
+    local_path: Sources/Documents/CBK_MEI_June_2026.pdf
+    relevant_locations: ["Table 7.1 (p. 22)", "Table 7.2 (p. 23)"]
+    statistical_status: provisional_monthly
+
+  - source_id: SRC-LAW-001
+    institution: Kenya Law
+    publication_title: Public Finance Management Act (Cap. 412C)
+    consolidation_date: "2024-04-26"
+    canonical_url: https://new.kenyalaw.org/akn/ke/act/2012/18/eng@2024-04-26
+    relevant_location: "Section 50(2A)-(2B)"
+    last_checked_in_project_register: "2026-08-27"
+    status: registered_primary_source
+
+excluded_from_this_release:
+  - reason: "The October 2024 IMF/World Bank DSA was not used because this short post does not make a current debt-distress classification claim."
+  - reason: "June 2026 domestic debt is partial without a same-month external total in the selected bulletin."
+  - reason: "Long historical trajectories and administration comparisons are outside the current-baseline scope."

@@ -18,4 +18,5 @@ updated: 2026-08-27 23:28
 
 | Folder | File | Type | Size | Modified |
 |---|---|---:|---:|---:|
+| / | [Editorial and Publication Style Guide.md](Editorial%20and%20Publication%20Style%20Guide.md) | md | — | 2026-08-28 |
 | / | [Style Guide.md](Style%20Guide.md) | md | 2.8 KB | 2026-08-27 20:12 |
