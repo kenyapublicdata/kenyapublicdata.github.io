@@ -1,7 +1,7 @@
 # QA and release checklist — KID-001 current debt baseline
 
 **Review date:** 2026-08-28  
-**Current status:** **Draft — not approved for publication**
+**Current status:** **Published — mobile revision prepared for deployment**
 
 **Canonical document:** [`KID-001 Current Debt Baseline.md`](../KID-001%20Current%20Debt%20Baseline.md). All derivative QA is performed against this document.
 
@@ -42,26 +42,30 @@
 | Quick-post package | PASS | Primary caption, 247-character X version, image, alt text and sources ready |
 | GitHub resource hub | PASS | Public README, six table extracts, selected chart formats and resource manifest prepared |
 | Follow-up infographic batch | PASS | ASSET-010, ASSET-012 and ASSET-014 built in PNG, SVG and PDF with alt text |
+| Mobile chart variants | PASS | Eight 1080 × 1350 charts built in PNG, SVG and PDF from the canonical dataset |
+| Responsive figure markup | PASS | Article uses mobile SVG below 700 px and reserves the correct aspect ratio before lazy loading |
 
 ## 3. Open release gates
 
 | Requirement | Status |
 |---|:---:|
-| Eight current-snapshot charts | READY FOR EDITORIAL APPROVAL |
-| SVG, PDF and 300-DPI PNG exports | PASS — 24 files |
+| Eight current-snapshot charts | PASS |
+| Landscape SVG, PDF and 300-DPI PNG exports | PASS — 24 files |
+| Mobile SVG, PDF and 1080 × 1350 PNG exports | PASS — 24 files |
 | Alt text and source line for every visual | PASS |
 | Quick-post social asset | PASS |
 | Broader social asset production | PARTIAL — three follow-up graphics built; carousel and glossary card parked |
 | Magazine PDF production | PARKED — Typst selected |
 | GitHub table and figure links | PASS — local package paths |
-| Live publication URL | PENDING |
-| Public-link test after deployment | PENDING |
-| Visual QA at intended sizes | PASS |
+| Live publication URL | PASS |
+| Mobile revision deployment | PENDING |
+| Public-link test after mobile deployment | PENDING |
+| Visual QA at intended sizes | PASS — mobile and landscape source files |
 | Release manifest and checksums | PENDING |
 
 ## Release decision
 
-The quick post is ready to publish with its existing chart and may stand alone without a live article link. The full article publication remains **blocked from public release** until deployment and live-link checks are complete.
+The article is published. The mobile revision is ready locally and should be deployed before the next distribution push. After deployment, repeat the 360, 390, 430 and 1280 px browser checks against the public URL.
 
 ## Editorial notes addressed — 2026-08-28
 

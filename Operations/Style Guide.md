@@ -10,6 +10,8 @@ tags: [style-guide, design-system, visualization, branding, typography, color-pa
 
 # Kenya in Data — Visual Style Guide & Design System
 
+Mobile article graphics must also follow the dedicated [Mobile Visualization Standard](Mobile%20Visualization%20Standard.md). Mobile is the primary reading canvas; article figures require deliberate responsive variants rather than mechanically scaled landscape exports.
+
 ## 1. Visual Philosophy & Core Epistemic Identity
 
 A reader scrolling through X (Twitter), LinkedIn, WhatsApp, or a policy brief should instantly recognize a **Kenya in Data** graphic before reading the account name or title.

@@ -1,11 +1,11 @@
 publication_id: KID-001
 project_id: PRJ-001
 title: "Kenya's Public Debt: Stock, Composition and Servicing Costs"
-status: staged_pending_live_article_url
+status: published_mobile_revision_pending_deployment
 last_updated: "2026-08-28"
 article:
   canonical_path: "../KID-001 Current Debt Baseline.md"
-  live_url: null
+  live_url: "https://kenyapublicdata.github.io/publications/kid-001/"
 distribution:
   quick_post: "../Derivatives/Social/Quick Post.md"
   follow_up_assets: "../Assets/README.md"
@@ -22,16 +22,22 @@ tables:
   - "Tables/weighted_average_interest_rates_fy2024_25.csv"
 article_figures:
   - stem: "../Derivatives/Charts/FIG-KID001-001_current_debt_composition"
+    mobile_stem: "../Derivatives/Charts/FIG-KID001-001_current_debt_composition_mobile"
     formats: [png, svg, pdf]
   - stem: "../Derivatives/Charts/FIG-KID001-004_june_2025_debt_components"
+    mobile_stem: "../Derivatives/Charts/FIG-KID001-004_june_2025_debt_components_mobile"
     formats: [png, svg, pdf]
   - stem: "../Derivatives/Charts/FIG-KID001-005_debt_service_composition"
+    mobile_stem: "../Derivatives/Charts/FIG-KID001-005_debt_service_composition_mobile"
     formats: [png, svg, pdf]
   - stem: "../Derivatives/Charts/FIG-KID001-008_weighted_average_interest_rates"
+    mobile_stem: "../Derivatives/Charts/FIG-KID001-008_weighted_average_interest_rates_mobile"
     formats: [png, svg, pdf]
   - stem: "../Derivatives/Charts/FIG-KID001-006_domestic_interest_composition"
+    mobile_stem: "../Derivatives/Charts/FIG-KID001-006_domestic_interest_composition_mobile"
     formats: [png, svg, pdf]
   - stem: "../Derivatives/Charts/FIG-KID001-007_domestic_debt_holders"
+    mobile_stem: "../Derivatives/Charts/FIG-KID001-007_domestic_debt_holders_mobile"
     formats: [png, svg, pdf]
 follow_up_graphics:
   - id: ASSET-010
@@ -54,6 +60,6 @@ licence:
   publication_dataset: CC-BY-4.0
   third_party_materials: original_source_terms_apply
 release_requirements:
-  - add_live_article_url
-  - run_public_link_check
+  - deploy_mobile_revision
+  - run_post_deployment_mobile_check
   - create_release_checksums

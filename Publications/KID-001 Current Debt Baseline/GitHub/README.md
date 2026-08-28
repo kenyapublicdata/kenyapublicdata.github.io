@@ -6,7 +6,7 @@ An open Kenya in Data publication package covering the current debt stock, its c
 
 The canonical report is [*Kenya's Public Debt: Stock, Composition and Servicing Costs*](../KID-001%20Current%20Debt%20Baseline.md).
 
-When the website is deployed, the live article URL should be added here. The article page is the main reading experience; this GitHub resource hub provides the supporting data, tables, figures, sources and reusable files.
+Read the published article at [kenyapublicdata.github.io/publications/kid-001/](https://kenyapublicdata.github.io/publications/kid-001/). The article page is the main reading experience; this GitHub resource hub provides the supporting data, tables, figures, sources and reusable files.
 
 ## Headline findings
 
@@ -41,7 +41,12 @@ Table documentation: [Downloadable Tables](Tables/README.md).
 
 ## Figures
 
-The article uses six selected figures. Each is available in high-resolution PNG, scalable SVG and PDF.
+The chart pack contains eight analytical figures. Every chart is available in high-resolution PNG, scalable SVG and PDF in two coordinated layouts:
+
+- The standard file is the 16:9 landscape version for desktop pages, presentations and print.
+- The file ending in `_mobile` is the 4:5 portrait version for phones, social posts and narrow embeds.
+
+The published article automatically selects the portrait SVG below 700 pixels and the landscape SVG on wider screens. Both versions use the same data, title and figure number.
 
 | Figure | PNG | SVG | PDF |
 |---|---|---|---|
@@ -52,7 +57,7 @@ The article uses six selected figures. Each is available in high-resolution PNG,
 | Domestic interest composition | [PNG](../Derivatives/Charts/FIG-KID001-006_domestic_interest_composition.png) | [SVG](../Derivatives/Charts/FIG-KID001-006_domestic_interest_composition.svg) | [PDF](../Derivatives/Charts/FIG-KID001-006_domestic_interest_composition.pdf) |
 | Domestic debt holders | [PNG](../Derivatives/Charts/FIG-KID001-007_domestic_debt_holders.png) | [SVG](../Derivatives/Charts/FIG-KID001-007_domestic_debt_holders.svg) | [PDF](../Derivatives/Charts/FIG-KID001-007_domestic_debt_holders.pdf) |
 
-The full chart register, alternative views, source map and alt text are available in the [chart documentation](../Derivatives/Charts/README.md).
+Mobile variants and the full chart register, alternative views, source map and alt text are available in the [chart documentation](../Derivatives/Charts/README.md). Production rules are documented in the [Mobile Visualization Standard](../../../Operations/Mobile%20Visualization%20Standard.md).
 
 ## Quick post and follow-up assets
 
