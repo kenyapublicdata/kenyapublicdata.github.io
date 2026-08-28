@@ -22,6 +22,23 @@ Every PNG is 3600 × 2025 px at 300 DPI. Every chart is also exported as SVG and
 - `Data: [primary source and exact location]`
 - `Analysis and visualisation: Kenya in Data • kenyaindata.org`
 
+## Mobile variants
+
+Every chart also has a deliberate 1080 × 1350 portrait composition for phones, social feeds and messaging apps. Mobile files use the same stem with a `_mobile` suffix and are available in PNG, SVG and PDF.
+
+| Asset | Mobile PNG | Mobile SVG | Mobile PDF |
+|---|---|---|---|
+| 001 | [PNG](FIG-KID001-001_current_debt_composition_mobile.png) | [SVG](FIG-KID001-001_current_debt_composition_mobile.svg) | [PDF](FIG-KID001-001_current_debt_composition_mobile.pdf) |
+| 002 | [PNG](FIG-KID001-002_debt_service_components_mobile.png) | [SVG](FIG-KID001-002_debt_service_components_mobile.svg) | [PDF](FIG-KID001-002_debt_service_components_mobile.pdf) |
+| 003 | [PNG](FIG-KID001-003_domestic_interest_by_instrument_mobile.png) | [SVG](FIG-KID001-003_domestic_interest_by_instrument_mobile.svg) | [PDF](FIG-KID001-003_domestic_interest_by_instrument_mobile.pdf) |
+| 004 | [PNG](FIG-KID001-004_june_2025_debt_components_mobile.png) | [SVG](FIG-KID001-004_june_2025_debt_components_mobile.svg) | [PDF](FIG-KID001-004_june_2025_debt_components_mobile.pdf) |
+| 005 | [PNG](FIG-KID001-005_debt_service_composition_mobile.png) | [SVG](FIG-KID001-005_debt_service_composition_mobile.svg) | [PDF](FIG-KID001-005_debt_service_composition_mobile.pdf) |
+| 006 | [PNG](FIG-KID001-006_domestic_interest_composition_mobile.png) | [SVG](FIG-KID001-006_domestic_interest_composition_mobile.svg) | [PDF](FIG-KID001-006_domestic_interest_composition_mobile.pdf) |
+| 007 | [PNG](FIG-KID001-007_domestic_debt_holders_mobile.png) | [SVG](FIG-KID001-007_domestic_debt_holders_mobile.svg) | [PDF](FIG-KID001-007_domestic_debt_holders_mobile.pdf) |
+| 008 | [PNG](FIG-KID001-008_weighted_average_interest_rates_mobile.png) | [SVG](FIG-KID001-008_weighted_average_interest_rates_mobile.svg) | [PDF](FIG-KID001-008_weighted_average_interest_rates_mobile.pdf) |
+
+The mobile layouts follow the project-wide [Mobile Visualization Standard](../../../../Operations/Mobile%20Visualization%20Standard.md). They use larger typography, fewer labels inside narrow segments and portrait-specific compositions rather than scaled landscape artwork.
+
 ## Alt text
 
 ### 001 — Current debt composition
@@ -70,6 +87,8 @@ Three horizontal bars show FY 2024/25 weighted average interest rates: domestic 
 ## Rebuild
 
 [`build_article_charts.py`](build_article_charts.py) reads only the publication CSV and regenerates all 24 chart files. Use the project's Python environment with a non-interactive plotting backend.
+
+[`build_mobile_charts.py`](build_mobile_charts.py) regenerates the 24 mobile chart files from the same CSV.
 
 ## Scope boundary
 

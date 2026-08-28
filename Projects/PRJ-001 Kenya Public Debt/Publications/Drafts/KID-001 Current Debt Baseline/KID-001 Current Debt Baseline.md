@@ -96,9 +96,9 @@ Kenya spent **KSh 1.722 trillion** on debt service in FY 2024/25. Interest payme
 | **Total principal** | **734.609** | **42.66%** | **30.35%** |
 | **Total debt service** | **1,722.104** | **100.00%** | **71.16%** |
 
-![A 100% stacked bar showing the composition of Kenya's FY 2024/25 debt service. Domestic interest was 45.1%, external interest 12.3%, domestic principal 21.3%, and external principal 21.4%.](Derivatives/Charts/FIG-KID001-005_debt_service_composition.png)
+![A pie and donut chart showing Kenya's FY 2024/25 debt service breakdown: domestic interest 45.1%, external interest 12.3%, domestic principal 21.3%, external principal 21.4%.](Derivatives/Charts/FIG-KID001-005B_debt_service_pie.png)
 
-*Figure 3. Composition of Kenya's debt service, FY 2024/25. Data: National Treasury (2025), Table 4, p. 30. Analysis and visualisation: Kenya in Data. Domestic principal excludes routine Treasury-bill redemptions; figures are provisional.*
+*Figure 3. Debt service breakdown (pie chart), FY 2024/25. Data: National Treasury (2025), Table 4, p. 30. Analysis and visualisation: Kenya in Data. Domestic principal excludes routine Treasury-bill redemptions; figures are provisional.*
 
 Ordinary revenue is the Treasury's measure of tax and recurring non-tax revenue. It is not limited to Kenya Revenue Authority tax collections. The debt-service ratio indicates the scale of debt payments relative to this revenue measure; it does not describe how every remaining shilling was allocated across the budget.
 
