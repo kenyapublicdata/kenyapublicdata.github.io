@@ -1,7 +1,7 @@
 publication_id: KID-001
 project_id: PRJ-001
 title: "Kenya's Public Debt: Stock, Composition and Servicing Costs"
-status: published_mobile_revision_pending_deployment
+status: published_mobile_optimized
 last_updated: "2026-08-28"
 article:
   canonical_path: "../KID-001 Current Debt Baseline.md"
@@ -60,6 +60,4 @@ licence:
   publication_dataset: CC-BY-4.0
   third_party_materials: original_source_terms_apply
 release_requirements:
-  - deploy_mobile_revision
-  - run_post_deployment_mobile_check
   - create_release_checksums

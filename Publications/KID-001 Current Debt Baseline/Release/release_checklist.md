@@ -1,7 +1,7 @@
 # QA and release checklist — KID-001 current debt baseline
 
 **Review date:** 2026-08-28  
-**Current status:** **Published — mobile revision prepared for deployment**
+**Current status:** **Published — mobile revision deployed and verified**
 
 **Canonical document:** [`KID-001 Current Debt Baseline.md`](../KID-001%20Current%20Debt%20Baseline.md). All derivative QA is performed against this document.
 
@@ -58,14 +58,14 @@
 | Magazine PDF production | PARKED — Typst selected |
 | GitHub table and figure links | PASS — local package paths |
 | Live publication URL | PASS |
-| Mobile revision deployment | PENDING |
-| Public-link test after mobile deployment | PENDING |
+| Mobile revision deployment | PASS — commit `5c4985a` pushed to `main` |
+| Public-link test after mobile deployment | PASS — 360, 390, 430 and 1280 px; no horizontal or action overflow |
 | Visual QA at intended sizes | PASS — mobile and landscape source files |
 | Release manifest and checksums | PENDING |
 
 ## Release decision
 
-The article is published. The mobile revision is ready locally and should be deployed before the next distribution push. After deployment, repeat the 360, 390, 430 and 1280 px browser checks against the public URL.
+The article and its mobile revision are published. The public page selects 4:5 SVG charts at 360, 390 and 430 px, retains the 16:9 SVGs at 1280 px, and shows no horizontal or figure-action overflow at the tested widths. Release checksums remain the only open packaging task.
 
 ## Editorial notes addressed — 2026-08-28
 

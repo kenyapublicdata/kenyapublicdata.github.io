@@ -39,8 +39,7 @@ populated_components:
   - github_resource_manifest: "GitHub/resource_manifest.yml"
   - public_table_extracts: "GitHub/Tables/"
 pending_components:
-  - deploy_mobile_revision
-  - post_deployment_mobile_check
+  - release_checksums
 parked_components:
   - carousel
   - glossary_card
