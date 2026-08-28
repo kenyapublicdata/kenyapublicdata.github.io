@@ -1,0 +1,869 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Uhuru vs Ruto: Kenya's Public Debt in Their First Four Fiscal-Year Windows — Kenya in Data</title>
+  <meta name="description" content="A head-to-head empirical comparison of debt growth, inflation-adjusted expansion, GDP tracking, debt composition and interest servicing burden under Uhuru Kenyatta and William Ruto.">
+  <meta name="theme-color" content="#f7f5ef">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Kenya in Data">
+  <meta property="og:title" content="Uhuru vs Ruto: Kenya's Public Debt in Their First Four Fiscal-Year Windows">
+  <meta property="og:description" content="Uhuru grew debt stock 2.7x faster (+132.7% nominal, +75.2% real) and outpaced GDP. Ruto added more nominal shillings (+KSh 4.25T vs +KSh 2.51T) on a 4.6x larger base, but interest costs doubled to 40.8% of revenue.">
+  <meta property="og:image" content="https://kenyapublicdata.github.io/assets/figures/ASSET-KID002-010_regime_debt_explainer_mobile.png">
+  <meta property="og:url" content="https://kenyapublicdata.github.io/publications/kid-002/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Uhuru vs Ruto: Kenya's Public Debt Comparison">
+  <meta name="twitter:description" content="A source-verified head-to-head comparison of debt growth, deflators, GDP ratios, and interest burden.">
+  <meta name="twitter:image" content="https://kenyapublicdata.github.io/assets/figures/ASSET-KID002-010_regime_debt_explainer_mobile.png">
+
+  <style>
+    :root {
+      --paper: #f7f5ef;
+      --card-bg: #ffffff;
+      --ink: #191919;
+      --muted: #66645e;
+      --line: #d8d4ca;
+      --line-light: #ece9e1;
+      --red: #b51f2e;
+      --green: #176b48;
+      --blue: #2563eb;
+      --gold: #d97706;
+      --purple: #7c3aed;
+      --width: 840px;
+      --wide-width: 1060px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--paper);
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 17px;
+      line-height: 1.68;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      width: min(calc(100% - 40px), var(--width));
+      margin: 0 auto;
+    }
+
+    .wrap-wide {
+      width: min(calc(100% - 40px), var(--wide-width));
+      margin: 0 auto;
+    }
+
+    a {
+      color: var(--ink);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover { color: var(--red); }
+
+    /* Site Header */
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+      font-weight: 750;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+    }
+
+    .mark {
+      width: 10px;
+      height: 10px;
+      background: var(--red);
+      border-radius: 50%;
+    }
+
+    nav { display: flex; gap: 20px; font-size: 14px; }
+    nav a { color: var(--muted); text-decoration: none; }
+    nav a:hover { color: var(--ink); }
+
+    /* Article Header */
+    .article-header {
+      padding: 64px 0 40px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .meta-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 750;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--red);
+      margin-bottom: 16px;
+    }
+
+    .meta-badge .id-tag {
+      background: rgba(181, 31, 46, 0.08);
+      padding: 3px 8px;
+      border-radius: 3px;
+    }
+
+    h1 {
+      margin: 0 0 20px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(34px, 5.5vw, 54px);
+      font-weight: 400;
+      letter-spacing: -0.04em;
+      line-height: 1.08;
+    }
+
+    .deck {
+      margin: 0 0 28px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(19px, 2.4vw, 23px);
+      font-style: italic;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .byline-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line-light);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .byline-left strong { color: var(--ink); }
+
+    /* Key Findings Box */
+    .findings-card {
+      margin: 44px 0;
+      padding: 28px 32px;
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--red);
+      border-radius: 4px;
+    }
+
+    .findings-card h2 {
+      margin: 0 0 16px;
+      font-size: 13px;
+      font-weight: 750;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--red);
+      font-family: Inter, sans-serif;
+    }
+
+    .findings-list {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .findings-list li {
+      margin-bottom: 12px;
+      line-height: 1.55;
+    }
+
+    .findings-list li:last-child { margin-bottom: 0; }
+
+    /* Short Answer Callout */
+    .short-answer {
+      margin: 36px 0;
+      padding: 24px 28px;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+    }
+
+    .short-answer blockquote {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18.5px;
+      line-height: 1.55;
+      color: var(--ink);
+    }
+
+    /* Main Article Content */
+    article {
+      padding: 20px 0 80px;
+    }
+
+    h2 {
+      margin: 52px 0 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(25px, 3.2vw, 32px);
+      font-weight: 400;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+    }
+
+    h3 {
+      margin: 36px 0 14px;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      margin: 0 0 22px;
+    }
+
+    /* Figures */
+    figure {
+      margin: 44px 0;
+      padding: 0;
+    }
+
+    .figure-container {
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+      overflow: hidden;
+    }
+
+    figure picture {
+      display: block;
+      width: 100%;
+    }
+
+    figure img, figure svg {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 3px;
+    }
+
+    figcaption {
+      margin-top: 14px;
+      font-size: 13.5px;
+      line-height: 1.5;
+      color: var(--muted);
+      text-align: left;
+    }
+
+    figcaption strong { color: var(--ink); }
+
+    .figure-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+      font-size: 12px;
+    }
+
+    .figure-actions a {
+      color: var(--muted);
+      text-decoration: none;
+      background: rgba(0,0,0,0.04);
+      padding: 4px 9px;
+      border-radius: 3px;
+      font-weight: 500;
+    }
+
+    .figure-actions a:hover {
+      background: var(--line);
+      color: var(--ink);
+    }
+
+    /* Data Tables */
+    .table-wrap {
+      margin: 32px 0 36px;
+      overflow-x: auto;
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14.5px;
+      text-align: left;
+    }
+
+    th {
+      background: #fbf9f4;
+      padding: 12px 16px;
+      font-weight: 700;
+      font-size: 12.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--line-light);
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    td.num, th.num {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    td.highlight-uhuru {
+      background: rgba(217, 119, 6, 0.04);
+    }
+
+    td.highlight-ruto {
+      background: rgba(37, 99, 235, 0.04);
+    }
+
+    tr.total-row {
+      font-weight: 750;
+      background: #fdfcf9;
+    }
+
+    /* Callout & Note Boxes */
+    .note-box {
+      margin: 36px 0;
+      padding: 20px 24px;
+      background: rgba(23, 107, 72, 0.05);
+      border-left: 3px solid var(--green);
+      border-radius: 0 4px 4px 0;
+      font-size: 15px;
+    }
+
+    .note-box p:last-child { margin-bottom: 0; }
+
+    .takeaway-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin: 32px 0;
+    }
+
+    .takeaway-card {
+      padding: 20px;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+    }
+
+    .takeaway-card .regime {
+      font-size: 11px;
+      font-weight: 750;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .takeaway-card.uhuru .regime { color: var(--gold); }
+    .takeaway-card.ruto .regime { color: var(--blue); }
+
+    .takeaway-card .core-finding {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      font-family: Georgia, serif;
+      color: var(--ink);
+    }
+
+    .takeaway-card p {
+      margin: 0;
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* Download Banner */
+    .download-panel {
+      margin: 60px 0;
+      padding: 32px;
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+    }
+
+    .download-panel h3 { margin-top: 0; }
+
+    .download-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .download-card {
+      padding: 16px;
+      border: 1px solid var(--line-light);
+      border-radius: 4px;
+      text-decoration: none;
+      background: #faf8f3;
+      transition: border-color 0.2s, transform 0.1s;
+    }
+
+    .download-card:hover {
+      border-color: var(--line);
+      background: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .download-card .format {
+      font-size: 11px;
+      font-weight: 750;
+      text-transform: uppercase;
+      color: var(--red);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .download-card .name {
+      font-size: 14px;
+      font-weight: 650;
+      color: var(--ink);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .download-card .desc {
+      font-size: 12px;
+      color: var(--muted);
+      display: block;
+    }
+
+    /* References & Glossary */
+    .ref-list {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .ref-list p { margin-bottom: 14px; }
+
+    /* Site Footer */
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      padding: 32px 0 48px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    @media (max-width: 700px) {
+      .footer-inner { display: block; }
+      .footer-inner p + p { margin-top: 6px; }
+      .article-header { padding: 40px 0 28px; }
+      .findings-card { padding: 22px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="wrap site-header">
+    <a class="brand" href="../../" aria-label="Kenya in Data home">
+      <span class="mark" aria-hidden="true"></span>
+      Kenya in Data
+    </a>
+    <nav aria-label="Navigation">
+      <a href="../../">← All Publications</a>
+      <a href="#downloads">Downloads</a>
+      <a href="#methodology">Methodology</a>
+      <a href="#sources">Sources</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <header class="article-header">
+      <div class="meta-badge">
+        <span class="id-tag">KID-002</span>
+        <span>Public Finance · Head-to-Head Comparison</span>
+      </div>
+      <h1>Uhuru vs Ruto: Kenya's Public Debt in Their First Four Fiscal-Year Windows</h1>
+      <p class="deck">How did Kenya's public debt evolve during the first four comparable fiscal-year windows of the Uhuru Kenyatta and William Ruto administrations? An empirical comparison of debt growth, inflation-adjusted expansion, GDP tracking, debt composition and interest servicing costs.</p>
+      
+      <div class="byline-bar">
+        <div class="byline-left">
+          Published by <strong>Kenya in Data</strong> · Research Project <strong>PRJ-001</strong>
+        </div>
+        <div class="byline-right">
+          Standardized 4-Year June Fiscal Windows · Official Treasury &amp; KNBS Data
+        </div>
+      </div>
+    </header>
+
+    <div class="findings-card">
+      <h2>Key Findings</h2>
+      <ul class="findings-list">
+        <li><strong>Debt Stock Expansion:</strong> Under Uhuru (June 2013 → June 2017), outstanding debt more than doubled, rising from <strong>KSh 1.894T to KSh 4.407T (+132.7% nominal, +75.2% real)</strong>. The June 2022–June 2026 Ruto-era window recorded a rise from <strong>KSh 8.761T to a provisional KSh 13.013T (+48.5% nominal, +19.1% real)</strong>.</li>
+        <li><strong>Absolute Shillings Added:</strong> The Ruto window recorded a larger nominal increase in the outstanding stock (<strong>+KSh 4.252 trillion</strong>) than the Uhuru window (<strong>+KSh 2.513 trillion</strong>), reflecting the 4.6× larger base inherited in 2022.</li>
+        <li><strong>Debt-to-GDP Trajectory:</strong> Under Uhuru, debt expanded significantly faster than output, rising by <strong>+15.1 percentage points</strong> (from 42.1% to 57.2% of GDP). Across the Ruto window, endpoint-to-endpoint debt/GDP was virtually flat (<strong>68.7% in June 2022 vs ~68.5% in June 2026</strong>).</li>
+        <li><strong>Driver of Net Debt Added:</strong> Uhuru's net debt addition was driven by external debt (<strong>57.7%</strong>, led by Kenya's debut 2014 Eurobond and bilateral SGR loans). In the Ruto window, the net increase was driven heavily by domestic debt (<strong>68.3%</strong>).</li>
+        <li><strong>The Cash-Servicing Squeeze:</strong> In FY2016/17 (Uhuru endpoint), total interest absorbed <strong>20.8% of ordinary revenue</strong>. In FY2024/25 (Ruto), interest payments absorbed <strong>40.8% of ordinary revenue</strong>—doubling the budget's carrying cost.</li>
+      </ul>
+    </div>
+
+    <div class="short-answer">
+      <p style="font-size: 12px; font-weight: 750; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 8px;">The Analytical Synthesis</p>
+      <blockquote>
+        The Ruto-era fiscal window recorded considerably more shillings added to the outstanding debt stock (+KSh 4.25T vs +KSh 2.51T), but Uhuru's debt stock grew almost three times as fast relative to the base he inherited (+132.7% vs +48.5%). Under Uhuru, debt outpaced economic growth; under the Ruto window, debt-to-GDP was virtually unchanged endpoint-to-endpoint. However, Ruto inherited a massive debt pile where interest alone now consumes over 40% of ordinary revenue.
+      </blockquote>
+    </div>
+
+    <article>
+      <h2>Head-to-Head Empirical Scorecard</h2>
+      <p>Standardized four-year June-to-June fiscal accounting snapshots allow an exact, like-for-like comparison across both administrations.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th class="num">Uhuru Window (Jun 13 → Jun 17)</th>
+              <th class="num">Ruto Window (Jun 22 → Jun 26*)</th>
+              <th>Analytical Takeaway</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Comparison Window</strong></td>
+              <td class="num highlight-uhuru">Jun 2013 → Jun 2017</td>
+              <td class="num highlight-ruto">Jun 2022 → Jun 2026*</td>
+              <td>Standardized 4-year June fiscal windows</td>
+            </tr>
+            <tr>
+              <td><strong>Starting Public Debt</strong></td>
+              <td class="num highlight-uhuru">KSh 1.894T</td>
+              <td class="num highlight-ruto">KSh 8.761T</td>
+              <td>Ruto window began from a 4.6× larger base</td>
+            </tr>
+            <tr>
+              <td><strong>Ending Public Debt</strong></td>
+              <td class="num highlight-uhuru">KSh 4.407T</td>
+              <td class="num highlight-ruto">~KSh 13.013T*</td>
+              <td>Outstanding public &amp; guaranteed debt stock</td>
+            </tr>
+            <tr style="background: #faf8f3; font-weight: 600;">
+              <td><strong>Increase in Debt Stock</strong></td>
+              <td class="num highlight-uhuru">+KSh 2.513T</td>
+              <td class="num highlight-ruto">+KSh 4.252T</td>
+              <td><strong>Ruto window added +KSh 1.74T more nominal stock</strong></td>
+            </tr>
+            <tr style="background: #faf8f3; font-weight: 600;">
+              <td><strong>Nominal Debt Growth</strong></td>
+              <td class="num highlight-uhuru">+132.7%</td>
+              <td class="num highlight-ruto">+48.5%</td>
+              <td><strong>Uhuru grew the debt stock 2.7× faster</strong></td>
+            </tr>
+            <tr>
+              <td><strong>CPI-Adjusted Real Growth</strong></td>
+              <td class="num highlight-uhuru">+75.2%</td>
+              <td class="num highlight-ruto">+19.1%</td>
+              <td>Inflation-adjusted purchasing power expansion</td>
+            </tr>
+            <tr>
+              <td><strong>Starting Debt / GDP</strong></td>
+              <td class="num highlight-uhuru">42.1%</td>
+              <td class="num highlight-ruto">68.7%</td>
+              <td>Base macroeconomic debt position</td>
+            </tr>
+            <tr>
+              <td><strong>Ending Debt / GDP</strong></td>
+              <td class="num highlight-uhuru">57.2%</td>
+              <td class="num highlight-ruto">~68.5%*</td>
+              <td>Post-window debt ratio</td>
+            </tr>
+            <tr style="background: #faf8f3; font-weight: 600;">
+              <td><strong>Change in Debt / GDP</strong></td>
+              <td class="num highlight-uhuru">+15.1 pp</td>
+              <td class="num highlight-ruto">~-0.2 pp*</td>
+              <td><strong>Uhuru outpaced GDP; Ruto window endpoint flat</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Domestic Debt Added</strong></td>
+              <td class="num highlight-uhuru">+KSh 1.062T (42.3%)</td>
+              <td class="num highlight-ruto">+KSh 2.903T (68.3%)</td>
+              <td>Ruto window pivoted heavily to local Treasury bonds</td>
+            </tr>
+            <tr>
+              <td><strong>External Debt Added</strong></td>
+              <td class="num highlight-uhuru">+KSh 1.451T (57.7%)</td>
+              <td class="num highlight-ruto">+KSh 1.349T (31.7%)</td>
+              <td>Uhuru expansion led by Eurobonds &amp; bilateral SGR</td>
+            </tr>
+            <tr style="background: #faf8f3; font-weight: 600;">
+              <td><strong>Interest / Ordinary Revenue</strong></td>
+              <td class="num highlight-uhuru">20.8% (FY16/17)</td>
+              <td class="num highlight-ruto">40.8% (FY24/25)</td>
+              <td><strong>Carrying cost on national budget doubled</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Like-for-Like Service Ratio</strong></td>
+              <td class="num highlight-uhuru">23.6%</td>
+              <td class="num highlight-ruto">~56.0%</td>
+              <td>Interest + External Principal / Ordinary Revenue</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <figure>
+        <div class="figure-container">
+          <picture>
+            <source media="(max-width: 720px)" srcset="../../assets/figures/FIG-KID002-H2H-001_head_to_head_scorecard_mobile.svg">
+            <img src="../../assets/figures/FIG-KID002-H2H-001_head_to_head_scorecard.svg" alt="Head to Head Public Debt Scorecard comparing Uhuru Kenyatta and William Ruto first four fiscal years." loading="lazy">
+          </picture>
+        </div>
+        <figcaption>
+          <strong>Figure 1. Kenya in Data Head-to-Head Public Debt Scorecard: Uhuru Window (2013–2017) vs Ruto-Era Window (2022–2026).</strong> Data: National Treasury and KNBS. Analysis: Kenya in Data. *June 2026 figures are provisional.
+          <div class="figure-actions">
+            <a href="../../assets/figures/FIG-KID002-H2H-001_head_to_head_scorecard_mobile.svg" download>Download Mobile SVG</a>
+            <a href="../../assets/figures/FIG-KID002-H2H-001_head_to_head_scorecard.svg" download>Download Desktop SVG</a>
+            <a href="../../assets/data/KID002_presidential_first_three_years.csv" download>Scorecard CSV</a>
+          </div>
+        </figcaption>
+      </figure>
+
+      <h2>1. Debt Stock: Uhuru Grew It Faster; Ruto Window Added More Shillings</h2>
+      <p>Uhuru's comparison window started with a public debt stock of <strong>KSh 1.894 trillion</strong>. Four fiscal years later, that stock reached <strong>KSh 4.407 trillion</strong>. The increase was KSh 2.513 trillion, equivalent to <strong>+132.7%</strong> (a 2.33× expansion).</p>
+      <p>The Ruto-era comparison window began from a dramatically larger base: <strong>KSh 8.761 trillion in June 2022</strong>. The June 2026 Monthly Debt Bulletin puts the provisional end-June 2026 stock at approximately <strong>KSh 13.013 trillion</strong>. The four-year increase is KSh 4.252 trillion, or <strong>+48.5%</strong> (a 1.49× expansion).</p>
+
+      <div class="note-box">
+        <p><strong>The Base-Effect Distinction:</strong> The Ruto window added roughly <strong>+KSh 1.74 trillion more</strong> in nominal debt than Uhuru's first four years, but because the starting balance sheet was already 4.6× larger, the percentage growth was significantly lower (+48.5% vs +132.7%).</p>
+      </div>
+
+      <h2>2. After Inflation, the Real Growth Gap Widens</h2>
+      <p>To compare the economic scale of debt accumulation fairly, nominal debt stocks must be adjusted for purchasing power using date-matched KNBS Consumer Price Index (CPI) observations.</p>
+      <ul>
+        <li><strong>Uhuru Window (2013–2017):</strong> CPI rose from 139.59 to 185.39 (2009=100 base). Real inflation-adjusted debt growth was <strong>+75.2%</strong>.</li>
+        <li><strong>Ruto Window (2022–2026):</strong> CPI rose from 124.22 to 154.91 (2019=100 base). Real inflation-adjusted debt growth was <strong>+19.1%</strong>.</li>
+      </ul>
+      <p>In real purchasing power terms, the debt stock under Uhuru's first four fiscal years expanded at nearly <strong>four times</strong> the pace recorded in the Ruto window.</p>
+
+      <figure>
+        <div class="figure-container">
+          <picture>
+            <source media="(max-width: 720px)" srcset="../../assets/figures/FIG-KID002-H2H-002_indexed_debt_growth_base100_mobile.svg">
+            <img src="../../assets/figures/FIG-KID002-H2H-002_indexed_debt_growth_base100.svg" alt="Normalized Public Debt Trajectory comparing Uhuru and Ruto indexed to Year 0 = 100." loading="lazy">
+          </picture>
+        </div>
+        <figcaption>
+          <strong>Figure 2. Normalized Public Debt Trajectory (Year 0 = 100).</strong> Comparing nominal and real debt growth trajectories across the first four fiscal years of each administration. Data: National Treasury and KNBS.
+          <div class="figure-actions">
+            <a href="../../assets/figures/FIG-KID002-H2H-002_indexed_debt_growth_base100_mobile.svg" download>Download Mobile SVG</a>
+            <a href="../../assets/figures/FIG-KID002-H2H-002_indexed_debt_growth_base100.svg" download>Download Desktop SVG</a>
+          </div>
+        </figcaption>
+      </figure>
+
+      <h2>3. Debt Relative to the Economy: Outpacing Output vs Holding the Line</h2>
+      <p>In June 2013, Kenya's public debt was equivalent to <strong>42.1% of GDP</strong>. By June 2017, the ratio reached <strong>57.2%</strong>—an increase of <strong>+15.1 percentage points in four years</strong>. Debt grew far faster than economic output.</p>
+      <p>Under the Ruto window, Treasury reports public debt equal to <strong>68.7% of GDP in June 2022</strong>. The provisional June 2026 bulletin places the ratio at approximately <strong>68.5%</strong>. Endpoint-to-endpoint, debt/GDP was virtually flat across the window (68.7% → 72.0% → 66.9% → 67.8% → ~68.5%).</p>
+
+      <figure>
+        <div class="figure-container">
+          <picture>
+            <source media="(max-width: 720px)" srcset="../../assets/figures/FIG-KID002-H2H-003_debt_to_gdp_trajectories_mobile.svg">
+            <img src="../../assets/figures/FIG-KID002-H2H-003_debt_to_gdp_trajectories.svg" alt="Debt to GDP Trajectories in the First Four Fiscal Years." loading="lazy">
+          </picture>
+        </div>
+        <figcaption>
+          <strong>Figure 3. Debt-to-GDP Trajectories in the First Four Fiscal Years.</strong> Dotted red line indicates the 55% statutory anchor in PFM Act §50(2A). Data: National Treasury.
+          <div class="figure-actions">
+            <a href="../../assets/figures/FIG-KID002-H2H-003_debt_to_gdp_trajectories_mobile.svg" download>Download Mobile SVG</a>
+            <a href="../../assets/figures/FIG-KID002-H2H-003_debt_to_gdp_trajectories.svg" download>Download Desktop SVG</a>
+          </div>
+        </figcaption>
+      </figure>
+
+      <h2>4. The Composition Shift: External Financing vs Domestic Paper</h2>
+      <p>The structural composition of the net increase in the debt stock diverged sharply:</p>
+      <ul>
+        <li><strong>Uhuru Window:</strong> External debt accounted for <strong>57.7% of the net debt increase</strong> (+KSh 1.451T external vs +KSh 1.062T domestic), driven by commercial Eurobonds and bilateral SGR loans.</li>
+        <li><strong>Ruto Window:</strong> Domestic debt accounted for <strong>68.3% of the net debt increase</strong> (+KSh 2.903T domestic vs +KSh 1.349T external), pivoting heavily to local Treasury bonds and bills.</li>
+      </ul>
+
+      <figure>
+        <div class="figure-container">
+          <picture>
+            <source media="(max-width: 720px)" srcset="../../assets/figures/FIG-KID002-H2H-004_composition_of_debt_added_mobile.svg">
+            <img src="../../assets/figures/FIG-KID002-H2H-004_composition_of_debt_added.svg" alt="Composition of Net Debt Added comparing Uhuru and Ruto domestic vs external share." loading="lazy">
+          </picture>
+        </div>
+        <figcaption>
+          <strong>Figure 4. Breakdown of the Net Increase in Public Debt Stock by Category.</strong> Data: National Treasury Annual Public Debt Reports. Analysis: Kenya in Data.
+          <div class="figure-actions">
+            <a href="../../assets/figures/FIG-KID002-H2H-004_composition_of_debt_added_mobile.svg" download>Download Mobile SVG</a>
+            <a href="../../assets/figures/FIG-KID002-H2H-004_composition_of_debt_added.svg" download>Download Desktop SVG</a>
+          </div>
+        </figcaption>
+      </figure>
+
+      <p>This composition shift is consequential: Treasury reports a weighted-average interest rate of <strong>13.0% on domestic debt versus 3.9% on external debt</strong>. Shifting borrowing to domestic markets heavily increases annual cash interest obligations.</p>
+
+      <h2>5. The Repayment Squeeze: Ruto's Defining Fiscal Challenge</h2>
+      <p>While the debt stock grew more slowly relative to GDP across the Ruto window, debt servicing costs reached historic highs.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Debt-Servicing Measure</th>
+              <th class="num">Uhuru FY2016/17</th>
+              <th class="num">Ruto FY2024/25 Actual</th>
+              <th class="num">Ruto FY2025/26 Projection*</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Total Interest Paid</strong></td>
+              <td class="num">KSh 271.2B</td>
+              <td class="num">KSh 987.5B</td>
+              <td class="num">KSh 1.129T</td>
+            </tr>
+            <tr>
+              <td><strong>Ordinary Revenue Collected</strong></td>
+              <td class="num">KSh 1.306T</td>
+              <td class="num">KSh 2.420T</td>
+              <td class="num">KSh 2.835T</td>
+            </tr>
+            <tr style="background: #faf8f3; font-weight: 700;">
+              <td><strong>Interest / Ordinary Revenue</strong></td>
+              <td class="num highlight-uhuru">20.8%</td>
+              <td class="num highlight-ruto">40.8%</td>
+              <td class="num highlight-ruto">~39.8%</td>
+            </tr>
+            <tr>
+              <td><strong>Like-for-Like Debt Service (Interest + Ext. Principal)</strong></td>
+              <td class="num">23.6%</td>
+              <td class="num">~56.0%</td>
+              <td class="num">~56.7%</td>
+            </tr>
+            <tr>
+              <td><strong>Modern Headline Service Ratio (incl. Domestic Redemptions)</strong></td>
+              <td class="num"><em>Not directly comparable</em></td>
+              <td class="num"><strong>71.2%</strong></td>
+              <td class="num"><strong>73.0% projected</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <figure>
+        <div class="figure-container">
+          <picture>
+            <source media="(max-width: 720px)" srcset="../../assets/figures/FIG-KID002-H2H-005_interest_burden_revenue_absorption_mobile.svg">
+            <img src="../../assets/figures/FIG-KID002-H2H-005_interest_burden_revenue_absorption.svg" alt="The Revenue Squeeze: Interest Payments as a Share of Ordinary Revenue." loading="lazy">
+          </picture>
+        </div>
+        <figcaption>
+          <strong>Figure 5. The Revenue Squeeze: Interest Payments as a Share of Ordinary Revenue.</strong> Data: National Treasury Annual Public Debt Reports.
+          <div class="figure-actions">
+            <a href="../../assets/figures/FIG-KID002-H2H-005_interest_burden_revenue_absorption_mobile.svg" download>Download Mobile SVG</a>
+            <a href="../../assets/figures/FIG-KID002-H2H-005_interest_burden_revenue_absorption.svg" download>Download Desktop SVG</a>
+          </div>
+        </figcaption>
+      </figure>
+
+      <h2>6. Conclusion: Two Administrations, Two Different Debt Problems</h2>
+      <div class="takeaway-grid">
+        <div class="takeaway-card uhuru">
+          <span class="regime">Uhuru Kenyatta (2013–2017)</span>
+          <div class="core-finding">A Debt-Accumulation Problem</div>
+          <p>The debt stock expanded rapidly (+132.7% nominal, +75.2% real), heavily driven by external borrowing (Eurobonds and SGR loans), outpacing economic growth by +15.1 percentage points of GDP.</p>
+        </div>
+        <div class="takeaway-card ruto">
+          <span class="regime">William Ruto Window (2022–2026)</span>
+          <div class="core-finding">A Debt-Carrying-Cost Problem</div>
+          <p>The debt stock grew more slowly relative to GDP (endpoint-to-endpoint flat at ~68.5%), but sits atop a massive inherited balance sheet where high domestic interest rates consume over 40% of ordinary revenue.</p>
+        </div>
+      </div>
+
+      <section id="methodology">
+        <h2>Methodology &amp; Data Accounting</h2>
+        <p>This analysis uses matched <strong>June-to-June fiscal-year debt-stock windows</strong> rather than presidential swearing-in anniversaries:</p>
+        <ul>
+          <li><strong>Fiscal Timing:</strong> Uhuru assumed office in April 2013; Ruto in September 2022. June 2013 → June 2017 and June 2022 → June 2026 provide standardized four-year fiscal accounting snapshots.</li>
+          <li><strong>Real Growth Deflator:</strong> Computed using KNBS monthly CPI series:
+            35585	ext{Real Growth} = \left(rac{	ext{Debt}_{	ext{end}}}{	ext{Debt}_{	ext{start}}}ight) 	imes \left(rac{	ext{CPI}_{	ext{start}}}{	ext{CPI}_{	ext{end}}}ight) - 135585
+            Uhuru uses the 2009=100 series (139.59 → 185.39). Ruto uses the 2019=100 series (124.22 → 154.91).
+          </li>
+          <li><strong>Debt Scope:</strong> Measures net outstanding public and publicly guaranteed debt stock (including new disbursements, amortizations, repayments and FX revaluations).</li>
+        </ul>
+      </section>
+
+      <section id="downloads" class="download-panel">
+        <h3>Download Open Data &amp; Assets</h3>
+        <p>Kenya in Data releases all underlying observation tables and chart files under an open <strong>CC BY 4.0</strong> license for public use, journalism, and research.</p>
+
+        <div class="download-grid">
+          <a class="download-card" href="../../assets/data/KID002_presidential_first_three_years.csv" download>
+            <span class="format">CSV · Scorecard</span>
+            <span class="name">Head-to-Head Metrics Table</span>
+            <span class="desc">Four-year fiscal window indicators for Uhuru &amp; Ruto</span>
+          </a>
+          <a class="download-card" href="../../assets/data/KID002_historical_debt_timeseries_2002_2026.csv" download>
+            <span class="format">CSV · 2002–2026</span>
+            <span class="name">Complete Historical Time Series</span>
+            <span class="desc">Full historical debt stocks, GDP ratios, and interest service</span>
+          </a>
+          <a class="download-card" href="../../assets/figures/FIG-KID002-H2H-001_head_to_head_scorecard.svg" download>
+            <span class="format">SVG · Vector</span>
+            <span class="name">Scorecard Hero Graphic</span>
+            <span class="desc">Full resolution vector scorecard comparison</span>
+          </a>
+          <a class="download-card" href="../../assets/figures/ASSET-KID002-010_regime_debt_explainer_mobile.png" download>
+            <span class="format">PNG · 300 DPI</span>
+            <span class="name">Social Sharing Card</span>
+            <span class="desc">Full resolution summary graphic for sharing</span>
+          </a>
+        </div>
+      </section>
+
+      <section id="sources">
+        <h2>Primary Sources &amp; References</h2>
+        <div class="ref-list">
+          <p><strong>National Treasury of Kenya (2017).</strong> <em>Annual Public Debt Management Report 2016/2017</em>. Tables 1-2, 1-3, pp. 12–18.</p>
+          <p><strong>National Treasury of Kenya (2025).</strong> <em>Annual Public Debt Report 2024/2025</em>. Tables 4.0-1, 4.1-1 and 11.1-1, pp. 28–45.</p>
+          <p><strong>National Treasury of Kenya (2026).</strong> <em>June 2026 Monthly Debt Bulletin</em>. Public Debt Management Office.</p>
+          <p><strong>Kenya National Bureau of Statistics (2013–2017, 2022–2026).</strong> <em>Consumer Price Indices and Inflation Rates</em>, June observations.</p>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <p><strong>Kenya in Data</strong> — Show first. Interpret second.</p>
+      <p><a href="../../">Home</a> · <a href="https://github.com/kenyapublicdata/kenyapublicdata.github.io" target="_blank" rel="noopener">GitHub Repository</a> · 2026</p>
+    </div>
+  </footer>
+
+</body>
+</html>

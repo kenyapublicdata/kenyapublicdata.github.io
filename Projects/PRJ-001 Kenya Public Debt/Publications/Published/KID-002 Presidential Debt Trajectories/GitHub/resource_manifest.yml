@@ -1,0 +1,64 @@
+package_id: KID-002
+package_name: "Kenya's Public Debt Across Presidencies: Comparing Early-Term Debt Trajectories"
+project_id: PRJ-001
+version: 1.0.0
+status: ready_for_publication
+publication_date: 2026-08-28
+canonical_article: "KID-002 Presidential Debt Trajectories.md"
+lead_analyst: "Kenya in Data Research Team"
+tags:
+  - public-debt
+  - presidential-comparison
+  - inflation-adjusted
+  - knbs-cpi
+  - debt-servicing
+  - kenya-economy
+licence: "CC BY 4.0"
+primary_sources:
+  - id: SRC-001
+    title: "Annual Public Debt Management Report 2005/06"
+    institution: "National Treasury of Kenya"
+  - id: SRC-002
+    title: "Historical Public Debt Analysis (December 2002 Baseline)"
+    institution: "Parliament of Kenya (Bunge Library)"
+  - id: SRC-003
+    title: "Annual Public Debt Management Report 2015/16"
+    institution: "National Treasury of Kenya"
+  - id: SRC-004
+    title: "Annual Public Debt Management Report FY 2024/25"
+    institution: "National Treasury of Kenya"
+  - id: SRC-005
+    title: "Monthly Consumer Price Indices Archive"
+    institution: "Kenya National Bureau of Statistics (KNBS)"
+figures:
+  - id: FIG-KID002-001
+    title: "Real vs. Nominal Public Debt Growth Across Regimes"
+    files:
+      desktop_png: "Derivatives/Charts/FIG-KID002-001_real_vs_nominal_debt_growth.png"
+      mobile_png: "Derivatives/Charts/FIG-KID002-001_real_vs_nominal_debt_growth_mobile.png"
+      svg: "Derivatives/Charts/FIG-KID002-001_real_vs_nominal_debt_growth.svg"
+      pdf: "Derivatives/Charts/FIG-KID002-001_real_vs_nominal_debt_growth.pdf"
+  - id: FIG-KID002-002
+    title: "Debt-to-GDP Trajectory Across Early-Term Windows"
+    files:
+      desktop_png: "Derivatives/Charts/FIG-KID002-002_debt_to_gdp_regimes.png"
+      mobile_png: "Derivatives/Charts/FIG-KID002-002_debt_to_gdp_regimes_mobile.png"
+      svg: "Derivatives/Charts/FIG-KID002-002_debt_to_gdp_regimes.svg"
+      pdf: "Derivatives/Charts/FIG-KID002-002_debt_to_gdp_regimes.pdf"
+  - id: FIG-KID002-003
+    title: "Debt Service as a Share of Ordinary Revenue"
+    files:
+      desktop_png: "Derivatives/Charts/FIG-KID002-003_debt_service_absorption_regimes.png"
+      mobile_png: "Derivatives/Charts/FIG-KID002-003_debt_service_absorption_regimes_mobile.png"
+      svg: "Derivatives/Charts/FIG-KID002-003_debt_service_absorption_regimes.svg"
+      pdf: "Derivatives/Charts/FIG-KID002-003_debt_service_absorption_regimes.pdf"
+  - id: ASSET-KID002-010
+    title: "Presidential Debt Comparison Narrative Infographic"
+    files:
+      mobile_png: "Derivatives/Infographics/ASSET-KID002-010_regime_debt_explainer_mobile.png"
+      svg: "Derivatives/Infographics/ASSET-KID002-010_regime_debt_explainer_mobile.svg"
+      pdf: "Derivatives/Infographics/ASSET-KID002-010_regime_debt_explainer_mobile.pdf"
+interactive_widgets:
+  - id: WGT-KID002-001
+    title: "Presidential Debt Comparison Interactive Explorer"
+    path: "Derivatives/Interactive/index.html"

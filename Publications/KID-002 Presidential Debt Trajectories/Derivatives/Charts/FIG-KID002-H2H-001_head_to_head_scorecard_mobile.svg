@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350" style="background-color:#F8FAFC; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<defs>
+  <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="110%" filterUnits="userSpaceOnUse">
+    <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.05" />
+  </filter>
+  <filter id="subtle-shadow" x="-2%" y="-2%" width="104%" height="104%" filterUnits="userSpaceOnUse">
+    <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.04" />
+  </filter>
+</defs>
+
+  <!-- Mobile Header -->
+  <text x="50" y="70" fill="#DC2626" font-size="16" font-weight="800" letter-spacing="1.5">KENYA IN DATA • PUBLIC DEBT</text>
+  <text x="50" y="118" fill="#0F172A" font-size="34" font-weight="900">Uhuru vs Ruto: Public Debt Scorecard</text>
+  <text x="50" y="156" fill="#64748B" font-size="19" font-weight="500">Matched 4-year fiscal windows: growth speed, debt-to-GDP and ordinary revenue burden</text>
+
+  <!-- Uhuru Mobile Card -->
+  <g transform="translate(50, 190)">
+    <rect x="0" y="0" width="980" height="490" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" filter="url(#card-shadow)" />
+    <rect x="0" y="0" width="980" height="75" rx="16" fill="#0F172A" />
+    <rect x="0" y="50" width="980" height="25" fill="#0F172A" />
+    <text x="35" y="48" fill="#FFFFFF" font-size="25" font-weight="900">UHURU WINDOW (Jun 2013 → Jun 2017)</text>
+    
+    <!-- Big Stat 1 -->
+    <rect x="30" y="100" width="440" height="115" rx="12" fill="#F8FAFC" />
+    <text x="50" y="132" fill="#64748B" font-size="16" font-weight="700">PUBLIC DEBT STOCK</text>
+    <text x="50" y="172" fill="#0F172A" font-size="27" font-weight="900">KSh 1.89T → 4.41T</text>
+    <text x="50" y="200" fill="#DC2626" font-size="18" font-weight="800">+132.7% nominal (+75.2% real)</text>
+    
+    <!-- Big Stat 2 -->
+    <rect x="510" y="100" width="440" height="115" rx="12" fill="#F8FAFC" />
+    <text x="530" y="132" fill="#64748B" font-size="16" font-weight="700">NET STOCK ADDED</text>
+    <text x="530" y="172" fill="#0F172A" font-size="27" font-weight="900">+KSh 2.51 Trillion</text>
+    <text x="530" y="200" fill="#334155" font-size="16" font-weight="600">External-heavy (57.7% of stock added)</text>
+    
+    <!-- Row 2 -->
+    <rect x="30" y="235" width="440" height="115" rx="12" fill="#F8FAFC" />
+    <text x="50" y="267" fill="#64748B" font-size="16" font-weight="700">DEBT / GDP TRAJECTORY</text>
+    <text x="50" y="307" fill="#DC2626" font-size="27" font-weight="900">42.1% → 57.2%</text>
+    <text x="50" y="335" fill="#DC2626" font-size="17" font-weight="700">+15.1 pp (substantially outpaced GDP)</text>
+    
+    <rect x="510" y="235" width="440" height="115" rx="12" fill="#F8FAFC" />
+    <text x="530" y="267" fill="#64748B" font-size="16" font-weight="700">INTEREST / ORDINARY REVENUE</text>
+    <text x="530" y="307" fill="#059669" font-size="27" font-weight="900">20.8%</text>
+    <text x="530" y="335" fill="#334155" font-size="16" font-weight="600">KSh 271B interest in FY16/17</text>
+    
+    <rect x="30" y="370" width="920" height="95" rx="12" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1.5" />
+    <text x="50" y="405" fill="#0F172A" font-size="18" font-weight="900">CORE STORY: RAPID ACCUMULATION</text>
+    <text x="50" y="435" fill="#334155" font-size="17">Grew debt stock 2.7x faster than Ruto window, sharply worsening debt-to-GDP (+15.1 pp).</text>
+  </g>
+
+  <!-- Ruto Mobile Card -->
+  <g transform="translate(50, 715)">
+    <rect x="0" y="0" width="980" height="505" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" filter="url(#card-shadow)" />
+    <rect x="0" y="0" width="980" height="75" rx="16" fill="#2563EB" />
+    <rect x="0" y="50" width="980" height="25" fill="#2563EB" />
+    <text x="35" y="48" fill="#FFFFFF" font-size="25" font-weight="900">RUTO-ERA WINDOW (Jun 2022 → Jun 2026*)</text>
+    
+    <!-- Big Stat 1 -->
+    <rect x="30" y="100" width="440" height="115" rx="12" fill="#F8FAFC" />
+    <text x="50" y="132" fill="#64748B" font-size="16" font-weight="700">PUBLIC DEBT STOCK</text>
+    <text x="50" y="172" fill="#0F172A" font-size="27" font-weight="900">KSh 8.76T → ~13.01T*</text>
+    <text x="50" y="200" fill="#2563EB" font-size="18" font-weight="800">+48.5% nominal (+19.1% real)</text>
+    
+    <!-- Big Stat 2 -->
+    <rect x="510" y="100" width="440" height="115" rx="12" fill="#F8FAFC" />
+    <text x="530" y="132" fill="#64748B" font-size="16" font-weight="700">NET STOCK ADDED</text>
+    <text x="530" y="172" fill="#0F172A" font-size="27" font-weight="900">+KSh 4.25 Trillion*</text>
+    <text x="530" y="200" fill="#334155" font-size="16" font-weight="600">Domestic-heavy (68.3% of stock added)</text>
+    
+    <!-- Row 2 -->
+    <rect x="30" y="235" width="440" height="115" rx="12" fill="#F8FAFC" />
+    <text x="50" y="267" fill="#64748B" font-size="16" font-weight="700">DEBT / GDP TRAJECTORY</text>
+    <text x="50" y="307" fill="#059669" font-size="27" font-weight="900">68.7% → ~68.5%*</text>
+    <text x="50" y="335" fill="#059669" font-size="17" font-weight="700">-0.2 pp (endpoint-to-endpoint flat)</text>
+    
+    <rect x="510" y="235" width="440" height="115" rx="12" fill="#F8FAFC" />
+    <text x="530" y="267" fill="#64748B" font-size="16" font-weight="700">INTEREST / ORDINARY REVENUE</text>
+    <text x="530" y="307" fill="#DC2626" font-size="27" font-weight="900">40.8%</text>
+    <text x="530" y="335" fill="#DC2626" font-size="17" font-weight="700">KSh 988B interest in FY24/25 (2x burden)</text>
+    
+    <rect x="30" y="370" width="920" height="105" rx="12" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1.5" />
+    <text x="50" y="405" fill="#0F172A" font-size="18" font-weight="900">CORE STORY: THE CASH SERVICING SQUEEZE</text>
+    <text x="50" y="435" fill="#334155" font-size="17">Added +KSh 4.25T on a huge base; debt/GDP flat; interest burden doubled to 40.8% of ordinary revenue.</text>
+  </g>
+
+  <!-- Mobile Footer -->
+  <line x1="50" y1="1260" x2="1030" y2="1260" stroke="#E2E8F0" stroke-width="1.5" />
+  <text x="50" y="1295" fill="#64748B" font-size="17" font-style="italic">Data: National Treasury; KNBS  |  *June 2026 provisional. Matched June-to-June fiscal windows.</text>
+  <text x="50" y="1325" fill="#0F172A" font-size="17.5" font-weight="800">Kenya in Data • kenyaindata.org</text>
+</svg>

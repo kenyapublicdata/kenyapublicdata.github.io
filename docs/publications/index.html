@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publications — Kenya in Data</title>
+  <meta name="description" content="Open, reproducible data publications and civic research releases from Kenya in Data.">
+  <meta name="theme-color" content="#f7f5ef">
+  <style>
+    :root {
+      --paper: #f7f5ef;
+      --card-bg: #ffffff;
+      --ink: #191919;
+      --muted: #66645e;
+      --line: #d8d4ca;
+      --line-light: #ece9e1;
+      --red: #b51f2e;
+      --width: 860px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; background: var(--paper); }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .wrap { width: min(calc(100% - 40px), var(--width)); margin: 0 auto; }
+    a { color: inherit; text-underline-offset: 3px; }
+    a:hover { color: var(--red); }
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+      font-weight: 750;
+      text-decoration: none;
+    }
+    .mark { width: 10px; height: 10px; background: var(--red); border-radius: 50%; }
+    nav { display: flex; gap: 20px; font-size: 14px; }
+    nav a { color: var(--muted); text-decoration: none; }
+    .page-title {
+      padding: 60px 0 32px;
+      border-bottom: 1px solid var(--line);
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-family: Georgia, serif;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 400;
+    }
+    .publications-list {
+      padding: 40px 0 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .pub-card {
+      padding: 32px;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      transition: border-color 0.2s, transform 0.1s;
+    }
+    .pub-card:hover {
+      border-color: var(--muted);
+      transform: translateY(-1px);
+    }
+    .pub-badge {
+      display: inline-flex;
+      gap: 8px;
+      font-size: 11.5px;
+      font-weight: 750;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--red);
+      margin-bottom: 12px;
+    }
+    .pub-badge span { background: rgba(181, 31, 46, 0.08); padding: 2px 7px; border-radius: 3px; }
+    .pub-title {
+      margin: 0 0 10px;
+      font-family: Georgia, serif;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.25;
+    }
+    .pub-title a { text-decoration: none; }
+    .pub-title a:hover { color: var(--red); }
+    .pub-desc { margin: 0 0 20px; font-size: 15px; color: var(--muted); line-height: 1.55; }
+    .pub-footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line-light);
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .read-link { font-weight: 650; color: var(--ink); text-decoration: none; }
+    .read-link:hover { color: var(--red); }
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      padding: 32px 0 48px;
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap site-header">
+    <a class="brand" href="../" aria-label="Kenya in Data home">
+      <span class="mark" aria-hidden="true"></span>
+      Kenya in Data
+    </a>
+    <nav>
+      <a href="../">Home</a>
+      <a href="#">Publications</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <div class="page-title">
+      <h1>Publications</h1>
+      <p style="margin: 0; color: var(--muted); font-size: 18px;">Verified, reproducible civic evidence releases and public reports.</p>
+    </div>
+
+    <div class="publications-list">
+      <!-- KID-002 -->
+      <div class="pub-card">
+        <div class="pub-badge">
+          <span>KID-002</span>
+          <span>Public Debt · Head-to-Head</span>
+        </div>
+        <h2 class="pub-title"><a href="kid-002/">Uhuru vs Ruto: Kenya's Public Debt in Their First Four Fiscal-Year Windows</a></h2>
+        <p class="pub-desc">A head-to-head empirical comparison of debt growth, inflation-adjusted expansion, GDP tracking, debt composition and interest servicing costs under the Uhuru Kenyatta and William Ruto administrations.</p>
+        <div class="pub-footer">
+          <div>Baseline: Standardized 4-Year June Fiscal Windows · Official Treasury Data</div>
+          <a class="read-link" href="kid-002/">Read Report &amp; Data →</a>
+        </div>
+      </div>
+
+      <!-- KID-001 -->
+      <div class="pub-card">
+        <div class="pub-badge">
+          <span>KID-001</span>
+          <span>Public Debt · Baseline</span>
+        </div>
+        <h2 class="pub-title"><a href="kid-001/">Kenya's Public Debt: Stock, Composition and Servicing Costs</a></h2>
+        <p class="pub-desc">A current, source-based account of how much Kenya owes (KSh 12.896T), how the debt is structured between domestic and external creditors, and why debt service consumed 71.2% of ordinary revenue in FY 2024/25.</p>
+        <div class="pub-footer">
+          <div>Baseline: May 2026 / FY 2024/25 · Provisional Official Data</div>
+          <a class="read-link" href="kid-001/">Read Report &amp; Data →</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap" style="display: flex; justify-content: space-between;">
+      <p><strong>Kenya in Data</strong> — Show first. Interpret second.</p>
+      <p><a href="../">Home</a> · 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

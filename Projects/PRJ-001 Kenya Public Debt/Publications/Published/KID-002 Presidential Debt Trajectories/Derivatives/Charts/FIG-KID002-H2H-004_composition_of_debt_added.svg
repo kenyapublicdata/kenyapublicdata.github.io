@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" style="background-color:#F8FAFC; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<defs>
+  <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="110%" filterUnits="userSpaceOnUse">
+    <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.05" />
+  </filter>
+  <filter id="subtle-shadow" x="-2%" y="-2%" width="104%" height="104%" filterUnits="userSpaceOnUse">
+    <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.04" />
+  </filter>
+</defs>
+
+  <!-- Header -->
+  <text x="60" y="52" fill="#DC2626" font-size="13" font-weight="800" letter-spacing="1.5">KENYA IN DATA • PUBLIC DEBT COMPARISON</text>
+  <text x="60" y="88" fill="#0F172A" font-size="24" font-weight="900">Where Did the Net Debt Stock Increase Come From?</text>
+  <text x="60" y="116" fill="#64748B" font-size="14" font-weight="500">Uhuru window was external-debt-led (57.7%); Ruto window pivoted heavily to domestic debt (68.3%)</text>
+
+  <!-- Uhuru Section -->
+  <text x="60" y="218" fill="#0F172A" font-size="18" font-weight="900">UHURU WINDOW</text>
+  <text x="60" y="240" fill="#64748B" font-size="13" font-weight="600">+KSh 2.51T Stock Added</text>
+  
+  <rect x="240" y="190" width="354.984" height="70" rx="8" fill="#2563EB" />
+  <rect x="594.9839999999999" y="190" width="485.016" height="70" rx="8" fill="#D97706" />
+  <rect x="590.9839999999999" y="190" width="8" height="70" fill="#D97706" />
+
+  <text x="417.49199999999996" y="226" fill="#FFFFFF" font-size="15" font-weight="900" text-anchor="middle">DOMESTIC: 42.3%</text>
+  <text x="417.49199999999996" y="244" fill="#EFF6FF" font-size="12" font-weight="600" text-anchor="middle">+KSh 1.06 Trillion</text>
+
+  <text x="837.492" y="226" fill="#FFFFFF" font-size="15" font-weight="900" text-anchor="middle">EXTERNAL: 57.7%</text>
+  <text x="837.492" y="244" fill="#FEF3C7" font-size="12" font-weight="600" text-anchor="middle">+KSh 1.45 Trillion (Eurobonds &amp; SGR)</text>
+
+  <!-- Ruto Section -->
+  <text x="60" y="358" fill="#0F172A" font-size="18" font-weight="900">RUTO WINDOW</text>
+  <text x="60" y="380" fill="#64748B" font-size="13" font-weight="600">+KSh 4.25T Stock Added*</text>
+  
+  <rect x="240" y="330" width="573.468" height="70" rx="8" fill="#2563EB" />
+  <rect x="813.468" y="330" width="266.53200000000004" height="70" rx="8" fill="#D97706" />
+  <rect x="809.468" y="330" width="8" height="70" fill="#D97706" />
+
+  <text x="526.7339999999999" y="366" fill="#FFFFFF" font-size="15" font-weight="900" text-anchor="middle">DOMESTIC: 68.3%</text>
+  <text x="526.7339999999999" y="384" fill="#EFF6FF" font-size="12" font-weight="600" text-anchor="middle">+KSh 2.90 Trillion (Local T-Bonds)</text>
+
+  <text x="946.7339999999999" y="366" fill="#FFFFFF" font-size="15" font-weight="900" text-anchor="middle">EXTERNAL: 31.7%</text>
+  <text x="946.7339999999999" y="384" fill="#FEF3C7" font-size="12" font-weight="600" text-anchor="middle">+KSh 1.35 Trillion*</text>
+
+  <g transform="translate(60, 460)">
+    <rect x="0" y="0" width="1080" height="110" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#subtle-shadow)" />
+    <text x="30" y="38" fill="#0F172A" font-size="15" font-weight="800">WHY THIS STRUCTURAL SHIFT MATTERS FOR BUDGET SERVICING</text>
+    <text x="30" y="65" fill="#334155" font-size="13">
+      • <tspan font-weight="700">Uhuru Window:</tspan> Kenya accessed international Eurobond markets and Chinese bilateral loans, shifting debt outward.
+    </text>
+    <text x="30" y="90" fill="#334155" font-size="13">
+      • <tspan font-weight="700">Ruto Window:</tspan> Pivoted to domestic debt. At June 2025, Treasury reported a weighted-average interest rate of 13.0% on domestic debt vs 3.9% on external debt.
+    </text>
+  </g>
+
+  <!-- Footer -->
+  <line x1="60" y1="615" x2="1140" y2="615" stroke="#E2E8F0" stroke-width="1.2" />
+  <text x="60" y="642" fill="#64748B" font-size="11.5" font-style="italic">Data: National Treasury Annual Public Debt Reports (2016/17, 2024/25); June 2026 Monthly Bulletin  |  Calculations reflect net change in outstanding debt stock by category (incorporating FX valuation and repayments).</text>
+  <text x="1140" y="642" fill="#0F172A" font-size="11.5" font-weight="700" text-anchor="end">Analysis: Kenya in Data • kenyaindata.org</text>
+</svg>

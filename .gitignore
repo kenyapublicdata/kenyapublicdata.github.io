@@ -21,3 +21,4 @@ secrets.json
 build/
 dist/
 *.egg-info/
+tmp/

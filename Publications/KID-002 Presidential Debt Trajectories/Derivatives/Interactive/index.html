@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kenya Public Debt: 24-Year Historical Analysis (2002–2026) — Kenya in Data</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 p-3 md:p-6 transition-colors duration-200">
+  <div class="max-w-4xl mx-auto bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-xl overflow-hidden">
+    
+    <!-- Top Header Bar -->
+    <div class="bg-slate-900 text-white px-6 py-5 border-b border-slate-800 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="inline-block w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
+          <span class="text-xs font-black tracking-widest text-red-400 uppercase">KENYA IN DATA • KID-002</span>
+        </div>
+        <h1 class="text-xl md:text-2xl font-black tracking-tight mt-1">24-Year Public Debt Explorer (2002–2026)</h1>
+        <p class="text-xs md:text-sm text-slate-400 mt-0.5">Historical trajectory and early-term comparative dynamics across Kibaki, Uhuru, and Ruto</p>
+      </div>
+      
+      <!-- Top Level Mode Selector -->
+      <div class="flex bg-slate-800 p-1 rounded-xl border border-slate-700 text-xs font-bold self-start md:self-auto">
+        <button id="mode-history" onclick="switchMode('history')" class="px-3.5 py-1.5 rounded-lg bg-red-600 text-white shadow transition-all">
+          24-Year History
+        </button>
+        <button id="mode-early" onclick="switchMode('early')" class="px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-white transition-all">
+          Early-Term Deep Dive
+        </button>
+      </div>
+    </div>
+
+    <!-- MAIN INTERACTIVE CONTAINER -->
+    <div class="p-6">
+
+      <!-- MODE 1: 24-YEAR MASTER HISTORICAL VIEW -->
+      <div id="container-history" class="space-y-6">
+        
+        <!-- 3 Presidential Era Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          
+          <!-- Kibaki Era -->
+          <div class="bg-emerald-50/50 dark:bg-emerald-950/20 border-2 border-emerald-200 dark:border-emerald-800/60 rounded-2xl p-4 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center text-xs font-bold text-emerald-800 dark:text-emerald-300 uppercase">
+                <span>1. Mwai Kibaki</span>
+                <span class="text-[10px] bg-emerald-200 dark:bg-emerald-900 px-2 py-0.5 rounded-full">2002–2013</span>
+              </div>
+              <div class="text-2xl font-black text-emerald-600 dark:text-emerald-400 mt-2">64% ➔ 42%</div>
+              <div class="text-xs font-bold text-emerald-900/80 dark:text-emerald-200/80">Sustained Deleveraging</div>
+              <ul class="text-xs text-slate-600 dark:text-slate-400 mt-2.5 space-y-1.5 leading-relaxed">
+                <li>• <strong>Debt Stock:</strong> KSh 629.5B ➔ KSh 1.894T</li>
+                <li>• <strong>Ordinary Revenue:</strong> Rose +324% (KSh 183B ➔ 779B)</li>
+                <li>• <strong>Strategy:</strong> Tax mobilization; concessional multilateral loans; GDP grew faster than debt (+413%).</li>
+              </ul>
+            </div>
+            <div class="mt-4 pt-3 border-t border-emerald-200 dark:border-emerald-900/40 text-[11px] font-semibold text-emerald-800 dark:text-emerald-300">
+              Avg Debt Service: <strong>23.5% of revenue</strong>
+            </div>
+          </div>
+
+          <!-- Uhuru Era -->
+          <div class="bg-amber-50/50 dark:bg-amber-950/20 border-2 border-amber-200 dark:border-amber-800/60 rounded-2xl p-4 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center text-xs font-bold text-amber-800 dark:text-amber-300 uppercase">
+                <span>2. Uhuru Kenyatta</span>
+                <span class="text-[10px] bg-amber-200 dark:bg-amber-900 px-2 py-0.5 rounded-full">2013–2022</span>
+              </div>
+              <div class="text-2xl font-black text-amber-600 dark:text-amber-400 mt-2">+362.5%</div>
+              <div class="text-xs font-bold text-amber-900/80 dark:text-amber-200/80">Commercial Borrowing Surge</div>
+              <ul class="text-xs text-slate-600 dark:text-slate-400 mt-2.5 space-y-1.5 leading-relaxed">
+                <li>• <strong>Debt Stock:</strong> KSh 1.894T ➔ KSh 8.761T</li>
+                <li>• <strong>Debt-to-GDP:</strong> Jumped from 42.1% to 68.7%</li>
+                <li>• <strong>Strategy:</strong> Debut 2014 Eurobond ($2.75B) & repeated issuances; China Exim SGR bilateral loans ($5B+).</li>
+              </ul>
+            </div>
+            <div class="mt-4 pt-3 border-t border-amber-200 dark:border-amber-900/40 text-[11px] font-semibold text-amber-800 dark:text-amber-300">
+              Debt Service: <strong>28.2% ➔ 47.9% of revenue</strong>
+            </div>
+          </div>
+
+          <!-- Ruto Era -->
+          <div class="bg-blue-50/50 dark:bg-blue-950/20 border-2 border-blue-200 dark:border-blue-800/60 rounded-2xl p-4 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-center text-xs font-bold text-blue-800 dark:text-blue-300 uppercase">
+                <span>3. William Ruto</span>
+                <span class="text-[10px] bg-blue-200 dark:bg-blue-900 px-2 py-0.5 rounded-full">2022–2026</span>
+              </div>
+              <div class="text-2xl font-black text-red-600 dark:text-red-400 mt-2">71.2% Svc</div>
+              <div class="text-xs font-bold text-blue-900/80 dark:text-blue-200/80">Severe Liquidity Squeeze</div>
+              <ul class="text-xs text-slate-600 dark:text-slate-400 mt-2.5 space-y-1.5 leading-relaxed">
+                <li>• <strong>Debt Stock:</strong> KSh 8.761T ➔ KSh 11.814T (➔ KSh 12.9T)</li>
+                <li>• <strong>Debt-to-GDP:</strong> Stabilized flat (68.7% ➔ 67.8%)</li>
+                <li>• <strong>The Crisis:</strong> Domestic debt portfolio WAIR at 13.0% (vs 3.9% external); domestic interest takes 32.1% rev.</li>
+              </ul>
+            </div>
+            <div class="mt-4 pt-3 border-t border-blue-200 dark:border-blue-900/40 text-[11px] font-semibold text-red-600 dark:text-red-400">
+              Debt Service: <strong>KSh 1.722 Trillion (71.2%)</strong>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 24-Year Key Statistics Summary Bar -->
+        <div class="p-4 bg-slate-100 dark:bg-slate-800/40 rounded-2xl border border-slate-200 dark:border-slate-700/60 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          <div>
+            <div class="text-[10px] font-bold text-slate-500 uppercase">2002 Starting Debt</div>
+            <div class="text-lg font-black text-slate-800 dark:text-slate-200">KSh 629.5B</div>
+            <div class="text-[10px] text-slate-500">64.0% of GDP</div>
+          </div>
+          <div>
+            <div class="text-[10px] font-bold text-slate-500 uppercase">2013 Handover</div>
+            <div class="text-lg font-black text-slate-800 dark:text-slate-200">KSh 1,894.1B</div>
+            <div class="text-[10px] text-slate-500">42.1% of GDP</div>
+          </div>
+          <div>
+            <div class="text-[10px] font-bold text-slate-500 uppercase">2022 Handover</div>
+            <div class="text-lg font-black text-slate-800 dark:text-slate-200">KSh 8,761.0B</div>
+            <div class="text-[10px] text-slate-500">68.7% of GDP</div>
+          </div>
+          <div>
+            <div class="text-[10px] font-bold text-red-600 dark:text-red-400 uppercase">2025 Debt Stock</div>
+            <div class="text-lg font-black text-red-600 dark:text-red-400">KSh 11,814.5B</div>
+            <div class="text-[10px] font-bold text-red-600 dark:text-red-400">71.2% Debt Service</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- MODE 2: EARLY-TERM COMPARATIVE DEEP DIVE -->
+      <div id="container-early" class="hidden space-y-6">
+        
+        <!-- Metric Selector Sub-Tabs -->
+        <div class="flex justify-between items-center border-b border-slate-200 dark:border-slate-800 pb-3">
+          <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Accession Mandate Analysis (~First 3 Years):</span>
+          <div class="flex bg-slate-100 dark:bg-slate-800 p-1 rounded-xl text-xs font-bold">
+            <button id="sub-real" onclick="switchSubTab('real')" class="px-3 py-1 rounded-lg bg-white dark:bg-slate-700 shadow text-slate-900 dark:text-white font-bold transition-all">
+              Real vs Nominal
+            </button>
+            <button id="sub-gdp" onclick="switchSubTab('gdp')" class="px-3 py-1 rounded-lg text-slate-500 dark:text-slate-400 hover:text-slate-900 transition-all">
+              Debt / GDP
+            </button>
+            <button id="sub-service" onclick="switchSubTab('service')" class="px-3 py-1 rounded-lg text-slate-500 dark:text-slate-400 hover:text-slate-900 transition-all">
+              Debt Squeeze
+            </button>
+          </div>
+        </div>
+
+        <!-- Sub-View 1: Real vs Nominal -->
+        <div id="subview-real" class="space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="p-4 rounded-2xl border border-emerald-200 dark:border-emerald-900 bg-emerald-50/30 text-center">
+              <div class="text-[10px] font-bold text-emerald-700 dark:text-emerald-400 uppercase">Kibaki (Dec 02–Jun 05)</div>
+              <div class="text-2xl font-black text-emerald-600 dark:text-emerald-400 mt-1">-10.8%</div>
+              <div class="text-xs font-semibold text-slate-600 dark:text-slate-400">Date-Matched Real Contraction</div>
+              <div class="mt-2 text-[11px] text-slate-500">Nominal: KSh 629.5B ➔ 750.0B (+19.1%)<br>Inflation: +33.5% (CPI 136.7 ➔ 182.5)</div>
+            </div>
+            <div class="p-4 rounded-2xl border border-amber-200 dark:border-amber-900 bg-amber-50/30 text-center">
+              <div class="text-[10px] font-bold text-amber-700 dark:text-amber-400 uppercase">Uhuru (Jun 13–Jun 16)</div>
+              <div class="text-2xl font-black text-amber-600 dark:text-amber-400 mt-1">+56.8%</div>
+              <div class="text-xs font-semibold text-slate-600 dark:text-slate-400">Fastest Real Surge</div>
+              <div class="mt-2 text-[11px] text-slate-500">Nominal: KSh 1.89T ➔ 3.61T (+90.7%)<br>Inflation: +21.6% (CPI 139.6 ➔ 169.8)</div>
+            </div>
+            <div class="p-4 rounded-2xl border border-blue-200 dark:border-blue-900 bg-blue-50/30 text-center">
+              <div class="text-[10px] font-bold text-blue-700 dark:text-blue-400 uppercase">Ruto (Jun 22–Jun 25)</div>
+              <div class="text-2xl font-black text-blue-600 dark:text-blue-400 mt-1">+15.1%</div>
+              <div class="text-xs font-semibold text-slate-600 dark:text-slate-400">Largest Shilling Volume</div>
+              <div class="mt-2 text-[11px] text-slate-500">Nominal: KSh 8.76T ➔ 11.81T (+34.8%)<br>Inflation: +17.2% (CPI 124.2 ➔ 145.6)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sub-View 2: Debt / GDP -->
+        <div id="subview-gdp" class="hidden space-y-3">
+          <div class="p-3.5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/30">
+            <div class="flex justify-between text-xs font-bold mb-1.5">
+              <span>Kibaki I (Dec 2002 ➔ Jun 2005)</span>
+              <span class="text-emerald-600 dark:text-emerald-400 font-extrabold">64.0% ➔ 55.6% (-8.4 pp)</span>
+            </div>
+            <div class="w-full bg-slate-200 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
+              <div class="bg-emerald-500 h-full rounded-full" style="width: 55.6%"></div>
+            </div>
+          </div>
+          <div class="p-3.5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/30">
+            <div class="flex justify-between text-xs font-bold mb-1.5">
+              <span>Uhuru I (Jun 2013 ➔ Jun 2016)</span>
+              <span class="text-amber-600 dark:text-amber-400 font-extrabold">42.1% ➔ 54.8% (+12.7 pp)</span>
+            </div>
+            <div class="w-full bg-slate-200 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
+              <div class="bg-amber-500 h-full rounded-full" style="width: 54.8%"></div>
+            </div>
+          </div>
+          <div class="p-3.5 rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/30">
+            <div class="flex justify-between text-xs font-bold mb-1.5">
+              <span>Ruto I (Jun 2022 ➔ Jun 2025)</span>
+              <span class="text-blue-600 dark:text-blue-400 font-extrabold">68.7% ➔ 67.8% (-0.9 pp / Flat)</span>
+            </div>
+            <div class="w-full bg-slate-200 dark:bg-slate-700 h-2.5 rounded-full overflow-hidden">
+              <div class="bg-blue-500 h-full rounded-full" style="width: 67.8%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sub-View 3: Debt Squeeze -->
+        <div id="subview-service" class="hidden space-y-4">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-center">
+            <div class="p-3 bg-slate-50 dark:bg-slate-800/40 rounded-xl border border-slate-200 dark:border-slate-700">
+              <div class="text-[9px] font-bold text-slate-500">Kibaki Yr 3*</div>
+              <div class="text-lg font-black text-emerald-600 dark:text-emerald-400">13.2%</div>
+              <div class="text-[9px] text-slate-500">KSh 38.3B</div>
+            </div>
+            <div class="p-3 bg-slate-50 dark:bg-slate-800/40 rounded-xl border border-slate-200 dark:border-slate-700">
+              <div class="text-[9px] font-bold text-slate-500">Uhuru Yr 3*</div>
+              <div class="text-lg font-black text-amber-600 dark:text-amber-400">21.7%</div>
+              <div class="text-[9px] text-slate-500">KSh 251.4B</div>
+            </div>
+            <div class="p-3 bg-blue-50 dark:bg-blue-950/20 rounded-xl border border-blue-200 dark:border-blue-900">
+              <div class="text-[9px] font-bold text-blue-700 dark:text-blue-300">Ruto Start</div>
+              <div class="text-lg font-black text-blue-600 dark:text-blue-400">47.9%</div>
+              <div class="text-[9px] text-blue-700 dark:text-blue-300">KSh 1,173.6B</div>
+            </div>
+            <div class="p-3 bg-red-50 dark:bg-red-950/20 rounded-xl border border-red-200 dark:border-red-900">
+              <div class="text-[9px] font-bold text-red-700 dark:text-red-300">Ruto Yr 3</div>
+              <div class="text-lg font-black text-red-600 dark:text-red-400">71.2%</div>
+              <div class="text-[9px] font-bold text-red-700 dark:text-red-300">KSh 1,722.1B</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="bg-slate-100 dark:bg-slate-950 px-6 py-3 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center text-[10px] text-slate-500 gap-2">
+      <div>Sources: National Treasury ADMR Reports (2003–2025) & KNBS Monthly CPI Releases</div>
+      <div class="font-bold text-slate-700 dark:text-slate-300">Analysis: Kenya in Data (kenyaindata.org)</div>
+    </div>
+
+  </div>
+
+  <script>
+    function switchMode(mode) {
+      const btnHist = document.getElementById('mode-history');
+      const btnEarly = document.getElementById('mode-early');
+      const contHist = document.getElementById('container-history');
+      const contEarly = document.getElementById('container-early');
+
+      if (mode === 'history') {
+        btnHist.className = 'px-3.5 py-1.5 rounded-lg bg-red-600 text-white shadow transition-all font-bold';
+        btnEarly.className = 'px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-white transition-all font-medium';
+        contHist.classList.remove('hidden');
+        contEarly.classList.add('hidden');
+      } else {
+        btnEarly.className = 'px-3.5 py-1.5 rounded-lg bg-red-600 text-white shadow transition-all font-bold';
+        btnHist.className = 'px-3.5 py-1.5 rounded-lg text-slate-300 hover:text-white transition-all font-medium';
+        contEarly.classList.remove('hidden');
+        contHist.classList.add('hidden');
+      }
+    }
+
+    function switchSubTab(tab) {
+      const tabs = ['real', 'gdp', 'service'];
+      tabs.forEach(t => {
+        const btn = document.getElementById('sub-' + t);
+        const subview = document.getElementById('subview-' + t);
+        if (t === tab) {
+          btn.className = 'px-3 py-1 rounded-lg bg-white dark:bg-slate-700 shadow text-slate-900 dark:text-white font-bold transition-all';
+          subview.classList.remove('hidden');
+        } else {
+          btn.className = 'px-3 py-1 rounded-lg text-slate-500 dark:text-slate-400 hover:text-slate-900 transition-all font-medium';
+          subview.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
