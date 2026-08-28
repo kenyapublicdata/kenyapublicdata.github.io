@@ -1,0 +1,9 @@
+component,observation_date,value_ksh_billion,share_of_total_debt_pct,status,source
+Domestic Treasury bonds,2025-06-30,5110.010,43.25,provisional,"National Treasury, Annual Public Debt Management Report FY 2024/25, Table 5, p. 34"
+Domestic Treasury bills,2025-06-30,1036.875,8.78,provisional,"National Treasury, Annual Public Debt Management Report FY 2024/25, Table 5, p. 34"
+Other domestic debt,2025-06-30,179.124,1.52,provisional,"National Treasury, Annual Public Debt Management Report FY 2024/25, Table 5, p. 34"
+External multilateral debt,2025-06-30,3045.391,25.78,provisional,"National Treasury, Annual Public Debt Management Report FY 2024/25, Table 10, p. 45"
+External commercial debt,2025-06-30,1322.292,11.19,provisional,"National Treasury, Annual Public Debt Management Report FY 2024/25, Table 10, p. 45"
+External bilateral debt,2025-06-30,1106.363,9.36,provisional,"National Treasury, Annual Public Debt Management Report FY 2024/25, Table 10, p. 45"
+External suppliers credit,2025-06-30,14.419,0.12,provisional,"National Treasury, Annual Public Debt Management Report FY 2024/25, Table 10, p. 45"
+Total public and publicly guaranteed debt,2025-06-30,11814.474,100.00,provisional,"National Treasury, Annual Public Debt Management Report FY 2024/25, Table 3, p. 28"

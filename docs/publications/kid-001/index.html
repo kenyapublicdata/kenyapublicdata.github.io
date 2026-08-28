@@ -1,0 +1,823 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kenya's Public Debt: Stock, Composition and Servicing Costs — Kenya in Data</title>
+  <meta name="description" content="A current, source-based account of how much Kenya owes, how the debt is structured, and how much it costs to service.">
+  <meta name="theme-color" content="#f7f5ef">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Kenya in Data">
+  <meta property="og:title" content="Kenya's Public Debt: Stock, Composition and Servicing Costs">
+  <meta property="og:description" content="Kenya owes KSh 12.896 trillion as of May 2026. Debt service absorbed 71.2% of ordinary revenue in FY 2024/25, with domestic interest costing 13.0% on average.">
+  <meta property="og:image" content="https://kenyapublicdata.github.io/assets/figures/ASSET-KID001-010_article_og_hero.png">
+  <meta property="og:url" content="https://kenyapublicdata.github.io/publications/kid-001/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kenya's Public Debt: Stock, Composition and Servicing Costs">
+  <meta name="twitter:description" content="A source-verified breakdown of Kenya's public debt, domestic interest burden, and revenue servicing ratios.">
+  <meta name="twitter:image" content="https://kenyapublicdata.github.io/assets/figures/ASSET-KID001-010_article_og_hero.png">
+
+  <style>
+    :root {
+      --paper: #f7f5ef;
+      --card-bg: #ffffff;
+      --ink: #191919;
+      --muted: #66645e;
+      --line: #d8d4ca;
+      --line-light: #ece9e1;
+      --red: #b51f2e;
+      --green: #176b48;
+      --blue: #1d5f8a;
+      --width: 820px;
+      --wide-width: 1040px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--paper);
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 17px;
+      line-height: 1.68;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      width: min(calc(100% - 40px), var(--width));
+      margin: 0 auto;
+    }
+
+    .wrap-wide {
+      width: min(calc(100% - 40px), var(--wide-width));
+      margin: 0 auto;
+    }
+
+    a {
+      color: var(--ink);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover { color: var(--red); }
+
+    /* Site Header */
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+      font-weight: 750;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+    }
+
+    .mark {
+      width: 10px;
+      height: 10px;
+      background: var(--red);
+      border-radius: 50%;
+    }
+
+    nav { display: flex; gap: 20px; font-size: 14px; }
+    nav a { color: var(--muted); text-decoration: none; }
+    nav a:hover { color: var(--ink); }
+
+    /* Article Header */
+    .article-header {
+      padding: 64px 0 40px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .meta-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 750;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--red);
+      margin-bottom: 16px;
+    }
+
+    .meta-badge .id-tag {
+      background: rgba(181, 31, 46, 0.08);
+      padding: 3px 8px;
+      border-radius: 3px;
+    }
+
+    h1 {
+      margin: 0 0 20px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(34px, 5.5vw, 54px);
+      font-weight: 400;
+      letter-spacing: -0.04em;
+      line-height: 1.08;
+    }
+
+    .deck {
+      margin: 0 0 28px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(19px, 2.4vw, 24px);
+      font-style: italic;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .byline-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line-light);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .byline-left strong { color: var(--ink); }
+
+    /* Key Findings Box */
+    .findings-card {
+      margin: 44px 0;
+      padding: 28px 32px;
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--red);
+      border-radius: 4px;
+    }
+
+    .findings-card h2 {
+      margin: 0 0 16px;
+      font-size: 13px;
+      font-weight: 750;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--red);
+      font-family: Inter, sans-serif;
+    }
+
+    .findings-list {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .findings-list li {
+      margin-bottom: 12px;
+      line-height: 1.55;
+    }
+
+    .findings-list li:last-child { margin-bottom: 0; }
+
+    /* Main Article Content */
+    article {
+      padding: 20px 0 80px;
+    }
+
+    h2 {
+      margin: 48px 0 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(24px, 3.2vw, 32px);
+      font-weight: 400;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+    }
+
+    h3 {
+      margin: 36px 0 14px;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      margin: 0 0 22px;
+    }
+
+    /* Figures */
+    figure {
+      margin: 44px 0;
+      padding: 0;
+    }
+
+    .figure-container {
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    figure img, figure svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 2px;
+    }
+
+    figcaption {
+      margin-top: 14px;
+      font-size: 13.5px;
+      line-height: 1.5;
+      color: var(--muted);
+      text-align: left;
+    }
+
+    figcaption strong { color: var(--ink); }
+
+    .figure-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 10px;
+      font-size: 12px;
+    }
+
+    .figure-actions a {
+      color: var(--muted);
+      text-decoration: none;
+      background: rgba(0,0,0,0.04);
+      padding: 4px 8px;
+      border-radius: 3px;
+    }
+
+    .figure-actions a:hover {
+      background: var(--line);
+      color: var(--ink);
+    }
+
+    /* Data Tables */
+    .table-wrap {
+      margin: 32px 0 36px;
+      overflow-x: auto;
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14.5px;
+      text-align: left;
+    }
+
+    th {
+      background: #fbf9f4;
+      padding: 12px 16px;
+      font-weight: 700;
+      font-size: 12.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--line-light);
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    td.num, th.num {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    tr.total-row {
+      font-weight: 750;
+      background: #fdfcf9;
+    }
+
+    /* Callout & Note Boxes */
+    .note-box {
+      margin: 36px 0;
+      padding: 20px 24px;
+      background: rgba(23, 107, 72, 0.05);
+      border-left: 3px solid var(--green);
+      border-radius: 0 4px 4px 0;
+      font-size: 15px;
+    }
+
+    .note-box p:last-child { margin-bottom: 0; }
+
+    .warning-box {
+      margin: 36px 0;
+      padding: 20px 24px;
+      background: rgba(181, 31, 46, 0.05);
+      border-left: 3px solid var(--red);
+      border-radius: 0 4px 4px 0;
+      font-size: 15px;
+    }
+
+    .warning-box p:last-child { margin-bottom: 0; }
+
+    /* Download Banner */
+    .download-panel {
+      margin: 60px 0;
+      padding: 32px;
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+    }
+
+    .download-panel h3 { margin-top: 0; }
+
+    .download-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .download-card {
+      padding: 16px;
+      border: 1px solid var(--line-light);
+      border-radius: 4px;
+      text-decoration: none;
+      background: #faf8f3;
+      transition: border-color 0.2s, transform 0.1s;
+    }
+
+    .download-card:hover {
+      border-color: var(--line);
+      background: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .download-card .format {
+      font-size: 11px;
+      font-weight: 750;
+      text-transform: uppercase;
+      color: var(--red);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .download-card .name {
+      font-size: 14px;
+      font-weight: 650;
+      color: var(--ink);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .download-card .desc {
+      font-size: 12px;
+      color: var(--muted);
+      display: block;
+    }
+
+    /* References & Glossary */
+    .ref-list, .glossary-list {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .ref-list p { margin-bottom: 14px; }
+
+    /* Site Footer */
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      padding: 32px 0 48px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    @media (max-width: 700px) {
+      .footer-inner { display: block; }
+      .footer-inner p + p { margin-top: 6px; }
+      .article-header { padding: 40px 0 28px; }
+      .findings-card { padding: 22px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="wrap site-header">
+    <a class="brand" href="../../" aria-label="Kenya in Data home">
+      <span class="mark" aria-hidden="true"></span>
+      Kenya in Data
+    </a>
+    <nav aria-label="Navigation">
+      <a href="../../">← All Publications</a>
+      <a href="#downloads">Downloads</a>
+      <a href="#sources">Sources</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <header class="article-header">
+      <div class="meta-badge">
+        <span class="id-tag">KID-001</span>
+        <span>Public Finance · Debt Baseline</span>
+      </div>
+      <h1>Kenya's Public Debt: Stock, Composition and Servicing Costs</h1>
+      <p class="deck">A current, source-based account of how much Kenya owes, how the debt is structured and how much it costs to service.</p>
+      
+      <div class="byline-bar">
+        <div class="byline-left">
+          Published by <strong>Kenya in Data</strong> · Research Project <strong>PRJ-001</strong>
+        </div>
+        <div class="byline-right">
+          Baseline: May 2026 / FY 2024/25 · Provisional Official Data
+        </div>
+      </div>
+    </header>
+
+    <div class="findings-card">
+      <h2>Key Findings</h2>
+      <ul class="findings-list">
+        <li>Kenya's public and publicly guaranteed debt stood at <strong>KSh 12.896 trillion in May 2026</strong>, the latest month with complete published domestic and external totals.</li>
+        <li>Domestic debt accounted for <strong>56.1% (KSh 7.239T)</strong> of the May 2026 total, compared with <strong>43.9% (KSh 5.657T)</strong> for external debt.</li>
+        <li>The National Treasury's detailed June 2025 baseline placed public debt at <strong>KSh 11.814 trillion</strong>, or <strong>67.8% of GDP</strong> in nominal terms.</li>
+        <li>Debt service reached <strong>KSh 1.722 trillion in FY 2024/25</strong>, absorbing <strong>71.2% of ordinary revenue</strong>.</li>
+        <li>Domestic debt carried a <strong>13.0% weighted average interest rate</strong>, compared with <strong>3.9%</strong> for external debt. Treasury bonds generated <strong>87.3%</strong> of domestic interest and charges.</li>
+        <li>The present value of debt stood at <strong>63.7% of GDP</strong> at June 2025, which was <strong>8.7 percentage points above</strong> the statutory debt anchor of 55%.</li>
+      </ul>
+    </div>
+
+    <article>
+      <h2>Reporting Scope and Observation Dates</h2>
+      <p>This report uses two observation dates because Kenya's official debt publications serve different purposes and are released on different schedules:</p>
+      <ul>
+        <li><strong>May 2026:</strong> Provides the most recent complete monthly total in the Central Bank of Kenya's June 2026 <em>Monthly Economic Indicators</em>.</li>
+        <li><strong>June 2025 / FY 2024/25:</strong> Provides the latest full fiscal-year account of debt composition, debt service, interest rates and debt-to-GDP ratios in the National Treasury's <em>Annual Public Debt Management Report FY 2024/25</em>.</li>
+      </ul>
+      <p>Public and publicly guaranteed debt includes borrowing undertaken directly by the national government and debt for which the government has formally guaranteed repayment. Both source publications describe the relevant observations as provisional (CBK Table 7.1, p. 22; National Treasury Tables 3–4, pp. 28–30).</p>
+
+      <div class="note-box">
+        <p><strong>Note on GDP Ratios:</strong> Debt-to-GDP ratios are reported strictly for June 2025. Applying the June 2025 GDP measure to the May 2026 debt stock would combine mismatching reporting periods and produce an invalid ratio.</p>
+      </div>
+
+      <h2>1. Total Public Debt Reached KSh 12.896 Trillion (May 2026)</h2>
+      <p>At the end of May 2026, Kenya's public and publicly guaranteed debt stood at <strong>KSh 12.896 trillion</strong>. Domestic debt was <strong>KSh 7.239 trillion</strong>, while external debt was <strong>KSh 5.657 trillion</strong>.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th class="num">KSh Trillion</th>
+              <th class="num">Share of Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Domestic debt</td>
+              <td class="num">7.239</td>
+              <td class="num">56.1%</td>
+            </tr>
+            <tr>
+              <td>External debt</td>
+              <td class="num">5.657</td>
+              <td class="num">43.9%</td>
+            </tr>
+            <tr class="total-row">
+              <td>Total Public &amp; Publicly Guaranteed Debt</td>
+              <td class="num">12.896</td>
+              <td class="num">100.0%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <figure>
+        <div class="figure-container">
+          <img src="../../assets/figures/FIG-KID001-001_current_debt_composition.svg" alt="A horizontal stacked bar chart showing Kenya's May 2026 public debt of KSh 12.896 trillion, comprising 56.1% domestic debt and 43.9% external debt." loading="lazy">
+        </div>
+        <figcaption>
+          <strong>Figure 1. Kenya's public and publicly guaranteed debt composition, May 2026.</strong> Data: Central Bank of Kenya (2026), Table 7.1, p. 22. Analysis and visualisation: Kenya in Data. Figures are provisional.
+          <div class="figure-actions">
+            <a href="../../assets/figures/FIG-KID001-001_current_debt_composition.svg" download>Download SVG</a>
+            <a href="../../assets/figures/FIG-KID001-001_current_debt_composition.png" download>Download PNG</a>
+            <a href="../../assets/data/tables/current_debt_snapshot_may_2026.csv" download>Table CSV</a>
+          </div>
+        </figcaption>
+      </figure>
+
+      <p>At June 2025, the corresponding shares were <strong>53.5% domestic</strong> and <strong>46.5% external</strong>. The May 2026 release reported a domestic share 2.6 percentage points higher than the June 2025 baseline.</p>
+      <p>The reported nominal debt total was KSh 1.082 trillion (9.2%) higher in May 2026 than in June 2025. This reflects a comparison between two official snapshot publications rather than a fully reconciled cash-flow ledger.</p>
+
+      <h2>2. Instrument &amp; Creditor Breakdown (June 2025 Baseline)</h2>
+      <p>The National Treasury's June 2025 fiscal-year report provides the detailed instrument and creditor composition across both domestic and external portfolios.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th class="num">KSh Billion</th>
+              <th class="num">Share of Total Debt</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Domestic Treasury bonds</td>
+              <td class="num">5,110.010</td>
+              <td class="num">43.25%</td>
+            </tr>
+            <tr>
+              <td>Domestic Treasury bills</td>
+              <td class="num">1,036.875</td>
+              <td class="num">8.78%</td>
+            </tr>
+            <tr>
+              <td>Other domestic debt</td>
+              <td class="num">179.124</td>
+              <td class="num">1.52%</td>
+            </tr>
+            <tr>
+              <td>External multilateral debt</td>
+              <td class="num">3,045.391</td>
+              <td class="num">25.78%</td>
+            </tr>
+            <tr>
+              <td>External commercial debt</td>
+              <td class="num">1,322.292</td>
+              <td class="num">11.19%</td>
+            </tr>
+            <tr>
+              <td>External bilateral debt</td>
+              <td class="num">1,106.363</td>
+              <td class="num">9.36%</td>
+            </tr>
+            <tr>
+              <td>External suppliers' credit</td>
+              <td class="num">14.419</td>
+              <td class="num">0.12%</td>
+            </tr>
+            <tr class="total-row">
+              <td>Total Public &amp; Publicly Guaranteed Debt</td>
+              <td class="num">11,814.474</td>
+              <td class="num">100.00%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <figure>
+        <div class="figure-container">
+          <img src="../../assets/figures/FIG-KID001-004_june_2025_debt_components.svg" alt="Horizontal bar chart showing the components of Kenya's June 2025 debt stock. Treasury bonds are 43.3%, external multilateral debt is 25.8%." loading="lazy">
+        </div>
+        <figcaption>
+          <strong>Figure 2. Detailed composition of Kenya's public debt, June 2025.</strong> Data: National Treasury (2025), Tables 5 &amp; 10, pp. 34 &amp; 45. Analysis and visualisation: Kenya in Data.
+          <div class="figure-actions">
+            <a href="../../assets/figures/FIG-KID001-004_june_2025_debt_components.svg" download>Download SVG</a>
+            <a href="../../assets/figures/FIG-KID001-004_june_2025_debt_components.png" download>Download PNG</a>
+            <a href="../../assets/data/tables/debt_components_june_2025.csv" download>Table CSV</a>
+          </div>
+        </figcaption>
+      </figure>
+
+      <p>Treasury bonds formed the single largest component, representing 43.25% of the total debt stock and over 80% of domestic debt. Treasury bonds had a weighted average time to maturity of 7.5 years at June 2025.</p>
+
+      <h2>3. Debt Service Absorbed 71.2% of Ordinary Revenue</h2>
+      <p>In FY 2024/25, total debt service amounted to <strong>KSh 1.722 trillion</strong>. Interest payments accounted for KSh 987.495 billion (57.34%), while principal repayments accounted for KSh 734.609 billion (42.66%).</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Debt Service Component</th>
+              <th class="num">KSh Billion</th>
+              <th class="num">Share of Service</th>
+              <th class="num">Share of Revenue</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Domestic interest</td>
+              <td class="num">776.257</td>
+              <td class="num">45.08%</td>
+              <td class="num">32.07%</td>
+            </tr>
+            <tr>
+              <td>External interest</td>
+              <td class="num">211.238</td>
+              <td class="num">12.27%</td>
+              <td class="num">8.73%</td>
+            </tr>
+            <tr style="background: #faf8f3; font-weight: 600;">
+              <td>Total Interest</td>
+              <td class="num">987.495</td>
+              <td class="num">57.34%</td>
+              <td class="num">40.80%</td>
+            </tr>
+            <tr>
+              <td>Domestic principal</td>
+              <td class="num">366.805</td>
+              <td class="num">21.30%</td>
+              <td class="num">15.16%</td>
+            </tr>
+            <tr>
+              <td>External principal</td>
+              <td class="num">367.804</td>
+              <td class="num">21.36%</td>
+              <td class="num">15.20%</td>
+            </tr>
+            <tr style="background: #faf8f3; font-weight: 600;">
+              <td>Total Principal</td>
+              <td class="num">734.609</td>
+              <td class="num">42.66%</td>
+              <td class="num">30.35%</td>
+            </tr>
+            <tr class="total-row">
+              <td>Total Debt Service (FY 2024/25)</td>
+              <td class="num">1,722.104</td>
+              <td class="num">100.00%</td>
+              <td class="num">71.16%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <figure>
+        <div class="figure-container">
+          <img src="../../assets/figures/FIG-KID001-005_debt_service_composition.svg" alt="Stacked bar chart showing Kenya's FY 2024/25 debt service breakdown: domestic interest 45.1%, external interest 12.3%, principal 42.7%." loading="lazy">
+        </div>
+        <figcaption>
+          <strong>Figure 3. Composition of Kenya's debt service, FY 2024/25.</strong> Data: National Treasury (2025), Table 4, p. 30. Analysis and visualisation: Kenya in Data. Domestic principal excludes routine Treasury-bill rollovers.
+          <div class="figure-actions">
+            <a href="../../assets/figures/FIG-KID001-005_debt_service_composition.svg" download>Download SVG</a>
+            <a href="../../assets/figures/FIG-KID001-005_debt_service_composition.png" download>Download PNG</a>
+            <a href="../../assets/data/tables/debt_service_fy2024_25.csv" download>Table CSV</a>
+          </div>
+        </figcaption>
+      </figure>
+
+      <h3>Domestic Debt Carried a 13.0% Weighted Average Interest Rate</h3>
+      <p>While domestic and external principal repayments were virtually identical at approximately KSh 367 billion each, <strong>domestic interest payments were more than 3.6 times higher than external interest</strong>.</p>
+      <p>The Treasury's weighted average interest rates explain this divergence: the domestic debt portfolio carried a <strong>13.0% average interest rate</strong>, compared with just <strong>3.9% for external debt</strong> and 8.7% across the entire public debt portfolio.</p>
+
+      <figure>
+        <div class="figure-container">
+          <img src="../../assets/figures/FIG-KID001-008_weighted_average_interest_rates.svg" alt="Horizontal bars displaying weighted average interest rates: domestic debt at 13.0%, total debt at 8.7%, external debt at 3.9%." loading="lazy">
+        </div>
+        <figcaption>
+          <strong>Figure 4. Weighted average interest rates on Kenya's public debt, FY 2024/25.</strong> Data: National Treasury (2025), Section 9.3 &amp; Figure 17, p. 68. Analysis and visualisation: Kenya in Data.
+          <div class="figure-actions">
+            <a href="../../assets/figures/FIG-KID001-008_weighted_average_interest_rates.svg" download>Download SVG</a>
+            <a href="../../assets/figures/FIG-KID001-008_weighted_average_interest_rates.png" download>Download PNG</a>
+            <a href="../../assets/data/tables/weighted_average_interest_rates_fy2024_25.csv" download>Table CSV</a>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="figure-container">
+          <img src="../../assets/figures/ASSET-KID001-012_domestic_interest_explainer.svg" alt="Infographic explaining the 3 structural drivers of why domestic interest costs were 3.6x external interest costs." loading="lazy">
+        </div>
+        <figcaption>
+          <strong>Explainer: Why domestic debt service costs more.</strong> 1) Domestic stock is larger (KSh 6.33T vs 5.49T); 2) 55.5% of external debt is from concessional/multilateral lenders at low rates; 3) Domestic yields reflect market bond auctions.
+        </figcaption>
+      </figure>
+
+      <h2>4. Domestic Interest Composition &amp; Debt Holders</h2>
+      <p>Treasury bonds accounted for <strong>KSh 677.762 billion</strong>, or <strong>87.3%</strong>, of total domestic interest and charges in FY 2024/25. Treasury bills generated KSh 87.560 billion (11.3%).</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Domestic Interest Component</th>
+              <th class="num">KSh Billion</th>
+              <th class="num">Share of Domestic Interest</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Treasury bonds</td>
+              <td class="num">677.762</td>
+              <td class="num">87.3%</td>
+            </tr>
+            <tr>
+              <td>Treasury bills</td>
+              <td class="num">87.560</td>
+              <td class="num">11.3%</td>
+            </tr>
+            <tr>
+              <td>Other interest and charges</td>
+              <td class="num">10.935</td>
+              <td class="num">1.4%</td>
+            </tr>
+            <tr class="total-row">
+              <td>Total Domestic Interest &amp; Charges</td>
+              <td class="num">776.257</td>
+              <td class="num">100.0%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>At June 2025, commercial banks held the largest institutional share of domestic debt at <strong>34.7%</strong>, followed by pension funds (14.1%), government &amp; parastatals (13.8%), and insurance companies (12.6%).</p>
+
+      <figure>
+        <div class="figure-container">
+          <img src="../../assets/figures/FIG-KID001-007_domestic_debt_holders.svg" alt="Horizontal bar chart showing domestic debt holders: Commercial banks 34.7%, Pension funds 14.1%, Parastatals 13.8%, Insurance 12.6%." loading="lazy">
+        </div>
+        <figcaption>
+          <strong>Figure 5. Holders of Kenya's domestic public debt, June 2025.</strong> Data: National Treasury (2025), Table 6, p. 36. Analysis and visualisation: Kenya in Data.
+          <div class="figure-actions">
+            <a href="../../assets/figures/FIG-KID001-007_domestic_debt_holders.svg" download>Download SVG</a>
+            <a href="../../assets/figures/FIG-KID001-007_domestic_debt_holders.png" download>Download PNG</a>
+            <a href="../../assets/data/tables/domestic_debt_holders_june_2025.csv" download>Table CSV</a>
+          </div>
+        </figcaption>
+      </figure>
+
+      <h2>5. Statutory Debt Anchor Benchmark</h2>
+      <p>At June 2025, Kenya's nominal debt stood at <strong>67.8% of GDP</strong>, while the present value of debt was reported at <strong>63.7% of GDP</strong>.</p>
+      <p>Section 50(2A) of the Public Finance Management Act sets Kenya's statutory debt anchor at <strong>55% of GDP in present-value terms</strong>. The present-value debt level exceeded this legal anchor by <strong>8.7 percentage points</strong>.</p>
+
+      <figure>
+        <div class="figure-container">
+          <img src="../../assets/figures/ASSET-KID001-014_statutory_anchor.svg" alt="Chart comparing June 2025 present value debt ratio of 63.7% of GDP against the statutory anchor of 55.0% of GDP." loading="lazy">
+        </div>
+        <figcaption>
+          <strong>Figure 6. Present value debt ratio vs statutory anchor, June 2025.</strong> Data: National Treasury (2025), Table 3 &amp; Section 8; PFM Act §50(2A). Analysis and visualisation: Kenya in Data.
+        </figcaption>
+      </figure>
+
+      <div class="warning-box">
+        <p><strong>Interpretation &amp; Caveats:</strong></p>
+        <ul style="margin: 8px 0 0; padding-left: 20px;">
+          <li><strong>Provisional data:</strong> Official numbers are provisional and subject to standard revisions by CBK and Treasury.</li>
+          <li><strong>Different observation dates:</strong> Debt stock is as of May 2026; detailed service and debt-to-GDP ratios reflect FY 2024/25.</li>
+          <li><strong>Revenue definition:</strong> The 71.2% service ratio uses ordinary revenue (tax + recurring non-tax revenue).</li>
+          <li><strong>Institutional holdings:</strong> Bank and pension debt holdings represent gross balance-sheet assets held on behalf of depositors and beneficiaries, not net institutional profits.</li>
+        </ul>
+      </div>
+
+      <section id="downloads" class="download-panel">
+        <h3>Download Open Data &amp; Assets</h3>
+        <p>Kenya in Data releases all underlying observation tables and chart files under an open <strong>CC BY 4.0</strong> license for public use, journalism, and research.</p>
+
+        <div class="download-grid">
+          <a class="download-card" href="../../assets/data/KID001_current_debt_baseline.csv" download>
+            <span class="format">CSV · 43 Series</span>
+            <span class="name">Full Publication Dataset</span>
+            <span class="desc">Complete verified debt series, metadata and sources</span>
+          </a>
+          <a class="download-card" href="../../assets/data/data_dictionary.csv" download>
+            <span class="format">CSV · Dictionary</span>
+            <span class="name">Data Dictionary</span>
+            <span class="desc">Full column definitions, units, and source codes</span>
+          </a>
+          <a class="download-card" href="../../assets/data/dataset_metadata.yml" download>
+            <span class="format">YAML · Metadata</span>
+            <span class="name">Dataset Metadata</span>
+            <span class="desc">Provenance, revision rules, and licensing terms</span>
+          </a>
+          <a class="download-card" href="../../assets/figures/ASSET-KID001-010_article_og_hero.png" download>
+            <span class="format">PNG · 300 DPI</span>
+            <span class="name">Publication Hero Card</span>
+            <span class="desc">Full resolution summary graphic for sharing</span>
+          </a>
+        </div>
+      </section>
+
+      <section id="sources">
+        <h2>Primary Sources &amp; References</h2>
+        <div class="ref-list">
+          <p><strong>Central Bank of Kenya (2026).</strong> <em>Monthly Economic Indicators: June 2026</em>. Nairobi: Central Bank of Kenya. <a href="https://www.centralbank.go.ke/uploads/monthly_economic_indicators/355702775_MEI%20-%20June%202026.pdf" target="_blank" rel="noopener">Official CBK Bulletin PDF</a>.</p>
+          <p><strong>National Treasury of Kenya (2025).</strong> <em>Annual Public Debt Management Report: Financial Year 2024/2025</em>. Nairobi: The National Treasury and Economic Planning. <a href="https://www.treasury.go.ke/wp-content/uploads/2025/11/Annual-Public-Debt-Report-2024-2025.pdf" target="_blank" rel="noopener">Official Treasury Report PDF</a>.</p>
+          <p><strong>Kenya Law (2024).</strong> <em>Public Finance Management Act, No. 18 of 2012 (consolidated 26 April 2024), Section 50</em>. <a href="https://new.kenyalaw.org/akn/ke/act/2012/18/eng@2024-04-26" target="_blank" rel="noopener">Kenya Law Database</a>.</p>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <p><strong>Kenya in Data</strong> — Show first. Interpret second.</p>
+      <p><a href="../../">Home</a> · <a href="https://github.com/kenyapublicdata/kenyapublicdata.github.io" target="_blank" rel="noopener">GitHub Repository</a> · 2026</p>
+    </div>
+  </footer>
+
+</body>
+</html>

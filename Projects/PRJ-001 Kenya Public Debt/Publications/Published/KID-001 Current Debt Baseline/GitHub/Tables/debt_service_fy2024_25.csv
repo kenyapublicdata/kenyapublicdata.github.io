@@ -1,0 +1,8 @@
+component,period,value_ksh_billion,share_of_total_service_pct,share_of_ordinary_revenue_pct,share_of_gdp_pct,status,source
+Domestic interest,FY 2024/25,776.257,45.08,32.07,4.45,provisional,"National Treasury, Annual Public Debt Management Report FY 2024/25, Table 4, p. 30"
+External interest,FY 2024/25,211.238,12.27,8.73,1.21,provisional,"National Treasury, Annual Public Debt Management Report FY 2024/25, Table 4, p. 30"
+Total interest,FY 2024/25,987.495,57.34,40.80,5.66,provisional,"National Treasury, Annual Public Debt Management Report FY 2024/25, Table 4, p. 30"
+Domestic principal,FY 2024/25,366.805,21.30,15.16,2.10,provisional,"National Treasury, Annual Public Debt Management Report FY 2024/25, Table 4, p. 30; excludes routine Treasury-bill redemptions"
+External principal,FY 2024/25,367.804,21.36,15.20,2.11,provisional,"National Treasury, Annual Public Debt Management Report FY 2024/25, Table 4, p. 30"
+Total principal,FY 2024/25,734.609,42.66,30.35,4.21,provisional,"National Treasury, Annual Public Debt Management Report FY 2024/25, Table 4, p. 30"
+Total debt service,FY 2024/25,1722.104,100.00,71.16,9.88,provisional,"National Treasury, Annual Public Debt Management Report FY 2024/25, Table 4, p. 30"

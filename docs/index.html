@@ -329,6 +329,98 @@
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
     }
+  
+    .featured-release {
+      margin: 64px 0 0;
+      padding: 36px 40px;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+    .featured-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11.5px;
+      font-weight: 750;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--red);
+      margin-bottom: 12px;
+    }
+    .featured-badge span {
+      background: rgba(181, 31, 46, 0.08);
+      padding: 2px 7px;
+      border-radius: 3px;
+    }
+    .featured-title {
+      margin: 0 0 12px;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(22px, 2.5vw, 28px);
+      font-weight: 400;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+    }
+    .featured-title a {
+      text-decoration: none;
+    }
+    .featured-title a:hover {
+      color: var(--red);
+    }
+    .featured-summary {
+      margin: 0 0 20px;
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+    .featured-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      background: var(--paper);
+      padding: 20px;
+      border-radius: 4px;
+      border: 1px solid var(--line-light);
+    }
+    .stat-item .stat-value {
+      font-size: 22px;
+      font-weight: 750;
+      font-family: Georgia, serif;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      display: block;
+    }
+    .stat-item .stat-label {
+      font-size: 11.5px;
+      color: var(--muted);
+      line-height: 1.35;
+      display: block;
+      margin-top: 2px;
+    }
+    .read-btn {
+      display: inline-block;
+      background: var(--ink);
+      color: #ffffff;
+      padding: 10px 20px;
+      font-size: 13.5px;
+      font-weight: 650;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .read-btn:hover {
+      background: var(--red);
+      color: #ffffff;
+    }
+    @media (max-width: 760px) {
+      .featured-release { grid-template-columns: 1fr; padding: 24px; gap: 24px; }
+      .featured-stats { grid-template-columns: 1fr 1fr; }
+    }
+
   </style>
 </head>
 <body>
@@ -338,6 +430,7 @@
       Kenya in Data
     </a>
     <nav aria-label="Main navigation">
+      <a href="publications/kid-001/">Publications</a>
       <a href="#about">About</a>
       <a href="#questions">Questions</a>
     </nav>
@@ -349,6 +442,36 @@
       <h1 id="page-title">Understand Kenya through evidence.</h1>
       <p class="intro">Clear, verifiable data about Kenya's government, society, economy and public life—built for citizens, journalists, researchers and anyone asking better questions.</p>
       <a class="hero-link" href="#questions">Explore the questions ↓</a>
+
+      <div class="featured-release">
+        <div>
+          <div class="featured-badge">
+            <span>Latest Publication · KID-001</span>
+          </div>
+          <h2 class="featured-title"><a href="publications/kid-001/">Kenya's Public Debt: Stock, Composition and Servicing Costs</a></h2>
+          <p class="featured-summary">A source-based account of how much Kenya owes (KSh 12.896T), how debt is structured between domestic and external lenders, and why debt service consumed 71.2% of ordinary revenue.</p>
+          <a class="read-btn" href="publications/kid-001/">Read Full Publication &amp; Data →</a>
+        </div>
+        <div class="featured-stats">
+          <div class="stat-item">
+            <span class="stat-value">KSh 12.9T</span>
+            <span class="stat-label">Total Public Debt (May 2026)</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">71.2%</span>
+            <span class="stat-label">Debt Service / Revenue (FY 24/25)</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">13.0%</span>
+            <span class="stat-label">Domestic Avg Interest Rate</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">63.7%</span>
+            <span class="stat-label">Present Value Debt / GDP</span>
+          </div>
+        </div>
+      </div>
+
     </section>
 
     <section class="wrap about" id="about" aria-labelledby="about-title">
@@ -407,7 +530,7 @@
 
     <section class="wrap closing" aria-label="Closing statement">
       <blockquote>Public data should help people understand power—not require power to understand it.</blockquote>
-      <a class="example" href="assets/figures/FIG-DEBT-001_nominal_vs_real_public_debt.svg">See an example: Kenya's public debt, 2002–2026 →</a>
+      <a class="example" href="publications/kid-001/">Read our first flagship release: Kenya's Public Debt Baseline →</a>
     </section>
   </main>
 

@@ -1,0 +1,10 @@
+holder_category,observation_date,value_ksh_billion,share_of_domestic_debt_pct,status,source
+Commercial banks,2025-06-30,2194.148,34.68,provisional,"National Treasury, Annual Public Debt Management Report FY 2024/25, Table 6, p. 36"
+Pension funds,2025-06-30,894.493,14.14,provisional,"National Treasury, Annual Public Debt Management Report FY 2024/25, Table 6, p. 36"
+Government and parastatals,2025-06-30,874.246,13.82,provisional,"National Treasury, Annual Public Debt Management Report FY 2024/25, Table 6, p. 36"
+Insurance companies,2025-06-30,799.140,12.63,provisional,"National Treasury, Annual Public Debt Management Report FY 2024/25, Table 6, p. 36"
+Other investors,2025-06-30,729.299,11.53,provisional,"National Treasury, Annual Public Debt Management Report FY 2024/25, Table 6, p. 36"
+Households,2025-06-30,382.411,6.05,provisional,"National Treasury, Annual Public Debt Management Report FY 2024/25, Table 6, p. 36"
+Non-residents,2025-06-30,279.636,4.42,provisional,"National Treasury, Annual Public Debt Management Report FY 2024/25, Table 6, p. 36"
+Central Bank of Kenya,2025-06-30,172.637,2.73,provisional,"National Treasury, Annual Public Debt Management Report FY 2024/25, Table 6, p. 36"
+Total domestic debt,2025-06-30,6326.009,100.00,provisional,"National Treasury, Annual Public Debt Management Report FY 2024/25, Tables 3 and 6, pp. 28 and 36; category values differ from total by KSh 0.001 billion due to source rounding"
