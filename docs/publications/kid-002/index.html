@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Uhuru vs Ruto: Kenya's Public Debt in Their First Four Fiscal-Year Windows — Kenya in Data</title>
-  <meta name="description" content="A head-to-head empirical comparison of debt growth, inflation-adjusted expansion, GDP tracking, debt composition and interest servicing burden under Uhuru Kenyatta and William Ruto.">
+  <meta name="description" content="A visual head-to-head empirical comparison of debt growth, inflation-adjusted expansion, GDP tracking, debt composition and interest servicing burden under Uhuru Kenyatta and William Ruto.">
   <meta name="theme-color" content="#f7f5ef">
 
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Kenya in Data">
   <meta property="og:title" content="Uhuru vs Ruto: Kenya's Public Debt in Their First Four Fiscal-Year Windows">
-  <meta property="og:description" content="Uhuru grew debt stock 2.7x faster (+132.7% nominal, +75.2% real) and outpaced GDP. Ruto added more nominal shillings (+KSh 4.25T vs +KSh 2.51T) on a 4.6x larger base, but interest costs doubled to 40.8% of revenue.">
+  <meta property="og:description" content="Uhuru grew debt stock 2.7x faster (+132.7% nominal, +75.2% real) and outpaced GDP. Ruto added more nominal shillings (+KSh 4.25T vs +KSh 2.51T) on a 4.6x larger base, while interest payments doubled to 40.8% of revenue.">
   <meta property="og:image" content="https://kenyapublicdata.github.io/assets/figures/ASSET-KID002-010_regime_debt_explainer_mobile.png">
   <meta property="og:url" content="https://kenyapublicdata.github.io/publications/kid-002/">
   <meta name="twitter:card" content="summary_large_image">
@@ -32,8 +32,7 @@
       --blue: #2563eb;
       --gold: #d97706;
       --purple: #7c3aed;
-      --width: 840px;
-      --wide-width: 1060px;
+      --width: 860px;
     }
 
     * { box-sizing: border-box; }
@@ -55,11 +54,6 @@
 
     .wrap {
       width: min(calc(100% - 40px), var(--width));
-      margin: 0 auto;
-    }
-
-    .wrap-wide {
-      width: min(calc(100% - 40px), var(--wide-width));
       margin: 0 auto;
     }
 
@@ -233,17 +227,17 @@
 
     /* Figures */
     figure {
-      margin: 44px 0;
+      margin: 48px 0;
       padding: 0;
     }
 
     .figure-container {
       background: var(--card-bg);
       border: 1px solid var(--line);
-      border-radius: 6px;
+      border-radius: 8px;
       padding: 16px;
       text-align: center;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
       overflow: hidden;
     }
 
@@ -258,7 +252,7 @@
       height: auto;
       display: block;
       margin: 0 auto;
-      border-radius: 3px;
+      border-radius: 4px;
     }
 
     figcaption {
@@ -340,11 +334,6 @@
       background: rgba(37, 99, 235, 0.04);
     }
 
-    tr.total-row {
-      font-weight: 750;
-      background: #fdfcf9;
-    }
-
     /* Callout & Note Boxes */
     .note-box {
       margin: 36px 0;
@@ -359,13 +348,13 @@
 
     .takeaway-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 16px;
       margin: 32px 0;
     }
 
     .takeaway-card {
-      padding: 20px;
+      padding: 22px;
       background: #ffffff;
       border: 1px solid var(--line);
       border-radius: 6px;
@@ -384,16 +373,16 @@
     .takeaway-card.ruto .regime { color: var(--blue); }
 
     .takeaway-card .core-finding {
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 700;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
       font-family: Georgia, serif;
       color: var(--ink);
     }
 
     .takeaway-card p {
       margin: 0;
-      font-size: 13.5px;
+      font-size: 14px;
       color: var(--muted);
       line-height: 1.5;
     }
@@ -454,7 +443,7 @@
       display: block;
     }
 
-    /* References & Glossary */
+    /* References */
     .ref-list {
       font-size: 15px;
       line-height: 1.6;
@@ -492,10 +481,10 @@
       Kenya in Data
     </a>
     <nav aria-label="Navigation">
-      <a href="../../">← All Publications</a>
+      <a href="../">← All Publications</a>
+      <a href="#scorecard">Scorecard</a>
       <a href="#downloads">Downloads</a>
       <a href="#methodology">Methodology</a>
-      <a href="#sources">Sources</a>
     </nav>
   </header>
 
@@ -537,7 +526,7 @@
     </div>
 
     <article>
-      <h2>Head-to-Head Empirical Scorecard</h2>
+      <h2 id="scorecard">Head-to-Head Empirical Scorecard</h2>
       <p>Standardized four-year June-to-June fiscal accounting snapshots allow an exact, like-for-like comparison across both administrations.</p>
 
       <div class="table-wrap">
@@ -633,6 +622,7 @@
         </table>
       </div>
 
+      <!-- Plot 1: Head to Head Scorecard -->
       <figure>
         <div class="figure-container">
           <picture>
@@ -650,15 +640,52 @@
         </figcaption>
       </figure>
 
-      <h2>1. Debt Stock: Uhuru Grew It Faster; Ruto Window Added More Shillings</h2>
+      <h2>1. Debt Stock: Base Effect vs Absolute Volume</h2>
       <p>Uhuru's comparison window started with a public debt stock of <strong>KSh 1.894 trillion</strong>. Four fiscal years later, that stock reached <strong>KSh 4.407 trillion</strong>. The increase was KSh 2.513 trillion, equivalent to <strong>+132.7%</strong> (a 2.33× expansion).</p>
       <p>The Ruto-era comparison window began from a dramatically larger base: <strong>KSh 8.761 trillion in June 2022</strong>. The June 2026 Monthly Debt Bulletin puts the provisional end-June 2026 stock at approximately <strong>KSh 13.013 trillion</strong>. The four-year increase is KSh 4.252 trillion, or <strong>+48.5%</strong> (a 1.49× expansion).</p>
 
-      <div class="note-box">
-        <p><strong>The Base-Effect Distinction:</strong> The Ruto window added roughly <strong>+KSh 1.74 trillion more</strong> in nominal debt than Uhuru's first four years, but because the starting balance sheet was already 4.6× larger, the percentage growth was significantly lower (+48.5% vs +132.7%).</p>
-      </div>
+      <!-- Plot 2: Starting Base, Net Added & Ending Total Bar Chart -->
+      <figure>
+        <div class="figure-container">
+          <picture>
+            <source media="(max-width: 720px)" srcset="../../assets/figures/FIG-KID002-H2H-007_debt_stock_start_added_end_barchart.svg">
+            <img src="../../assets/figures/FIG-KID002-H2H-007_debt_stock_start_added_end_barchart.svg" alt="Public Debt Stock: Starting Base, Net Added, and Ending Total Bar Chart." loading="lazy">
+          </picture>
+        </div>
+        <figcaption>
+          <strong>Figure 2. Public Debt Stock: Starting Base, Net Added, and Ending Total.</strong> Data: National Treasury. Comparing the inherited balance sheet and the 4-year nominal addition.
+          <div class="figure-actions">
+            <a href="../../assets/figures/FIG-KID002-H2H-007_debt_stock_start_added_end_barchart.svg" download>Download SVG</a>
+          </div>
+        </figcaption>
+      </figure>
 
-      <h2>2. After Inflation, the Real Growth Gap Widens</h2>
+      <h2>2. Annual Debt Additions: The Year-by-Year Flow</h2>
+      <p>Examining the net debt added in each individual fiscal year reveals sharp structural differences in timing and external shocks:</p>
+      <ul>
+        <li><strong>Ruto Year 1 (FY2022/23):</strong> Public debt spiked by <strong>+KSh 1,518 billion</strong>, heavily driven by the steep depreciation of the shilling (KES/USD moved from 117.8 to 140.5), which mechanically inflated the KSh value of existing foreign loans.</li>
+        <li><strong>Ruto Year 2 (FY2023/24):</strong> Debt additions slowed dramatically to just <strong>+KSh 278 billion</strong> as the shilling rebounded to 129.0 and the government executed a successful Eurobond buyback.</li>
+        <li><strong>Uhuru Years 1–4:</strong> Debt growth was consistent and accelerating (+KSh 476B in Year 1 $ightarrow$ +KSh 473B in Year 2 $ightarrow$ +KSh 768B in Year 3 $ightarrow$ +KSh 795B in Year 4).</li>
+      </ul>
+
+      <!-- Plot 3: Annual Debt Additions Year by Year -->
+      <figure>
+        <div class="figure-container">
+          <picture>
+            <source media="(max-width: 720px)" srcset="../../assets/figures/FIG-KID002-H2H-008_annual_debt_additions_year_by_year_mobile.svg">
+            <img src="../../assets/figures/FIG-KID002-H2H-008_annual_debt_additions_year_by_year.svg" alt="Annual Net Debt Additions: Year-by-Year Comparison." loading="lazy">
+          </picture>
+        </div>
+        <figcaption>
+          <strong>Figure 3. Annual Net Debt Additions: Year-by-Year Comparison.</strong> Net billions added to the public debt stock in each successive fiscal year. Data: National Treasury Annual Debt Reports and June 2026 Monthly Bulletin.
+          <div class="figure-actions">
+            <a href="../../assets/figures/FIG-KID002-H2H-008_annual_debt_additions_year_by_year_mobile.svg" download>Download Mobile SVG</a>
+            <a href="../../assets/figures/FIG-KID002-H2H-008_annual_debt_additions_year_by_year.svg" download>Download Desktop SVG</a>
+          </div>
+        </figcaption>
+      </figure>
+
+      <h2>3. Inflation-Adjusted Growth: The Real Purchasing Power Gap</h2>
       <p>To compare the economic scale of debt accumulation fairly, nominal debt stocks must be adjusted for purchasing power using date-matched KNBS Consumer Price Index (CPI) observations.</p>
       <ul>
         <li><strong>Uhuru Window (2013–2017):</strong> CPI rose from 139.59 to 185.39 (2009=100 base). Real inflation-adjusted debt growth was <strong>+75.2%</strong>.</li>
@@ -666,6 +693,7 @@
       </ul>
       <p>In real purchasing power terms, the debt stock under Uhuru's first four fiscal years expanded at nearly <strong>four times</strong> the pace recorded in the Ruto window.</p>
 
+      <!-- Plot 4: Normalized Indexed Trajectory -->
       <figure>
         <div class="figure-container">
           <picture>
@@ -674,7 +702,7 @@
           </picture>
         </div>
         <figcaption>
-          <strong>Figure 2. Normalized Public Debt Trajectory (Year 0 = 100).</strong> Comparing nominal and real debt growth trajectories across the first four fiscal years of each administration. Data: National Treasury and KNBS.
+          <strong>Figure 4. Normalized Public Debt Trajectory (Year 0 = 100).</strong> Comparing nominal and real debt growth trajectories across the first four fiscal years of each administration. Data: National Treasury and KNBS.
           <div class="figure-actions">
             <a href="../../assets/figures/FIG-KID002-H2H-002_indexed_debt_growth_base100_mobile.svg" download>Download Mobile SVG</a>
             <a href="../../assets/figures/FIG-KID002-H2H-002_indexed_debt_growth_base100.svg" download>Download Desktop SVG</a>
@@ -682,10 +710,11 @@
         </figcaption>
       </figure>
 
-      <h2>3. Debt Relative to the Economy: Outpacing Output vs Holding the Line</h2>
+      <h2>4. Debt Relative to the Economy: Outpacing Output vs Holding the Line</h2>
       <p>In June 2013, Kenya's public debt was equivalent to <strong>42.1% of GDP</strong>. By June 2017, the ratio reached <strong>57.2%</strong>—an increase of <strong>+15.1 percentage points in four years</strong>. Debt grew far faster than economic output.</p>
       <p>Under the Ruto window, Treasury reports public debt equal to <strong>68.7% of GDP in June 2022</strong>. The provisional June 2026 bulletin places the ratio at approximately <strong>68.5%</strong>. Endpoint-to-endpoint, debt/GDP was virtually flat across the window (68.7% → 72.0% → 66.9% → 67.8% → ~68.5%).</p>
 
+      <!-- Plot 5: 4-Year Debt-to-GDP Trajectory -->
       <figure>
         <div class="figure-container">
           <picture>
@@ -694,7 +723,7 @@
           </picture>
         </div>
         <figcaption>
-          <strong>Figure 3. Debt-to-GDP Trajectories in the First Four Fiscal Years.</strong> Dotted red line indicates the 55% statutory anchor in PFM Act §50(2A). Data: National Treasury.
+          <strong>Figure 5. Debt-to-GDP Trajectories in the First Four Fiscal Years.</strong> Dotted red line indicates the 55% statutory anchor in PFM Act §50(2A). Data: National Treasury.
           <div class="figure-actions">
             <a href="../../assets/figures/FIG-KID002-H2H-003_debt_to_gdp_trajectories_mobile.svg" download>Download Mobile SVG</a>
             <a href="../../assets/figures/FIG-KID002-H2H-003_debt_to_gdp_trajectories.svg" download>Download Desktop SVG</a>
@@ -702,13 +731,14 @@
         </figcaption>
       </figure>
 
-      <h2>4. The Composition Shift: External Financing vs Domestic Paper</h2>
+      <h2>5. The Composition Shift: External Financing vs Domestic Paper</h2>
       <p>The structural composition of the net increase in the debt stock diverged sharply:</p>
       <ul>
         <li><strong>Uhuru Window:</strong> External debt accounted for <strong>57.7% of the net debt increase</strong> (+KSh 1.451T external vs +KSh 1.062T domestic), driven by commercial Eurobonds and bilateral SGR loans.</li>
         <li><strong>Ruto Window:</strong> Domestic debt accounted for <strong>68.3% of the net debt increase</strong> (+KSh 2.903T domestic vs +KSh 1.349T external), pivoting heavily to local Treasury bonds and bills.</li>
       </ul>
 
+      <!-- Plot 6: Composition of Net Debt Added -->
       <figure>
         <div class="figure-container">
           <picture>
@@ -717,7 +747,7 @@
           </picture>
         </div>
         <figcaption>
-          <strong>Figure 4. Breakdown of the Net Increase in Public Debt Stock by Category.</strong> Data: National Treasury Annual Public Debt Reports. Analysis: Kenya in Data.
+          <strong>Figure 6. Breakdown of the Net Increase in Public Debt Stock by Category.</strong> Data: National Treasury Annual Public Debt Reports. Analysis: Kenya in Data.
           <div class="figure-actions">
             <a href="../../assets/figures/FIG-KID002-H2H-004_composition_of_debt_added_mobile.svg" download>Download Mobile SVG</a>
             <a href="../../assets/figures/FIG-KID002-H2H-004_composition_of_debt_added.svg" download>Download Desktop SVG</a>
@@ -727,7 +757,7 @@
 
       <p>This composition shift is consequential: Treasury reports a weighted-average interest rate of <strong>13.0% on domestic debt versus 3.9% on external debt</strong>. Shifting borrowing to domestic markets heavily increases annual cash interest obligations.</p>
 
-      <h2>5. The Repayment Squeeze: Ruto's Defining Fiscal Challenge</h2>
+      <h2>6. The Repayment Squeeze: Interest Revenue Absorption</h2>
       <p>While the debt stock grew more slowly relative to GDP across the Ruto window, debt servicing costs reached historic highs.</p>
 
       <div class="table-wrap">
@@ -775,6 +805,7 @@
         </table>
       </div>
 
+      <!-- Plot 7: Revenue Squeeze Chart -->
       <figure>
         <div class="figure-container">
           <picture>
@@ -783,7 +814,7 @@
           </picture>
         </div>
         <figcaption>
-          <strong>Figure 5. The Revenue Squeeze: Interest Payments as a Share of Ordinary Revenue.</strong> Data: National Treasury Annual Public Debt Reports.
+          <strong>Figure 7. The Revenue Squeeze: Interest Payments as a Share of Ordinary Revenue.</strong> Data: National Treasury Annual Public Debt Reports.
           <div class="figure-actions">
             <a href="../../assets/figures/FIG-KID002-H2H-005_interest_burden_revenue_absorption_mobile.svg" download>Download Mobile SVG</a>
             <a href="../../assets/figures/FIG-KID002-H2H-005_interest_burden_revenue_absorption.svg" download>Download Desktop SVG</a>
@@ -791,7 +822,50 @@
         </figcaption>
       </figure>
 
-      <h2>6. Conclusion: Two Administrations, Two Different Debt Problems</h2>
+      <!-- Plot 8: Borrowing Dynamics 3-Card Summary -->
+      <figure>
+        <div class="figure-container">
+          <picture>
+            <source media="(max-width: 720px)" srcset="../../assets/figures/FIG-KID002-H2H-006_borrowing_dynamics_comparison_mobile.svg">
+            <img src="../../assets/figures/FIG-KID002-H2H-006_borrowing_dynamics_comparison.svg" alt="Borrowing Dynamics Comparison: Volume, Velocity, and Structure." loading="lazy">
+          </picture>
+        </div>
+        <figcaption>
+          <strong>Figure 8. Borrowing Dynamics Comparison: Volume, Velocity, and Portfolio Mix.</strong> Data: National Treasury &amp; KNBS. Analysis: Kenya in Data.
+          <div class="figure-actions">
+            <a href="../../assets/figures/FIG-KID002-H2H-006_borrowing_dynamics_comparison_mobile.svg" download>Download Mobile SVG</a>
+            <a href="../../assets/figures/FIG-KID002-H2H-006_borrowing_dynamics_comparison.svg" download>Download Desktop SVG</a>
+          </div>
+        </figcaption>
+      </figure>
+
+      <h2>7. Long-Run Horizon: The 24-Year Arc (2002–2026)</h2>
+      <p>To fully appreciate the divergence between the Uhuru and Ruto administrations, we must view both against Kenya's quarter-century macroeconomic arc:</p>
+      <ul>
+        <li><strong>The Kibaki Decade (2002–2013):</strong> Strong economic growth and fiscal prudence reduced debt from <strong>60.8% of GDP to 35.7% of GDP</strong>.</li>
+        <li><strong>The Uhuru Decade (2013–2022):</strong> Heavy infrastructure investments and Eurobond issuances surged debt from <strong>35.7% of GDP to 64.0% of GDP</strong>.</li>
+        <li><strong>The Ruto Administration (2022–2026*):</strong> Debt/GDP has stabilized around <strong>67%–68%</strong>, but the carrying cost peaked at <strong>71.2% of ordinary revenue</strong> due to inherited stock size and elevated domestic interest rates.</li>
+      </ul>
+
+      <!-- Plot 9: 24-Year Long-Term Macro Arc -->
+      <figure>
+        <div class="figure-container">
+          <picture>
+            <source media="(max-width: 720px)" srcset="../../assets/figures/FIG-KID002-H2H-009_long_term_debt_to_gdp_and_service_mobile.svg">
+            <img src="../../assets/figures/FIG-KID002-H2H-009_long_term_debt_to_gdp_and_service.svg" alt="Kenya's 24-Year Debt Trajectory: Debt-to-GDP and Debt Service to Revenue (2002–2026)." loading="lazy">
+          </picture>
+        </div>
+        <figcaption>
+          <strong>Figure 9. Kenya's 24-Year Public Debt Arc (2002–2026).</strong> Top solid line shows Debt-to-GDP (%); purple dashed line shows Debt Service as % of Ordinary Revenue. Dotted red line marks the 55% statutory debt anchor. Data: National Treasury &amp; Central Bank of Kenya.
+          <div class="figure-actions">
+            <a href="../../assets/figures/FIG-KID002-H2H-009_long_term_debt_to_gdp_and_service_mobile.svg" download>Download Mobile SVG</a>
+            <a href="../../assets/figures/FIG-KID002-H2H-009_long_term_debt_to_gdp_and_service.svg" download>Download Desktop SVG</a>
+            <a href="../../assets/data/KID002_historical_debt_timeseries_2002_2026.csv" download>Complete 2002–2026 CSV</a>
+          </div>
+        </figcaption>
+      </figure>
+
+      <h2>8. Conclusion: Two Administrations, Two Different Debt Problems</h2>
       <div class="takeaway-grid">
         <div class="takeaway-card uhuru">
           <span class="regime">Uhuru Kenyatta (2013–2017)</span>
@@ -811,7 +885,7 @@
         <ul>
           <li><strong>Fiscal Timing:</strong> Uhuru assumed office in April 2013; Ruto in September 2022. June 2013 → June 2017 and June 2022 → June 2026 provide standardized four-year fiscal accounting snapshots.</li>
           <li><strong>Real Growth Deflator:</strong> Computed using KNBS monthly CPI series:
-            35585	ext{Real Growth} = \left(rac{	ext{Debt}_{	ext{end}}}{	ext{Debt}_{	ext{start}}}ight) 	imes \left(rac{	ext{CPI}_{	ext{start}}}{	ext{CPI}_{	ext{end}}}ight) - 135585
+            36995	ext{Real Growth} = \left(rac{	ext{Debt}_{	ext{end}}}{	ext{Debt}_{	ext{start}}}ight) 	imes \left(rac{	ext{CPI}_{	ext{start}}}{	ext{CPI}_{	ext{end}}}ight) - 136995
             Uhuru uses the 2009=100 series (139.59 → 185.39). Ruto uses the 2019=100 series (124.22 → 154.91).
           </li>
           <li><strong>Debt Scope:</strong> Measures net outstanding public and publicly guaranteed debt stock (including new disbursements, amortizations, repayments and FX revaluations).</li>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350" style="background-color:#F8FAFC; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<defs>
+  <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="110%" filterUnits="userSpaceOnUse">
+    <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.05" />
+  </filter>
+  <filter id="subtle-shadow" x="-2%" y="-2%" width="104%" height="104%" filterUnits="userSpaceOnUse">
+    <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.04" />
+  </filter>
+</defs>
+
+  <!-- Mobile Header -->
+  <text x="50" y="70" fill="#DC2626" font-size="16" font-weight="800" letter-spacing="1.5">KENYA IN DATA • PUBLIC DEBT</text>
+  <text x="50" y="118" fill="#0F172A" font-size="34" font-weight="900">Public Debt Stock: Start, Added & End</text>
+  <text x="50" y="156" fill="#64748B" font-size="19" font-weight="500">Visualizing the base effect: starting debt + 4-year additions (KSh Trillion)</text>
+<line x1="120" y1="770.0" x2="960" y2="770.0" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="6,6" /><text x="100" y="776.0" fill="#64748B" font-size="18" font-weight="700" text-anchor="end">KSh 2T</text><line x1="120" y1="680.0" x2="960" y2="680.0" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="6,6" /><text x="100" y="686.0" fill="#64748B" font-size="18" font-weight="700" text-anchor="end">KSh 4T</text><line x1="120" y1="590.0" x2="960" y2="590.0" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="6,6" /><text x="100" y="596.0" fill="#64748B" font-size="18" font-weight="700" text-anchor="end">KSh 6T</text><line x1="120" y1="500.0" x2="960" y2="500.0" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="6,6" /><text x="100" y="506.0" fill="#64748B" font-size="18" font-weight="700" text-anchor="end">KSh 8T</text><line x1="120" y1="410.0" x2="960" y2="410.0" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="6,6" /><text x="100" y="416.0" fill="#64748B" font-size="18" font-weight="700" text-anchor="end">KSh 10T</text><line x1="120" y1="320.0" x2="960" y2="320.0" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="6,6" /><text x="100" y="326.0" fill="#64748B" font-size="18" font-weight="700" text-anchor="end">KSh 12T</text><line x1="120" y1="230.0" x2="960" y2="230.0" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="6,6" /><text x="100" y="236.0" fill="#64748B" font-size="18" font-weight="700" text-anchor="end">KSh 14T</text><line x1="120" y1="860" x2="960" y2="860" stroke="#64748B" stroke-width="2" /><rect x="200" y="774.77" width="300" height="85.23" rx="6" fill="#334155" /><rect x="200" y="661.685" width="300" height="113.085" rx="8" fill="#DC2626" /><rect x="200" y="772.77" width="300" height="6" fill="#DC2626" /><text x="350.0" y="825.385" fill="#FFFFFF" font-size="20" font-weight="800" text-anchor="middle">Start: KSh 1.89T</text><text x="350.0" y="712.2275" fill="#FFFFFF" font-size="23" font-weight="900" text-anchor="middle">+KSh 2.51T ADDED</text><text x="350.0" y="740.2275" fill="#FEE2E2" font-size="18" font-weight="800" text-anchor="middle">(+132.7% Nominal)</text><text x="350.0" y="646.685" fill="#DC2626" font-size="26" font-weight="900" text-anchor="middle">KSh 4.41T Total</text><text x="350.0" y="896" fill="#0F172A" font-size="22" font-weight="900" text-anchor="middle">UHURU (2013–17)</text><rect x="580" y="465.755" width="300" height="394.245" rx="6" fill="#0F172A" /><rect x="580" y="274.41499999999996" width="300" height="191.34" rx="8" fill="#2563EB" /><rect x="580" y="463.755" width="300" height="6" fill="#2563EB" /><text x="730.0" y="794.77" fill="#FFFFFF" font-size="22" font-weight="800" text-anchor="middle">Start: KSh 8.76T Base</text><text x="730.0" y="364.085" fill="#FFFFFF" font-size="23" font-weight="900" text-anchor="middle">+KSh 4.25T ADDED*</text><text x="730.0" y="392.085" fill="#EFF6FF" font-size="18" font-weight="800" text-anchor="middle">(+48.5% Nominal)</text><text x="730.0" y="259.41499999999996" fill="#2563EB" font-size="26" font-weight="900" text-anchor="middle">~KSh 13.01T Total*</text><text x="730.0" y="896" fill="#0F172A" font-size="22" font-weight="900" text-anchor="middle">RUTO (2022–26*)</text>
+  <g transform="translate(50, 930)">
+    <rect x="0" y="0" width="980" height="295" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" filter="url(#card-shadow)" />
+    <text x="35" y="42" fill="#0F172A" font-size="22" font-weight="900">THE HEAD-TO-HEAD SUMMARY</text>
+    
+    <g transform="translate(35, 75)">
+      <rect x="0" y="0" width="430" height="90" rx="10" fill="#F8FAFC" />
+      <text x="20" y="32" fill="#64748B" font-size="15" font-weight="700">NET STOCK ADDED (VOLUME)</text>
+      <text x="20" y="68" fill="#0F172A" font-size="22" font-weight="900">+KSh 2.51T vs +KSh 4.25T*</text>
+    </g>
+
+    <g transform="translate(515, 75)">
+      <rect x="0" y="0" width="430" height="90" rx="10" fill="#F8FAFC" />
+      <text x="20" y="32" fill="#64748B" font-size="15" font-weight="700">EXPANSION SPEED (VELOCITY)</text>
+      <text x="20" y="68" fill="#DC2626" font-size="22" font-weight="900">+132.7% vs +48.5%*</text>
+    </g>
+
+    <rect x="35" y="185" width="910" height="85" rx="10" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1.5" />
+    <text x="55" y="220" fill="#0F172A" font-size="17" font-weight="900">THE TAKEAWAY:</text>
+    <text x="55" y="248" fill="#334155" font-size="16.5">Ruto added +KSh 1.74T more shillings; Uhuru doubled his debt stock 2.7x faster.</text>
+  </g>
+
+  <!-- Mobile Footer -->
+  <line x1="50" y1="1260" x2="1030" y2="1260" stroke="#E2E8F0" stroke-width="1.5" />
+  <text x="50" y="1295" fill="#64748B" font-size="17" font-style="italic">Data: National Treasury Annual Debt Reports; June 2026 Bulletin  |  *June 2026 figures are provisional.</text>
+  <text x="50" y="1325" fill="#0F172A" font-size="17.5" font-weight="800">Kenya in Data • kenyaindata.org</text>
+</svg>

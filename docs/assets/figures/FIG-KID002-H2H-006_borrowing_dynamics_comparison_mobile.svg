@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350" style="background-color:#F8FAFC; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<defs>
+  <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="110%" filterUnits="userSpaceOnUse">
+    <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.05" />
+  </filter>
+  <filter id="subtle-shadow" x="-2%" y="-2%" width="104%" height="104%" filterUnits="userSpaceOnUse">
+    <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.04" />
+  </filter>
+</defs>
+
+  <!-- Mobile Header -->
+  <text x="50" y="70" fill="#DC2626" font-size="16" font-weight="800" letter-spacing="1.5">KENYA IN DATA • PUBLIC DEBT</text>
+  <text x="50" y="118" fill="#0F172A" font-size="34" font-weight="900">Borrowing Contrasts: Volume, Pace & Mix</text>
+  <text x="50" y="156" fill="#64748B" font-size="19" font-weight="500">Uhuru grew debt 2.7x faster; Ruto window added 1.7x more shillings per year</text>
+
+  <!-- Mobile Section 1: Volume -->
+  <g transform="translate(50, 190)">
+    <rect x="0" y="0" width="980" height="300" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" filter="url(#card-shadow)" />
+    <text x="35" y="42" fill="#0F172A" font-size="22" font-weight="900">1. VOLUME: NET SHILLINGS ADDED TO STOCK</text>
+    
+    <!-- Uhuru Bar -->
+    <text x="35" y="85" fill="#0F172A" font-size="18" font-weight="800">Uhuru (2013–17): +KSh 2.51T (+KSh 628B / Year)</text>
+    <rect x="35" y="100" width="480" height="42" rx="8" fill="#DC2626" />
+    <text x="530" y="128" fill="#DC2626" font-size="20" font-weight="900">+KSh 2.51T</text>
+    
+    <!-- Ruto Bar -->
+    <text x="35" y="180" fill="#0F172A" font-size="18" font-weight="800">Ruto Window (2022–26*): +KSh 4.25T* (+KSh 1,063B / Year)</text>
+    <rect x="35" y="195" width="810" height="42" rx="8" fill="#2563EB" />
+    <text x="860" y="223" fill="#2563EB" font-size="20" font-weight="900">+KSh 4.25T*</text>
+    
+    <text x="35" y="275" fill="#334155" font-size="16" font-weight="600">The Ruto window added +KSh 1.74T more debt (+70% higher volume), averaging KSh 1.06T/year.</text>
+  </g>
+
+  <!-- Mobile Section 2: Speed -->
+  <g transform="translate(50, 515)">
+    <rect x="0" y="0" width="980" height="300" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" filter="url(#card-shadow)" />
+    <text x="35" y="42" fill="#0F172A" font-size="22" font-weight="900">2. VELOCITY: EXPANSION SPEED (NOMINAL &amp; REAL)</text>
+    
+    <!-- Uhuru Group -->
+    <text x="35" y="85" fill="#0F172A" font-size="18" font-weight="800">Uhuru: +132.7% Nominal | +75.2% Real (CPI-Adjusted)</text>
+    <rect x="35" y="98" width="750" height="32" rx="6" fill="#DC2626" />
+    <rect x="35" y="135" width="425" height="26" rx="6" fill="#FCA5A5" />
+    
+    <!-- Ruto Group -->
+    <text x="35" y="195" fill="#0F172A" font-size="18" font-weight="800">Ruto Window: +48.5% Nominal | +19.1% Real (CPI-Adjusted)</text>
+    <rect x="35" y="208" width="275" height="32" rx="6" fill="#2563EB" />
+    <rect x="35" y="245" width="108" height="26" rx="6" fill="#93C5FD" />
+  </g>
+
+  <!-- Mobile Section 3: Structure -->
+  <g transform="translate(50, 840)">
+    <rect x="0" y="0" width="980" height="385" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" filter="url(#card-shadow)" />
+    <text x="35" y="42" fill="#0F172A" font-size="22" font-weight="900">3. BORROWING MIX: DOMESTIC VS EXTERNAL</text>
+    
+    <text x="35" y="85" fill="#0F172A" font-size="18" font-weight="800">Uhuru Net Increase (+KSh 2.51T): External-Heavy</text>
+    <rect x="35" y="100" width="380" height="55" rx="8" fill="#2563EB" />
+    <rect x="415" y="100" width="530" height="55" rx="8" fill="#D97706" />
+    <text x="210" y="135" fill="#FFFFFF" font-size="19" font-weight="900" text-anchor="middle">Domestic: 42%</text>
+    <text x="670" y="135" fill="#FFFFFF" font-size="19" font-weight="900" text-anchor="middle">External: 58% (Eurobonds / SGR)</text>
+    
+    <text x="35" y="195" fill="#0F172A" font-size="18" font-weight="800">Ruto Window Net Increase (+KSh 4.25T*): Domestic-Heavy</text>
+    <rect x="35" y="210" width="620" height="55" rx="8" fill="#2563EB" />
+    <rect x="655" y="210" width="290" height="55" rx="8" fill="#D97706" />
+    <text x="340" y="245" fill="#FFFFFF" font-size="19" font-weight="900" text-anchor="middle">Domestic: 68% (Local T-Bonds)</text>
+    <text x="795" y="245" fill="#FFFFFF" font-size="19" font-weight="900" text-anchor="middle">External: 32%</text>
+
+    <rect x="35" y="285" width="910" height="80" rx="10" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1.5" />
+    <text x="55" y="318" fill="#0F172A" font-size="16" font-weight="900">COST CONSEQUENCE:</text>
+    <text x="55" y="344" fill="#334155" font-size="15.5">Domestic weighted interest was 13.0% vs 3.9% on external loans (Treasury June 2025).</text>
+  </g>
+
+  <!-- Mobile Footer -->
+  <line x1="50" y1="1260" x2="1030" y2="1260" stroke="#E2E8F0" stroke-width="1.5" />
+  <text x="50" y="1295" fill="#64748B" font-size="17" font-style="italic">Data: National Treasury Annual Debt Reports; June 2026 Bulletin; KNBS CPI series  |  *June 2026 figures are provisional.</text>
+  <text x="50" y="1325" fill="#0F172A" font-size="17.5" font-weight="800">Kenya in Data • kenyaindata.org</text>
+</svg>

@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" style="background-color:#F8FAFC; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<defs>
+  <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="110%" filterUnits="userSpaceOnUse">
+    <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.05" />
+  </filter>
+  <filter id="subtle-shadow" x="-2%" y="-2%" width="104%" height="104%" filterUnits="userSpaceOnUse">
+    <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.04" />
+  </filter>
+</defs>
+
+  <!-- Header -->
+  <text x="60" y="52" fill="#DC2626" font-size="13" font-weight="800" letter-spacing="1.5">KENYA IN DATA • BORROWING DYNAMICS</text>
+  <text x="60" y="88" fill="#0F172A" font-size="24" font-weight="900">Contrasting Borrowing Dynamics: Volume, Speed, and Structure</text>
+  <text x="60" y="116" fill="#64748B" font-size="14" font-weight="500">Uhuru expanded the debt stock at nearly triple the speed; the Ruto window added 1.7x more nominal shillings per year</text>
+
+  <!-- Card 1: Volume -->
+  <rect x="60" y="145" width="345" height="450" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#card-shadow)" />
+  <rect x="60" y="145" width="345" height="48" rx="12" fill="#0F172A" />
+  <rect x="60" y="181" width="345" height="12" fill="#0F172A" />
+  <text x="75" y="175" fill="#FFFFFF" font-size="14" font-weight="900">1. TOTAL &amp; ANNUAL VOLUME</text>
+  
+  <text x="80" y="220" fill="#64748B" font-size="11.5" font-weight="700">NET STOCK ADDED (4 YEARS)</text>
+  
+  <!-- Uhuru Bar -->
+  <text x="80" y="250" fill="#0F172A" font-size="12" font-weight="800">Uhuru (2013–17)</text>
+  <rect x="80" y="260" width="165" height="32" rx="5" fill="#DC2626" />
+  <text x="255" y="281" fill="#DC2626" font-size="13" font-weight="900">+KSh 2.51T</text>
+  <text x="80" y="307" fill="#64748B" font-size="11">Avg pace: <tspan font-weight="700" fill="#0F172A">+KSh 628B / year</tspan></text>
+  
+  <!-- Ruto Bar -->
+  <text x="80" y="345" fill="#0F172A" font-size="12" font-weight="800">Ruto Window (2022–26*)</text>
+  <rect x="80" y="355" width="280" height="32" rx="5" fill="#2563EB" />
+  <text x="365" y="376" fill="#2563EB" font-size="13" font-weight="900" text-anchor="end">+KSh 4.25T*</text>
+  <text x="80" y="402" fill="#64748B" font-size="11">Avg pace: <tspan font-weight="700" fill="#2563EB">+KSh 1,063B / year</tspan></text>
+
+  <!-- Visual Callout -->
+  <rect x="75" y="440" width="315" height="135" rx="8" fill="#EFF6FF" stroke="#E2E8F0" stroke-width="1" />
+  <text x="90" y="470" fill="#2563EB" font-size="12.5" font-weight="900">THE VOLUME REALITY</text>
+  <text x="90" y="497" fill="#0F172A" font-size="12" font-weight="700">Ruto window added +KSh 1.74T more</text>
+  <text x="90" y="517" fill="#334155" font-size="11.5">nominal debt than Uhuru, reflecting the</text>
+  <text x="90" y="537" fill="#334155" font-size="11.5">compounding effect of an 8.76T base.</text>
+
+  <!-- Card 2: Speed -->
+  <rect x="427" y="145" width="345" height="450" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#card-shadow)" />
+  <rect x="427" y="145" width="345" height="48" rx="12" fill="#0F172A" />
+  <rect x="427" y="181" width="345" height="12" fill="#0F172A" />
+  <text x="442" y="175" fill="#FFFFFF" font-size="14" font-weight="900">2. EXPANSION SPEED</text>
+  
+  <text x="447" y="220" fill="#64748B" font-size="11.5" font-weight="700">NOMINAL &amp; REAL GROWTH</text>
+  
+  <!-- Uhuru Speed -->
+  <text x="447" y="250" fill="#0F172A" font-size="12" font-weight="800">Uhuru (2013–17)</text>
+  <rect x="447" y="260" width="250" height="22" rx="4" fill="#DC2626" />
+  <text x="703" y="276" fill="#DC2626" font-size="12" font-weight="900">+132.7% Nom</text>
+  <rect x="447" y="285" width="142" height="18" rx="4" fill="#FCA5A5" />
+  <text x="595" y="299" fill="#DC2626" font-size="11" font-weight="800">+75.2% Real</text>
+  
+  <!-- Ruto Speed -->
+  <text x="447" y="340" fill="#0F172A" font-size="12" font-weight="800">Ruto Window (2022–26*)</text>
+  <rect x="447" y="350" width="91" height="22" rx="4" fill="#2563EB" />
+  <text x="545" y="366" fill="#2563EB" font-size="12" font-weight="900">+48.5% Nom</text>
+  <rect x="447" y="375" width="36" height="18" rx="4" fill="#93C5FD" />
+  <text x="489" y="389" fill="#2563EB" font-size="11" font-weight="800">+19.1% Real</text>
+
+  <!-- Speed Callout -->
+  <rect x="442" y="440" width="315" height="135" rx="8" fill="#FEE2E2" stroke="#E2E8F0" stroke-width="1" />
+  <text x="457" y="470" fill="#DC2626" font-size="12.5" font-weight="900">THE VELOCITY REALITY</text>
+  <text x="457" y="497" fill="#0F172A" font-size="12" font-weight="700">Uhuru grew stock 2.7x faster nominally</text>
+  <text x="457" y="517" fill="#334155" font-size="11.5">and 4x faster in real purchasing power</text>
+  <text x="457" y="537" fill="#334155" font-size="11.5">(+75.2% real vs +19.1% under Ruto).</text>
+
+  <!-- Card 3: Structure -->
+  <rect x="794" y="145" width="345" height="450" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#card-shadow)" />
+  <rect x="794" y="145" width="345" height="48" rx="12" fill="#0F172A" />
+  <rect x="794" y="181" width="345" height="12" fill="#0F172A" />
+  <text x="809" y="175" fill="#FFFFFF" font-size="14" font-weight="900">3. BORROWING MIX</text>
+  
+  <text x="814" y="220" fill="#64748B" font-size="11.5" font-weight="700">SHARE OF NET DEBT ADDED</text>
+  
+  <!-- Uhuru Stack -->
+  <text x="814" y="250" fill="#0F172A" font-size="12" font-weight="800">Uhuru (+KSh 2.51T Stock)</text>
+  <rect x="814" y="260" width="127" height="32" rx="4" fill="#2563EB" />
+  <rect x="941" y="260" width="173" height="32" rx="4" fill="#D97706" />
+  <text x="869" y="281" fill="#FFFFFF" font-size="11" font-weight="800" text-anchor="middle">42% Dom</text>
+  <text x="1027" y="281" fill="#FFFFFF" font-size="11" font-weight="800" text-anchor="middle">58% External</text>
+  
+  <!-- Ruto Stack -->
+  <text x="814" y="330" fill="#0F172A" font-size="12" font-weight="800">Ruto Window (+KSh 4.25T Stock*)</text>
+  <rect x="814" y="340" width="205" height="32" rx="4" fill="#2563EB" />
+  <rect x="1019" y="340" width="95" height="32" rx="4" fill="#D97706" />
+  <text x="909" y="361" fill="#FFFFFF" font-size="11" font-weight="800" text-anchor="middle">68% Dom</text>
+  <text x="1066" y="361" fill="#FFFFFF" font-size="11" font-weight="800" text-anchor="middle">32% Ext</text>
+
+  <!-- Structure Callout -->
+  <rect x="809" y="440" width="315" height="135" rx="8" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1" />
+  <text x="824" y="470" fill="#0F172A" font-size="12.5" font-weight="900">THE COST CONSEQUENCE</text>
+  <text x="824" y="497" fill="#0F172A" font-size="12" font-weight="700">Ruto window pivoted to local debt</text>
+  <text x="824" y="517" fill="#334155" font-size="11.5">where weighted interest was 13.0%</text>
+  <text x="824" y="537" fill="#334155" font-size="11.5">vs 3.9% on external loans (Treasury 2025).</text>
+
+  <!-- Footer -->
+  <line x1="60" y1="615" x2="1140" y2="615" stroke="#E2E8F0" stroke-width="1.2" />
+  <text x="60" y="642" fill="#64748B" font-size="11.5" font-style="italic">Data: National Treasury Annual Public Debt Reports (2016/17, 2024/25); June 2026 Monthly Bulletin; KNBS CPI series  |  *June 2026 figures are provisional. Ruto took office Sept 2022; June 2022–2026 provides standardized fiscal window.</text>
+  <text x="1140" y="642" fill="#0F172A" font-size="11.5" font-weight="700" text-anchor="end">Analysis: Kenya in Data • kenyaindata.org</text>
+</svg>

@@ -89,6 +89,14 @@ This is why statements such as *"one president borrowed X percent while another 
 
 There is also an accounting distinction worth preserving: **the increase in outstanding debt stock is not identical to gross or net new borrowing.** Governments simultaneously issue new debt, repay maturing obligations, refinance existing loans and experience valuation changes on foreign-currency debt. The figures here measure the **net change in the stock of outstanding public debt**, not every gross shilling disbursed.
 
+![Public Debt Stock: Starting Base, Net Added, and Ending Total Bar Chart](Derivatives/Charts/FIG-KID002-H2H-007_debt_stock_start_added_end_barchart.svg)
+
+*Figure 2. Public Debt Stock: Starting Base, Net Added, and Ending Total. Comparing the inherited base and net additions over the 4-year windows (KSh Trillions). Data: National Treasury. Analysis: Kenya in Data.*
+
+![Contrasting Borrowing Dynamics: Volume, Speed, and Structure comparing Uhuru and Ruto](Derivatives/Charts/FIG-KID002-H2H-006_borrowing_dynamics_comparison.svg)
+
+*Figure 3. Contrasting Borrowing Dynamics: Comparing Total & Annual Shillings Added, Expansion Velocity (Nominal & Real), and Domestic vs External Portfolio Structure. Data: National Treasury and KNBS. Analysis: Kenya in Data.*
+
 ---
 
 ## 2. After inflation, the growth gap widens
@@ -107,7 +115,7 @@ The inflation adjustment shows that the real purchasing-power expansion of the d
 
 ![Normalized Debt Stock Growth comparing Uhuru and Ruto indexed to Year 0 = 100](Derivatives/Charts/FIG-KID002-H2H-002_indexed_debt_growth_base100.svg)
 
-*Figure 2. Normalized Public Debt Trajectory (Year 0 = 100). Comparing nominal and real debt growth trajectories across the first four fiscal years of each administration. Data: National Treasury and KNBS. Analysis: Kenya in Data.*
+*Figure 4. Normalized Public Debt Trajectory (Year 0 = 100). Comparing nominal and real debt growth trajectories across the first four fiscal years of each administration. Data: National Treasury and KNBS. Analysis: Kenya in Data.*
 
 ---
 
@@ -123,7 +131,7 @@ This does not mean Kenya's debt vulnerability has disappeared. It establishes a 
 
 ![Debt-to-GDP Trajectory comparing Uhuru Kenyatta and William Ruto over their first four fiscal years](Derivatives/Charts/FIG-KID002-H2H-003_debt_to_gdp_trajectories.svg)
 
-*Figure 3. Debt-to-GDP Trajectories in the First Four Fiscal Years. Dotted line marks the 55% statutory anchor. Data: National Treasury Annual Debt Reports and June 2026 Monthly Bulletin. Analysis: Kenya in Data.*
+*Figure 5. Debt-to-GDP Trajectories in the First Four Fiscal Years. Dotted line marks the 55% statutory anchor. Data: National Treasury Annual Debt Reports and June 2026 Monthly Bulletin. Analysis: Kenya in Data.*
 
 ---
 
@@ -143,7 +151,7 @@ Across the Ruto window (June 2022 → June 2026 provisional):
 
 ![Composition of Net Debt Added comparing Uhuru and Ruto domestic vs external share](Derivatives/Charts/FIG-KID002-H2H-004_composition_of_debt_added.svg)
 
-*Figure 4. Breakdown of the Net Increase in the Public Debt Stock by Category. Data: National Treasury Annual Public Debt Reports. Analysis: Kenya in Data.*
+*Figure 6. Breakdown of the Net Increase in the Public Debt Stock by Category. Data: National Treasury Annual Public Debt Reports. Analysis: Kenya in Data.*
 
 This composition shift is critical for debt sustainability: **at June 2025, Treasury reported a weighted-average interest rate of 13.0% on domestic debt versus 3.9% on external debt.** Shifting the balance of new debt accumulation toward domestic securities has significantly elevated the budget's cash carrying costs.
 
@@ -174,7 +182,7 @@ A consistent, like-for-like metric across both periods is the **interest burden*
 
 ![Interest Payments as a Percentage of Ordinary Revenue comparing Uhuru and Ruto fiscal years](Derivatives/Charts/FIG-KID002-H2H-005_interest_burden_revenue_absorption.svg)
 
-*Figure 5. The Revenue Squeeze: Interest Payments as a Share of Ordinary Revenue. Data: National Treasury. Analysis: Kenya in Data.*
+*Figure 7. The Revenue Squeeze: Interest Payments as a Share of Ordinary Revenue. Data: National Treasury. Analysis: Kenya in Data.*
 
 At the end of Uhuru's four-year fiscal window, interest payments absorbed **20.8% of ordinary revenue**. By FY2024/25 under Ruto, interest payments reached **40.8%**—nearly double the Uhuru endpoint.
 
